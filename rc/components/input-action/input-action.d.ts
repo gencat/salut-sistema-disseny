@@ -1,0 +1,47 @@
+import { LitElement } from 'lit';
+
+export declare class InputAction extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    get _input(): HTMLInputElement;
+    get _labelSlot(): HTMLInputElement;
+    get _action(): HTMLInputElement;
+    get _secondaryAction(): HTMLInputElement;
+    set label(label: string);
+    set icon(icon: string);
+    set inputSize(size: string);
+    set helpText(text: string);
+    set invalid(status: boolean);
+    set removeMinWidth(value: boolean);
+    set value(value: string);
+    _label: string;
+    _icon: string;
+    _placeholder: string;
+    _inputSize: string;
+    _maxLength: number | undefined;
+    _invalid: boolean;
+    _helpText: string;
+    _isFocused: boolean;
+    _isTypeNumeric: boolean;
+    _inputValidity: boolean;
+    _removeMinWidth: boolean;
+    observerConfig: {
+        attributes: boolean;
+        childList: boolean;
+        subtree: boolean;
+    };
+    callback: (mutationList: any) => void;
+    observer: MutationObserver;
+    disconnectedCallback(): void;
+    _handleClick(): void;
+    _handleInput(): void;
+    _handleFocusIn(): void;
+    _handleFocusOut(): void;
+    _focusInput(): void;
+    _handleValidity(): void;
+    _stepUp(): void;
+    _stepDown(): void;
+    _dispatchValueChange(): void;
+    _checkInputAttributes(): void;
+    firstUpdated(): Promise<void>;
+    render(): import('lit-html').TemplateResult<1>;
+}

@@ -1,0 +1,45 @@
+import { LitElement } from 'lit';
+
+export declare class Accordion extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    get _checkbox(): HTMLInputElement;
+    set icon(icon: string);
+    set iconStatus(value: string);
+    set titleText(text: string);
+    set type(value: string);
+    set index(value: number);
+    set isOpen(value: boolean);
+    set accordionStyle(value: string);
+    set results(value: number);
+    set resultsText(value: string);
+    set hasCheckbox(value: boolean);
+    set hasSecondaryAction(value: boolean);
+    set secondaryActionIcon(value: string);
+    set secondaryActionStatus(value: string);
+    set secondaryActionDisabled(value: boolean);
+    set resultsState(value: string);
+    set notificationsState(value: string);
+    set notifications(value: number);
+    _icon: string;
+    _iconStatus: string;
+    _type: string;
+    _title: string;
+    _index: number | undefined;
+    _isOpen: boolean;
+    _results: number | undefined;
+    _resultsText: string;
+    _resultsState: string;
+    _accordionStyle: string;
+    _hasCheckbox: boolean;
+    _hasSecondaryAction: boolean;
+    _secondaryActionIcon: string;
+    _secondaryActionStatus: string;
+    _secondaryActionDisabled: boolean;
+    _notificationsState: string;
+    _notifications: number | undefined;
+    _toggleAccordion(): void;
+    _dispatchCheckboxChange(): void;
+    _dispatchSecondaryAction(): void;
+    _dispatchToggleAccordion(): void;
+    render(): import('lit-html').TemplateResult;
+}

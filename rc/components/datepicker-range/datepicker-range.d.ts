@@ -1,0 +1,58 @@
+import { LitElement } from 'lit';
+
+export type DssTimepickerOption = {
+    value: string;
+    state: string;
+};
+export declare class DatepickerRange extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    private get _inputRangeStart();
+    private get _inputRangeEnd();
+    set iconRangeStart(value: string);
+    set iconRangeEnd(value: string);
+    set minDate(minDate: string);
+    set maxDate(maxDate: string);
+    set invalid(invalid: boolean);
+    set inputSize(size: string);
+    set helpText(text: string);
+    set showButtons(showButtons: boolean);
+    set calendarLeftButtonLabel(leftLabel: string);
+    set calendarRightButtonLabel(rightLabel: string);
+    private _iconRangeStart;
+    private _iconRangeEnd;
+    private _dateformatPlaceholder;
+    private _isStartFocused;
+    private _isEndFocused;
+    private _invalid;
+    private _showCalendar;
+    private _helpText;
+    private _minDate;
+    private _maxDate;
+    private _inputSize;
+    private _calendarShowButtons;
+    private _calendarLeftButtonLabel;
+    private _calendarRightButtonLabel;
+    private _copyInputRangeStartPlaceholder;
+    private _copyInputRangeEndPlaceholder;
+    private _isFirstInputsCheck;
+    private _checkInputAttributes;
+    private _updatePlaceholders;
+    private _removePlaceholders;
+    private _handleRangeStartInput;
+    private _handleRangeEndInput;
+    private _handleRangeStartClick;
+    private _handleRangeEndClick;
+    private _handleRangeStartFocusIn;
+    private _handleRangeEndFocusIn;
+    private _handleRangeKeydown;
+    private _onCalendarChange;
+    private _onCalendarCancel;
+    private _closeCalendar;
+    private _formatDate;
+    private observerConfig;
+    private callback;
+    private observer;
+    disconnectedCallback(): void;
+    firstUpdated(): Promise<void>;
+    render(): import('lit-html').TemplateResult;
+}

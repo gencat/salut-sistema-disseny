@@ -1,0 +1,40 @@
+import { LitElement } from 'lit';
+
+export declare class ActionMenuItem extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    set state(value: string);
+    set label(value: string);
+    set leftIcon(value: string);
+    set rightIcon(value: string);
+    set actionIcon(value: string);
+    set actionState(value: string);
+    set notifications(value: number);
+    set notificationsState(value: string);
+    set selected(value: boolean);
+    set disabled(value: boolean);
+    set hasNestedMenu(value: boolean);
+    set nestedMenuPosition(value: string);
+    set first(value: boolean);
+    set last(value: boolean);
+    _state: string;
+    _label: string;
+    _leftIcon: string | undefined;
+    _rightIcon: string | undefined;
+    _actionIcon: string | undefined;
+    _actionState: string;
+    _notifications: number;
+    _notificationsState: string;
+    _selected: boolean;
+    _disabled: boolean;
+    _hasNestedMenu: boolean;
+    _nestedMenuPosition: string;
+    _first: boolean;
+    _last: boolean;
+    _handleItemClick(): void;
+    _handleKeydown(event: KeyboardEvent): void;
+    _handleAction(): void;
+    private _clickOutside;
+    private _unselectItem;
+    firstUpdated(): Promise<void>;
+    render(): import('lit-html').TemplateResult;
+}
