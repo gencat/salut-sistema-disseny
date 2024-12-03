@@ -2,6 +2,7 @@ import { LitElement } from 'lit';
 
 export declare class Badge extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    get _tooltip(): any;
     set icon(icon: string);
     set size(size: string);
     set text(text: string);
@@ -11,6 +12,7 @@ export declare class Badge extends LitElement {
     set dot(value: boolean);
     set hideIcon(value: boolean);
     _icon: string;
+    _iconSize: string;
     _size: string;
     _text: string;
     _state: string;
@@ -19,5 +21,6 @@ export declare class Badge extends LitElement {
     _outlined: boolean;
     _dot: boolean;
     _hideIcon: boolean;
+    firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }

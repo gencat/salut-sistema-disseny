@@ -6,9 +6,9 @@ export declare class ProgressIndicator extends LitElement {
     set title(title: string);
     set description(description: string);
     set percentage(percentage: number);
-    private _hasFailed;
-    private _title;
-    private _description;
-    private _percentage;
-    render(): import('lit-html').TemplateResult<1>;
+    _hasFailed: boolean;
+    _title: string;
+    _description: string;
+    _percentage: number;
+    render(): import('lit-html').TemplateResult;
 }

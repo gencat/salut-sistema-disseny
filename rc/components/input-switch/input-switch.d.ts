@@ -2,23 +2,27 @@ import { LitElement } from 'lit';
 
 export declare class InputSwitch extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    private get _input();
+    get _input(): HTMLInputElement;
     set size(size: string);
     set checked(value: boolean);
-    private _checked;
-    private _isCheckedPropDefined;
-    private _isFirstUpdate;
-    private _disabled;
-    private _readonly;
-    private _size;
-    private observerConfig;
-    private callback;
-    private observer;
+    _checked: boolean;
+    _isCheckedPropDefined: boolean;
+    _isFirstUpdate: boolean;
+    _disabled: boolean;
+    _readonly: boolean;
+    _size: string;
+    observerConfig: {
+        attributes: boolean;
+        childList: boolean;
+        subtree: boolean;
+    };
+    callback: (mutationList: any) => void;
+    observer: MutationObserver;
     disconnectedCallback(): void;
-    private _checkInputAttributes;
-    private _handleClick;
-    private _handleKeydown;
-    private _dispatchChange;
+    _checkInputAttributes(): void;
+    _handleClick(): void;
+    _handleKeydown(event: KeyboardEvent): void;
+    _dispatchChange(): void;
     firstUpdated(): Promise<void>;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

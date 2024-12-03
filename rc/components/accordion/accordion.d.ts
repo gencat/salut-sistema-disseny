@@ -20,6 +20,11 @@ export declare class Accordion extends LitElement {
     set resultsState(value: string);
     set notificationsState(value: string);
     set notifications(value: number);
+    set widget(value: boolean);
+    set widgetBadgeState(value: string);
+    set widgetBadgeText(value: string);
+    set widgetShowNext(value: boolean);
+    set widgetShowClose(value: boolean);
     _icon: string;
     _iconStatus: string;
     _type: string;
@@ -37,9 +42,16 @@ export declare class Accordion extends LitElement {
     _secondaryActionDisabled: boolean;
     _notificationsState: string;
     _notifications: number | undefined;
+    _widget: boolean;
+    _widgetBadgeState: string;
+    _widgetBadgeText: string | undefined;
+    _widgetShowNext: boolean;
+    _widgetShowClose: boolean;
     _toggleAccordion(): void;
     _dispatchCheckboxChange(): void;
     _dispatchSecondaryAction(): void;
     _dispatchToggleAccordion(): void;
+    _dispatchWidgetNext(): void;
+    _dispatchWidgetClose(): void;
     render(): import('lit-html').TemplateResult;
 }

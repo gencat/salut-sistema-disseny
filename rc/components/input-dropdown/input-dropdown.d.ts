@@ -30,6 +30,7 @@ export declare class InputDropdown extends LitElement {
     set dropdownPlaceholder(placeholder: string);
     set placeholderEmpty(placeholder: string);
     set filterThreshold(value: number);
+    set value(value: string);
     private _elements;
     private _copyElements;
     private _tick;
@@ -61,6 +62,7 @@ export declare class InputDropdown extends LitElement {
     private _placeholderEmpty;
     private _filterThreshold;
     private _unorder;
+    _popperInstance: any;
     private observerConfig;
     private callback;
     private observer;
@@ -86,5 +88,6 @@ export declare class InputDropdown extends LitElement {
     private _hidePlaceholder;
     private _handleValidity;
     private _cleanInput;
+    private _createPopperDropdown;
     render(): import('lit-html').TemplateResult;
 }

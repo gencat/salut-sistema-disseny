@@ -1,0 +1,13 @@
+import{r as p,a}from"./lit-element-vV9fql9z.js";import{x as c}from"./lit-html-paDGiEfB.js";import{n as e}from"./property-CzN8u98o.js";import{i as b}from"./icon.style-DPTab5RN.js";import{r as h}from"./reset.style-B0CQ8619.js";import{b as u}from"./property-types-CkH-zh1n.js";import{e as _}from"./class-map-2iHk_WiG.js";const f=":host{display:inline-block;vertical-align:middle}.dss-button-link{display:inline-flex;align-items:center;gap:var(--dss-spacing-xxs);font-size:14px;line-height:24px;font-weight:var(--font-semibold);color:var(--color-primary-500);text-decoration:none;border-radius:var(--dss-radius-xs);transition:.2s all ease-in;vertical-align:middle}.dss-button-link:visited{color:var(--color-purple-700)}.dss-button-link:hover{color:var(--color-primary-600)}.dss-button-link:active{color:var(--color-primary-400)}.dss-button-link:focus-visible{outline:var(--dss-border-width-md) solid var(--color-blue-200)}.dss-button-link.dss-button-link--disabled{cursor:not-allowed;color:var(--color-neutral-500)!important}.dss-button-link .dss-button-link-text{text-decoration:underline}.dss-button-link--icon-right{flex-direction:row-reverse}",k=s=>c`
+  <a
+    href="${s._linkHref}"
+    class=${_({"dss-button-link":!0,"dss-button-link--disabled":!!s._disabled,"dss-button-link--icon-right":!!s._icon&&s._iconPosition==="right"})}
+  >
+    ${s._icon?c`
+          <i class="dss-icon dss-icon--sm dss-button-link-icon"
+            >${s._icon}</i
+          >
+        `:null}
+    <span class="dss-button-link-text"> ${s._label} </span>
+  </a>
+`;var v=Object.defineProperty,m=Object.getOwnPropertyDescriptor,l=(s,t,i,y)=>{for(var o=m(t,i),r=s.length-1,d;r>=0;r--)(d=s[r])&&(o=d(t,i,o)||o);return o&&v(t,i,o),o};class n extends p{constructor(){super(...arguments),this._linkHref="#",this._label="Button Link",this._icon=void 0,this._iconPosition="left",this._iconFill=!1,this._disabled=!1}static get styles(){return[a(b),a(h),a(f)]}set linkHref(t){const i=this._linkHref;this._linkHref=t,this.requestUpdate("linkHref",i)}set label(t){const i=this._label;this._label=t,this.requestUpdate("label",i)}set icon(t){const i=this._icon;this._icon=t,this.requestUpdate("icon",i)}set iconPosition(t){const i=this._iconPosition;this._iconPosition=t,this.requestUpdate("iconPosition",i)}set iconFill(t){const i=this._iconFill;this._iconFill=t,this.requestUpdate("iconFill",i)}set disabled(t){const i=this._disabled;this._disabled=t,this.requestUpdate("disabled",i)}render(){return k(this)}}l([e({type:String})],n.prototype,"linkHref");l([e({type:String})],n.prototype,"label");l([e({type:String})],n.prototype,"icon");l([e({type:String})],n.prototype,"iconPosition");l([e(u)],n.prototype,"iconFill");l([e(u)],n.prototype,"disabled");export{n as B};

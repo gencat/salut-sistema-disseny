@@ -3,7 +3,6 @@ import { LitElement } from 'lit';
 export declare class SplitButton extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private _handleDocumentClickBound;
-    private _handleActionMenuClickBound;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
@@ -28,7 +27,6 @@ export declare class SplitButton extends LitElement {
     _dispatchMainClick(): void;
     _dispatchIconClick(): void;
     _toggleMenu(): void;
-    _handleActionMenuClick(): void;
     _handleDocumentClick(event: Event): void;
     private _clickedOutsideItem;
     render(): import('lit-html').TemplateResult<1>;

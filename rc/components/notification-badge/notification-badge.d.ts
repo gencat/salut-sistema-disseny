@@ -12,14 +12,14 @@ export declare class NotificationBadge extends LitElement {
     set borderWhite(value: boolean);
     set isHover(value: boolean);
     set isActive(value: boolean);
-    private _icon;
-    private _value;
-    private _state;
-    private _type;
-    private _dot;
-    private _borderMenu;
-    private _borderWhite;
-    private _isHover;
-    private _isActive;
+    _icon: string | undefined;
+    _value: string;
+    _state: string;
+    _type: string;
+    _dot: boolean;
+    _borderMenu: boolean;
+    _borderWhite: boolean;
+    _isHover: boolean;
+    _isActive: boolean;
     render(): import('lit-html').TemplateResult;
 }

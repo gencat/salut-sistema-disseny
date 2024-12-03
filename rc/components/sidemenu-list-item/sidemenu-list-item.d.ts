@@ -43,7 +43,6 @@ export declare class SidemenuListItem extends LitElement {
     _handleMouseDown(): void;
     _handleMouseUp(): void;
     _handleKeyDown(event: KeyboardEvent): void;
-    _handleActionMenuClick(): void;
     _handleFocusout(event: any): void;
     _closeItemDropdown(): void;
     focusItem(): void;
@@ -55,5 +54,5 @@ export declare class SidemenuListItem extends LitElement {
     _getTooltipFixedPosition(): void;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }
