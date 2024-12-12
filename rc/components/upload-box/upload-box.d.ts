@@ -2,27 +2,20 @@ import { LitElement } from 'lit';
 
 export declare class UploadBox extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    set dragAndDropIcon(value: string);
-    set dragAndDropMessage(value: string);
-    set fileExplorerMessage(value: string);
-    set filesFormatMessage(value: string);
-    set buttonLabel(value: string);
-    set filesFormat(value: Array<string>);
-    set maxFileSize(value: number);
+    fileExplorerMessage: string;
+    dragAndDropMessage: string;
+    dragAndDropIcon: string;
+    filesFormatMessage: string;
+    buttonLabel: string;
+    filesFormat: string[];
+    maxFileSize: number;
     get _input(): HTMLInputElement;
     _dragOver: boolean;
     _files: any[];
     _disabled: boolean;
-    _dragAndDropIcon: string;
-    _fileExplorerMessage: string;
-    _dragAndDropMessage: string;
-    _filesFormatMessage: string;
-    _buttonLabel: string;
-    _filesFormat: string[];
     _fileFormatErrorMessage: string;
     _fileSizeErrorMessage: string;
     _fileFormatAndSizeErrorMessage: string;
-    _maxFileSize: number;
     _fileErrors: {
         [fileName: string]: string;
     };

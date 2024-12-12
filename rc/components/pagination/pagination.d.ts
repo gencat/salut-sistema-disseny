@@ -3,9 +3,13 @@ import { LitElement } from 'lit';
 export declare class Pagination extends LitElement {
     static get styles(): import('lit').CSSResult;
     set length(length: number);
+    get length(): number;
     set pageSize(pageSize: number);
+    get pageSize(): number;
     set size(size: string);
+    get size(): string;
     set currentIndex(currentIndex: number);
+    get currentIndex(): number;
     _length: number;
     _pageSize: number;
     _totalPages: number;

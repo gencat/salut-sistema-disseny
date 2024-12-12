@@ -9,15 +9,25 @@ export declare class DatepickerRange extends LitElement {
     get _inputRangeStart(): HTMLInputElement;
     get _inputRangeEnd(): HTMLInputElement;
     set iconRangeStart(value: string);
+    get iconRangeStart(): string;
     set iconRangeEnd(value: string);
+    get iconRangeEnd(): string;
     set minDate(minDate: string);
+    get minDate(): string;
     set maxDate(maxDate: string);
+    get maxDate(): string;
     set invalid(invalid: boolean);
+    get invalid(): boolean;
     set inputSize(size: string);
+    get inputSize(): string;
     set helpText(text: string);
+    get helpText(): string;
     set showButtons(showButtons: boolean);
+    get showButtons(): boolean;
     set calendarLeftButtonLabel(leftLabel: string);
+    get calendarLeftButtonLabel(): string;
     set calendarRightButtonLabel(rightLabel: string);
+    get calendarRightButtonLabel(): string;
     _iconRangeStart: string;
     _iconRangeEnd: string;
     _dateformatPlaceholder: string;
@@ -35,6 +45,7 @@ export declare class DatepickerRange extends LitElement {
     _copyInputRangeStartPlaceholder: string;
     _copyInputRangeEndPlaceholder: string;
     _isFirstInputsCheck: boolean;
+    _popperInstance: any;
     _checkInputAttributes(): void;
     _updatePlaceholders(): void;
     _removePlaceholders(): void;
@@ -49,6 +60,7 @@ export declare class DatepickerRange extends LitElement {
     _onCalendarCancel(): void;
     _closeCalendar(): void;
     _formatDate(value: string): string;
+    _createPopperCalendar(): void;
     observerConfig: {
         attributes: boolean;
         childList: boolean;

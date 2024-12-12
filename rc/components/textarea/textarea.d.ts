@@ -3,7 +3,9 @@ import { LitElement } from 'lit';
 export declare class Textarea extends LitElement {
     static get styles(): import('lit').CSSResult;
     set value(value: string);
+    get value(): string;
     set showError(showError: boolean);
+    get showError(): boolean;
     get _label(): HTMLElement;
     get _textarea(): HTMLTextAreaElement;
     get _description(): HTMLElement;

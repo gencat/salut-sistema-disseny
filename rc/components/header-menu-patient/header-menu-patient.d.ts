@@ -7,11 +7,17 @@ export declare class HeaderMenuPatient extends LitElement {
     connectedCallback(): void;
     disconnectedCallback(): void;
     set size(value: string);
+    get size(): string;
     set disabled(value: boolean);
+    get disabled(): boolean;
     set name(value: string);
+    get name(): string;
     set cip(value: string);
+    get cip(): string;
     set age(value: string);
+    get age(): string;
     set gender(value: string);
+    get gender(): string;
     _size: string;
     _name: string | undefined;
     _cip: string | undefined;
@@ -23,8 +29,9 @@ export declare class HeaderMenuPatient extends LitElement {
     _toggleDropdown(): void;
     _handleClick(): void;
     _handleActionClick(action: string): void;
-    _handleCopyCIP(): void;
+    _handleACIPClick(event: Event): void;
+    _handleCopyCIP(event: Event): void;
     private _handleDocumentClick;
     private _clickedOutside;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

@@ -14,10 +14,15 @@ export declare class TabsList extends LitElement {
     connectedCallback(): void;
     disconnectedCallback(): void;
     set dssTabsId(value: string);
+    get dssTabsId(): string;
     set label(value: string);
+    get label(): string;
     set tabs(data: DssTabItem[]);
+    get tabs(): DssTabItem[];
     set addTabText(value: string);
+    get addTabText(): string;
     set addTabEnabled(value: boolean);
+    get addTabEnabled(): boolean;
     get _header(): HTMLElement | undefined;
     get _menu(): HTMLElement | undefined;
     get _prevScroll(): HTMLElement | undefined;

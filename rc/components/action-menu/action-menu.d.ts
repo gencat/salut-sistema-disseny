@@ -5,7 +5,12 @@ export declare class ActionMenu extends LitElement {
     connectedCallback(): void;
     disconnectedCallback(): void;
     set fullWidth(value: boolean);
+    get fullWidth(): boolean;
     set position(value: string);
+    get position(): string;
+    disablePopper: boolean;
+    disableParentClick: boolean;
+    open: boolean;
     _fullWidth: boolean;
     _popperInstance: any;
     _parent: HTMLElement | null;
@@ -15,7 +20,8 @@ export declare class ActionMenu extends LitElement {
     private _handleCloseAllMenus;
     private _handleSlotChange;
     private _clickOutside;
-    private _closeMenu;
+    _closeMenu(): void;
     firstUpdated(): Promise<void>;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult<1>;
 }

@@ -1,4 +1,5 @@
 import { LitElement } from 'lit';
+import { ActionMenu } from '../action-menu/action-menu';
 
 export declare class SplitButton extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -6,15 +7,25 @@ export declare class SplitButton extends LitElement {
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    get _actionMenu(): ActionMenu;
     set iconClose(icon: string);
+    get iconClose(): string;
     set iconOpen(icon: string);
+    get iconOpen(): string;
     set type(value: string);
+    get type(): string;
     set text(value: string);
+    get text(): string;
     set disabled(value: boolean);
+    get disabled(): boolean;
     set isOpen(value: boolean);
+    get isOpen(): boolean;
     set size(value: string);
+    get size(): string;
     set dropdownPosition(value: string);
+    get dropdownPosition(): string;
     set hasMenu(value: boolean);
+    get hasMenu(): boolean;
     _size: string;
     _iconClose: string;
     _iconOpen: string;
@@ -27,7 +38,9 @@ export declare class SplitButton extends LitElement {
     _dispatchMainClick(): void;
     _dispatchIconClick(): void;
     _toggleMenu(): void;
+    _handleActionMenuClosed(): void;
     _handleDocumentClick(event: Event): void;
     private _clickedOutsideItem;
+    firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult<1>;
 }

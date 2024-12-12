@@ -4,7 +4,9 @@ export declare class InputSwitch extends LitElement {
     static get styles(): import('lit').CSSResult[];
     get _input(): HTMLInputElement;
     set size(size: string);
+    get size(): string;
     set checked(value: boolean);
+    get checked(): boolean;
     _checked: boolean;
     _isCheckedPropDefined: boolean;
     _isFirstUpdate: boolean;
