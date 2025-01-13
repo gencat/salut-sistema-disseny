@@ -13,5 +13,8 @@ export declare class Chip extends LitElement {
     handleToggle(): void;
     handleDelete(event: Event): void;
     firstUpdated(): Promise<void>;
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    onKeyDown(event: KeyboardEvent): void;
     render(): import('lit-html').TemplateResult;
 }

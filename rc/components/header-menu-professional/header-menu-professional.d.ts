@@ -63,5 +63,6 @@ export declare class HeaderMenuProfessional extends LitElement {
     _handleLogout(): void;
     private _handleDocumentClick;
     private _clickedOutside;
-    render(): import('lit-html').TemplateResult<1>;
+    private _updatePreferencesDropdownPosition;
+    render(): import('lit-html').TemplateResult;
 }

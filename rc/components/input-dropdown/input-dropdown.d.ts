@@ -8,6 +8,8 @@ export declare class InputDropdown extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private get _input();
     private get _label();
+    manualPopperOffsetX: number | undefined;
+    manualPopperOffsetY: number | undefined;
     set icon(icon: string);
     get icon(): string;
     set placeHolder(placeHolder: string);
@@ -112,5 +114,6 @@ export declare class InputDropdown extends LitElement {
     private _handleValidity;
     private _cleanInput;
     private _createPopperDropdown;
+    private _updatePopperDropdown;
     render(): import('lit-html').TemplateResult;
 }

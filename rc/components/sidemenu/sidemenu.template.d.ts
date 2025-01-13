@@ -1,3 +1,3 @@
 import { Sidemenu } from './sidemenu';
 
-export declare const sidemenuTemplate: (component: Sidemenu) => import('lit-html').TemplateResult<1>;
+export declare const sidemenuTemplate: (component: Sidemenu) => import('lit-html').TemplateResult;

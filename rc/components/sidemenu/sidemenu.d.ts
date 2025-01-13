@@ -57,5 +57,5 @@ export declare class Sidemenu extends LitElement {
     _handleContainerScroll(): void;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

@@ -49,6 +49,6 @@ export declare class TabsList extends LitElement {
     _updateArrows(): void;
     _scrollMenu(direction: number): void;
     firstUpdated(): Promise<void>;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }
 export {};

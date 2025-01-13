@@ -1,6 +1,6 @@
 import { LitElement } from 'lit';
 
-export declare class FormRadioButton extends LitElement {
+export declare class RadioButton extends LitElement {
     static get styles(): import('lit').CSSResult[];
     label: string;
     value: boolean;

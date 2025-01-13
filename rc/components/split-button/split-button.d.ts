@@ -12,8 +12,8 @@ export declare class SplitButton extends LitElement {
     get iconClose(): string;
     set iconOpen(icon: string);
     get iconOpen(): string;
-    set type(value: string);
-    get type(): string;
+    set variant(value: string);
+    get variant(): string;
     set text(value: string);
     get text(): string;
     set disabled(value: boolean);
@@ -29,7 +29,7 @@ export declare class SplitButton extends LitElement {
     _size: string;
     _iconClose: string;
     _iconOpen: string;
-    _type: string;
+    _variant: string;
     _text: string;
     _disabled: boolean;
     _isOpen: boolean;

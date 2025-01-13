@@ -1,3 +1,3 @@
-import { FormRadioButton } from './radio-button';
+import { RadioButton } from './radio-button';
 
-export declare const template: (component: FormRadioButton) => import('lit-html').TemplateResult;
+export declare const template: (component: RadioButton) => import('lit-html').TemplateResult;

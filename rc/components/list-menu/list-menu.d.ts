@@ -15,5 +15,9 @@ export declare class ListMenu extends LitElement {
     disabled: boolean;
     selectedItemIndex: number | null;
     handleItemClick(index: number): void;
+    onKeyDown(event: KeyboardEvent): void;
+    moveFocus(direction: number): void;
+    connectedCallback(): void;
+    disconnectedCallback(): void;
     render(): import('lit-html').TemplateResult;
 }

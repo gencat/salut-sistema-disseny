@@ -17,12 +17,15 @@ export declare class Toast extends LitElement {
     _firstTimeRendered_: boolean;
     _timeoutId_: number | undefined;
     constructor();
+    connectedCallback(): void;
     update(changedProperties: Map<string | number | symbol, unknown>): void;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    updateHostAttributes(): void;
     handleAnimationEnd(): void;
     handleClickButton(): void;
     handleClose(): void;
     getText(): Array<string>;
+    onKeyDown(event: KeyboardEvent): void;
     render(): import('lit-html').TemplateResult;
     disconnectedCallback(): void;
 }

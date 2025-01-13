@@ -68,5 +68,5 @@ export declare class Selector extends LitElement {
     private _areAllElementsSelected;
     private generateListInputsElements;
     private generatElementSelectAll;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

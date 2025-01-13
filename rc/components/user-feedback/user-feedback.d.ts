@@ -11,5 +11,5 @@ export declare class UserFeedback extends LitElement {
     hideFooter: boolean;
     _detailsExpanded: boolean;
     _handleDetailsClick(): void;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }
