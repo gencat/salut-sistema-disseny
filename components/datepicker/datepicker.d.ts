@@ -43,7 +43,6 @@ export declare class Datepicker_ extends LitElement {
     get value(): string;
     set icon(icon: string);
     get icon(): string;
-    dropdownPlacement: string;
     _timepickerLabel: string;
     _timepicker: string;
     _minutesRange: number;

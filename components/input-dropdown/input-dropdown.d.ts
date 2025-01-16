@@ -8,8 +8,8 @@ export declare class InputDropdown extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private get _input();
     private get _label();
-    dropdownOffsetX: number | undefined;
-    dropdownOffsetY: number | undefined;
+    manualPopperOffsetX: number | undefined;
+    manualPopperOffsetY: number | undefined;
     set icon(icon: string);
     get icon(): string;
     set placeHolder(placeHolder: string);
@@ -55,7 +55,6 @@ export declare class InputDropdown extends LitElement {
     set filterThreshold(value: number);
     get filterThreshold(): number;
     set value(value: string);
-    dropdownPlacement: string;
     get value(): string;
     private _elements;
     private _copyElements;
