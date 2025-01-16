@@ -34,6 +34,7 @@ export declare class Timepicker extends LitElement {
     get customTimeListOptions(): DssTimepickerOption[];
     set icon(icon: string);
     get icon(): string;
+    dropdownPlacement: string;
     _value: string;
     _placeholder: string;
     _inputSize: string;
