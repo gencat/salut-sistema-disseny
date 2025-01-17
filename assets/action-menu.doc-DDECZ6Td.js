@@ -61,10 +61,6 @@ trobàvem fins ara quan un element apareixia retallat a causa d’un contenidor 
 `,e.jsx(n.h2,{id:"ús",children:"Ús"}),`
 `,e.jsx(n.h5,{id:"mida-màxima-amplada-i-alçada",children:"Mida màxima: amplada i alçada"}),`
 `,e.jsx(n.p,{children:"Mínima amplada 160px i màxima amplada 280px, tenint en compte que a partir de 160px s'adaptarà l'amplada del modal fins a 280px."}),`
-`,e.jsx(n.h5,{id:"visibilitat",children:"Visibilitat"}),`
-`,e.jsxs(n.p,{children:["El component action-menu es mostrarà ",e.jsx(n.strong,{children:"sempre visible per defecte"}),", ja que està inclòs en altres components de nivell superior, on la visibilitat es gestiona internament, com per exemple en dss-card-menu."]}),`
-`,e.jsxs(n.p,{children:["En cas que aquest component s'utilitzi de manera individual, serà cada iniciativa la que haurà de gestionar quan es mostra o s'oculta l'Action Menu. Per a això, disposarà dels esdeveniments ",e.jsx(n.strong,{children:"onClickOutside"})," del dss-action-menu i dels esdeveniments ",e.jsx(n.strong,{children:"onClick"})," i ",e.jsx(n.strong,{children:"onAction"})," del dss-action-menu-item, els quals haurien de tancar el menú principal i tots els seus menús niats."]}),`
-`,e.jsx(n.p,{children:"Els components action-menu que s'incloguin niats dins d'un altre action-menu principal sí que seran controlats per la pròpia lògica interna del mateix, per la qual cosa no necessitaran cap funcionalitat extra."}),`
 `,e.jsx("br",{}),`
 `,e.jsx("br",{}),`
 `,e.jsx(n.h4,{id:"changelog",children:"Changelog"}),`
