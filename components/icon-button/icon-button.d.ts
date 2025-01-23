@@ -9,6 +9,7 @@ export declare class IconButton extends LitElement {
     icon: string | undefined;
     disabled: boolean;
     hidden: boolean;
+    disableTabindex: boolean;
     _handleClick(): void;
     render(): import('lit-html').TemplateResult;
 }

@@ -4,6 +4,7 @@ export declare class ActionMenu extends LitElement {
     static get styles(): import('lit').CSSResult[];
     connectedCallback(): void;
     disconnectedCallback(): void;
+    private visibleObserver;
     set fullWidth(value: boolean);
     get fullWidth(): boolean;
     set position(value: string);

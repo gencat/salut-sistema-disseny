@@ -54,6 +54,8 @@ export declare class InputDropdown extends LitElement {
     get placeholderEmpty(): string;
     set filterThreshold(value: number);
     get filterThreshold(): number;
+    set searchThreshold(value: number);
+    get searchThreshold(): number;
     set value(value: string);
     dropdownPlacement: string;
     get value(): string;
@@ -87,11 +89,13 @@ export declare class InputDropdown extends LitElement {
     private _isFiltering;
     private _placeholderEmpty;
     private _filterThreshold;
+    private _searchThreshold;
     private _unorder;
     _popperInstance: any;
     private observerConfig;
     private callback;
     private observer;
+    private visibleObserver;
     disconnectedCallback(): void;
     private _getFilteredElements;
     firstUpdated(): Promise<void>;

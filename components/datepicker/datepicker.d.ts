@@ -77,6 +77,7 @@ export declare class Datepicker_ extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    private visibleObserver;
     disconnectedCallback(): void;
     firstUpdated(): Promise<void>;
     _createPopperCalendar(): void;

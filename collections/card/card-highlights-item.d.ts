@@ -7,5 +7,5 @@ export declare class CardHighlightsItem extends LitElement {
     icon: string;
     title: string;
     text: string;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

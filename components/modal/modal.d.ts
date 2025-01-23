@@ -41,5 +41,5 @@ export declare class Modal extends LitElement {
     private _modalHeader;
     private _modalFooter;
     firstUpdated(): Promise<void>;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

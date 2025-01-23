@@ -69,6 +69,7 @@ export declare class Timepicker extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    private visibleObserver;
     disconnectedCallback(): void;
     firstUpdated(): Promise<void>;
     _createPopperList(): void;

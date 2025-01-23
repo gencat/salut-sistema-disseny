@@ -5,5 +5,5 @@ export declare class CardInfoItem extends LitElement {
     icon: string;
     text: string;
     critic: boolean;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

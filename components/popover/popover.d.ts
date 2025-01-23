@@ -9,6 +9,7 @@ export declare class Popover extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    private visibleObserver;
     disconnectedCallback(): void;
     open: boolean;
     hasDivider: boolean;

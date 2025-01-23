@@ -1,3 +1,3 @@
 import { Modal } from './modal';
 
-export declare const modalTemplate: (component: Modal) => import('lit-html').TemplateResult<1>;
+export declare const modalTemplate: (component: Modal) => import('lit-html').TemplateResult;

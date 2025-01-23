@@ -69,6 +69,7 @@ export declare class DatepickerRange extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    private visibleObserver;
     disconnectedCallback(): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;

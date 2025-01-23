@@ -64,8 +64,8 @@ export declare class SearchBar extends LitElement {
     _clearSearch(): void;
     _hideDropdown(): void;
     _getFilterCatalog(filter: string): CatalogOption[];
-    _generateSearchChips(): import('lit-html').TemplateResult<1>[];
-    _generateFilterCatalog(): import('lit-html').TemplateResult<1>[];
+    _generateSearchChips(): import('lit-html').TemplateResult[];
+    _generateFilterCatalog(): import('lit-html').TemplateResult[];
     _dispatchSearchChange(): void;
     _closeDropdown(): void;
     observerConfig: {

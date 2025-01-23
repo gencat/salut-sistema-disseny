@@ -11,5 +11,5 @@ export declare class Card extends LitElement {
     private _propagateProperties;
     private _dispatchClose;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }
