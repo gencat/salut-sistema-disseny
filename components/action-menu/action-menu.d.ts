@@ -17,6 +17,7 @@ export declare class ActionMenu extends LitElement {
     _parent: HTMLElement | null;
     _position: string;
     _isVisible: boolean;
+    _disableClickOutside: boolean;
     createPopperInstance(parent: HTMLElement): void;
     private _handleCloseAllMenus;
     private _handleSlotChange;

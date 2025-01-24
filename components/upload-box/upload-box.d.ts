@@ -42,7 +42,9 @@ export declare class UploadBox extends LitElement {
     _readFile(newFile: File, validity?: boolean): void;
     _removeFile(index: number): void;
     _reloadFile(file: any): void;
+    resetFiles(): void;
     _dispatchUploadFiles(): void;
+    _dispatchOpenFile(file: File): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }

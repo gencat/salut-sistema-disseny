@@ -111,6 +111,8 @@ export declare class CustomTable extends LitElement {
     private _pageSizeOptionsDisabled;
     private _hidePaginationResults;
     private _hideFooter;
+    fixedColumnsBefore: undefined;
+    fixedColumnsAfter: undefined;
     private _getDataLength;
     private _sortBy;
     private _updateColumnSortState;
@@ -131,6 +133,8 @@ export declare class CustomTable extends LitElement {
     private _dispatchMultiselect;
     private _initTable;
     private _checkAllRowsSelected;
+    private _fixColumns;
+    private _cellsToSticky;
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: any): void;
     render(): import('lit-html').TemplateResult;
