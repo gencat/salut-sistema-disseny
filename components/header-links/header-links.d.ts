@@ -21,5 +21,5 @@ export declare class HeaderLinks extends LitElement {
     _items: LinksItem[];
     _dispatchItemAction(item: LinksItem): void;
     _handleHelp(): void;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

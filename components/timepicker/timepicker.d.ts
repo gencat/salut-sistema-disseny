@@ -62,6 +62,12 @@ export declare class Timepicker extends LitElement {
     _isFirstUpdated: boolean;
     _popperInstanceList: any;
     _popperInstanceManual: any;
+    constructor();
+    disconnectedCallback(): void;
+    _addDropdownListener(): void;
+    _removeDropdownListener(): void;
+    _handleOutsideClick(event: any): void;
+    _handleFocusOut(event: FocusEvent): void;
     observerConfig: {
         attributes: boolean;
         childList: boolean;
@@ -70,13 +76,14 @@ export declare class Timepicker extends LitElement {
     callback: (mutationList: any) => void;
     observer: MutationObserver;
     private visibleObserver;
-    disconnectedCallback(): void;
     firstUpdated(): Promise<void>;
     _createPopperList(): void;
     _createPopperManual(): void;
     _updateTimeOptions(): void;
     _checkInputAttributes(): void;
     _handleValidity(): void;
+    _checkClickOutside(event: Event): void;
+    _checkFocusOut(event: FocusEvent): void;
     _closeDropdown(): void;
     _timePattern: RegExp;
     _timeSeparator: string;
@@ -92,10 +99,10 @@ export declare class Timepicker extends LitElement {
     _handleBlur(): void;
     _focusInput(): void;
     _generateTimeListOptions(): string[];
-    _generateTimeListOptionsHTML(options: string[], customOptions?: DssTimepickerOption[]): import('lit-html').TemplateResult<1>[];
+    _generateTimeListOptionsHTML(options: string[], customOptions?: DssTimepickerOption[]): import('lit-html').TemplateResult[];
     _generateTimeManualHoursOptions(): string[];
     _generateTimeManualMinutesOptions(): string[];
-    _generateTimeManualOptionsHTML(inputName: string, options: string[]): import('lit-html').TemplateResult<1>[];
+    _generateTimeManualOptionsHTML(inputName: string, options: string[]): import('lit-html').TemplateResult[];
     _checkDisableTimeManualSelector(): boolean;
     _timeManualSelectorCancel(): void;
     _timeManualSelectorAccept(): void;

@@ -10,7 +10,12 @@ export declare class Popover extends LitElement {
     callback: (mutationList: any) => void;
     observer: MutationObserver;
     private visibleObserver;
+    constructor();
+    connectedCallback(): void;
     disconnectedCallback(): void;
+    _addDropdownListener(): void;
+    _removeDropdownListener(): void;
+    _handleOutsideClick(event: any): void;
     open: boolean;
     hasDivider: boolean;
     hideCloseIcon: boolean;
@@ -23,8 +28,8 @@ export declare class Popover extends LitElement {
     _disableClickOutside: boolean;
     _handleAction(): void;
     _handleClose(): void;
-    private _clickOutside;
-    private _closeMenu;
+    private _checkClickOutside;
+    private _closePopover;
     createPopperInstance(parent: HTMLElement): void;
     _propagatePlacement(placement: string): void;
     firstUpdated(): Promise<void>;

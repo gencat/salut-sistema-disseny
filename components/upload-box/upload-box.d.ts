@@ -9,6 +9,7 @@ export declare class UploadBox extends LitElement {
     buttonLabel: string;
     filesFormat: string[];
     maxFileSize: number;
+    disableOpenFile: boolean;
     get _input(): HTMLInputElement;
     _dragOver: boolean;
     _files: any[];

@@ -70,6 +70,12 @@ export declare class Datepicker_ extends LitElement {
     _inputSize: string;
     _inputValidity: boolean;
     _popperInstance: any;
+    constructor();
+    disconnectedCallback(): void;
+    _addCalendarListener(): void;
+    _removeCalendarListener(): void;
+    _handleOutsideClick(event: any): void;
+    _handleFocusOut(event: FocusEvent): void;
     observerConfig: {
         attributes: boolean;
         childList: boolean;
@@ -78,12 +84,13 @@ export declare class Datepicker_ extends LitElement {
     callback: (mutationList: any) => void;
     observer: MutationObserver;
     private visibleObserver;
-    disconnectedCallback(): void;
     firstUpdated(): Promise<void>;
     _createPopperCalendar(): void;
     _checkInputAttributes(): void;
     _handleValidity(): void;
-    _closeDropdown(): void;
+    _checkClickOutside(event: Event): void;
+    _checkFocusOut(event: FocusEvent): void;
+    _closeCalendar(): void;
     _handleKeyUp(e: KeyboardEvent): void;
     _handleInput(event: any): void;
     _formatDate(value: string): string;

@@ -92,11 +92,16 @@ export declare class InputDropdown extends LitElement {
     private _searchThreshold;
     private _unorder;
     _popperInstance: any;
+    constructor();
+    disconnectedCallback(): void;
+    _addOutsideClickListener(): void;
+    _removeOutsideClickListener(): void;
+    _handleOutsideClick(event: any): void;
+    _closeDropdown(): void;
     private observerConfig;
     private callback;
     private observer;
     private visibleObserver;
-    disconnectedCallback(): void;
     private _getFilteredElements;
     firstUpdated(): Promise<void>;
     private _initElementsSelected;

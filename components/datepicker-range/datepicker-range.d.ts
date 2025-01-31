@@ -47,6 +47,12 @@ export declare class DatepickerRange extends LitElement {
     _copyInputRangeEndPlaceholder: string;
     _isFirstInputsCheck: boolean;
     _popperInstance: any;
+    constructor();
+    disconnectedCallback(): void;
+    _addCalendarListener(): void;
+    _removeCalendarListener(): void;
+    _handleOutsideClick(event: any): void;
+    _handleFocusOut(event: FocusEvent): void;
     _checkInputAttributes(): void;
     _updatePlaceholders(): void;
     _removePlaceholders(): void;
@@ -59,6 +65,8 @@ export declare class DatepickerRange extends LitElement {
     _handleRangeKeydown(e: KeyboardEvent): void;
     _onCalendarChange(event: CustomEvent): void;
     _onCalendarCancel(): void;
+    _checkClickOutside(event: Event): void;
+    _checkFocusOut(event: FocusEvent): void;
     _closeCalendar(): void;
     _formatDate(value: string): string;
     _createPopperCalendar(): void;
@@ -70,7 +78,6 @@ export declare class DatepickerRange extends LitElement {
     callback: (mutationList: any) => void;
     observer: MutationObserver;
     private visibleObserver;
-    disconnectedCallback(): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }

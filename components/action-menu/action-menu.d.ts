@@ -2,8 +2,13 @@ import { LitElement } from 'lit';
 
 export declare class ActionMenu extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    _addDropdownListener(): void;
+    _removeDropdownListener(): void;
+    _handleOutsideClick(event: any): void;
+    _handleFocusOut(event: FocusEvent): void;
     private visibleObserver;
     set fullWidth(value: boolean);
     get fullWidth(): boolean;
@@ -19,9 +24,11 @@ export declare class ActionMenu extends LitElement {
     _isVisible: boolean;
     _disableClickOutside: boolean;
     createPopperInstance(parent: HTMLElement): void;
+    private _openByParent;
     private _handleCloseAllMenus;
     private _handleSlotChange;
-    private _clickOutside;
+    private _checkClickOutside;
+    private _checkFocusOut;
     _closeMenu(): void;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
