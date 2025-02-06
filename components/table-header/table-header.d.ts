@@ -45,5 +45,5 @@ export declare class TableHeader extends LitElement {
     private _emitExpandAction;
     private _emitOpenFilters;
     private _emitChangeFilters;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

@@ -8,5 +8,5 @@ export declare class CardHeader extends LitElement {
     disabled: boolean;
     private _propagateProperties;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

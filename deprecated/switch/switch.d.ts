@@ -10,6 +10,7 @@ export declare class Switch extends LitElement {
     get label(): string;
     set size(size: string);
     get size(): string;
+    ariaLabel: string;
     private _checked;
     private _disabled;
     private _label;

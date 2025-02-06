@@ -7,12 +7,14 @@ export type WidgetAction = {
     action: string;
     icon: string;
     type: string;
+    label?: string;
 };
 export type ListItem = {
     title: string;
     subtitle: string;
     decorativeIcon?: string;
     decorativeIconType?: string;
+    actionLabel?: string;
     actionIcon?: string;
     actionIconType?: string;
     badgeText?: string;

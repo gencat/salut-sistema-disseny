@@ -1,3 +1,3 @@
 import { SplitButton } from './split-button';
 
-export declare const splitButtonTemplate: (component: SplitButton) => import('lit-html').TemplateResult<1>;
+export declare const splitButtonTemplate: (component: SplitButton) => import('lit-html').TemplateResult;

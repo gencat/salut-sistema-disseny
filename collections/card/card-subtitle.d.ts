@@ -8,5 +8,5 @@ export declare class CardSubitle extends LitElement {
     hasIcon: boolean;
     linkHref: string;
     icon: string;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

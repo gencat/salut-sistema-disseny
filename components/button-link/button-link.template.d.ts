@@ -1,3 +1,3 @@
 import { ButtonLink } from './button-link';
 
-export declare const buttonLinkTemplate: (component: ButtonLink) => import('lit-html').TemplateResult<1>;
+export declare const buttonLinkTemplate: (component: ButtonLink) => import('lit-html').TemplateResult;

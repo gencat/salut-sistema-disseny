@@ -26,6 +26,8 @@ export declare class SplitButton extends LitElement {
     get dropdownPosition(): string;
     set hasMenu(value: boolean);
     get hasMenu(): boolean;
+    secondaryLabelOpen: string;
+    secondaryLabelClose: string;
     _size: string;
     _iconClose: string;
     _iconOpen: string;
@@ -42,5 +44,5 @@ export declare class SplitButton extends LitElement {
     _handleDocumentClick(event: Event): void;
     private _clickedOutsideItem;
     firstUpdated(): Promise<void>;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

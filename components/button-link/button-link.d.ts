@@ -7,5 +7,5 @@ export declare class ButtonLink extends LitElement {
     icon: string | undefined;
     iconPosition: string;
     disabled: boolean;
-    render(): import('lit-html').TemplateResult<1>;
+    render(): import('lit-html').TemplateResult;
 }

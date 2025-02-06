@@ -58,6 +58,7 @@ export declare class InputDropdown extends LitElement {
     get searchThreshold(): number;
     set value(value: string);
     dropdownPlacement: string;
+    dropdownFixed: boolean;
     get value(): string;
     private _elements;
     private _copyElements;

@@ -29,6 +29,7 @@ export declare class DatepickerRange extends LitElement {
     set calendarRightButtonLabel(rightLabel: string);
     get calendarRightButtonLabel(): string;
     dropdownPlacement: string;
+    dropdownFixed: boolean;
     _iconRangeStart: string;
     _iconRangeEnd: string;
     _dateformatPlaceholder: string;

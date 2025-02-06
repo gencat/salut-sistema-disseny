@@ -26,6 +26,7 @@ export declare class HeaderMenuPatient extends LitElement {
     _disabled: boolean;
     _showDropdown: boolean;
     _toggleIcon: string;
+    _toggleLabel: string;
     _toggleDropdown(): void;
     _handleClick(): void;
     _handleActionClick(action: string): void;

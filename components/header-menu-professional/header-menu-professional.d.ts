@@ -59,6 +59,7 @@ export declare class HeaderMenuProfessional extends LitElement {
     _logoutLabel: string;
     _logoutIcon: string;
     _logoutIconPosition: string;
+    _toggleLabel: string;
     _toggleDropdown(): void;
     _handleLogout(): void;
     private _handleDocumentClick;
