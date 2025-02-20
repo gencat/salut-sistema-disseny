@@ -6,6 +6,9 @@ export interface IFilter {
 }
 export declare class TableHeader extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    tableInfo: undefined;
+    showConfig: boolean;
+    configTableLabel: string;
     set filters(filters: Array<any>);
     get filters(): Array<any>;
     set headerTitle(value: string);
@@ -44,6 +47,7 @@ export declare class TableHeader extends LitElement {
     private _clearFilters;
     private _emitExpandAction;
     private _emitOpenFilters;
+    private _emitConfigTable;
     private _emitChangeFilters;
     render(): import('lit-html').TemplateResult;
 }

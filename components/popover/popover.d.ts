@@ -23,6 +23,7 @@ export declare class Popover extends LitElement {
     title: string;
     actionIcon: string | undefined;
     position: string;
+    popoverFixed: boolean;
     _popperInstance: any;
     _parent: HTMLElement | null;
     _disableClickOutside: boolean;

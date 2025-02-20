@@ -36,6 +36,7 @@ export declare class Selector extends LitElement {
     get elementsSelected(): number;
     set ariaLabel(label: string);
     get ariaLabel(): string;
+    isDisplayed: undefined;
     private _valueIsSelected;
     private _manuallySelect;
     private _manuallySelectAll;

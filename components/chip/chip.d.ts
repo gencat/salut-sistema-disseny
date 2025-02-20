@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, PropertyValues } from 'lit';
 
 export declare class Chip extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -10,9 +10,12 @@ export declare class Chip extends LitElement {
     selected: boolean;
     disableSelect: boolean;
     _isLabelTruncated: boolean;
+    _isFirstUpdated: boolean;
     handleToggle(): void;
     handleDelete(event: Event): void;
     firstUpdated(): Promise<void>;
+    willUpdate(_changedProperties: PropertyValues): void;
+    _checkLabelTruncated(): void;
     connectedCallback(): void;
     disconnectedCallback(): void;
     onKeyDown(event: KeyboardEvent): void;

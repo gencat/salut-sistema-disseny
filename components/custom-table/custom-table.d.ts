@@ -31,6 +31,8 @@ export declare class CustomTable extends LitElement {
     get selectedRowsLabel(): string;
     set selectedRowsCounter(value: number);
     get selectedRowsCounter(): number;
+    showConfig: boolean;
+    configTableLabel: string;
     private _hideHeader;
     private _hidePaginator;
     private _columnsHeader;
@@ -113,6 +115,7 @@ export declare class CustomTable extends LitElement {
     private _hideFooter;
     fixedColumnsBefore: undefined;
     fixedColumnsAfter: undefined;
+    tableInfo: undefined;
     private _getDataLength;
     private _sortBy;
     private _updateColumnSortState;

@@ -5,6 +5,7 @@ export declare class Textarea extends LitElement {
     set value(value: string);
     get value(): string;
     set showError(showError: boolean);
+    autoHeight: boolean;
     get showError(): boolean;
     get _label(): HTMLElement;
     get _textarea(): HTMLTextAreaElement;
@@ -15,6 +16,7 @@ export declare class Textarea extends LitElement {
     _showError: boolean;
     firstUpdated(): Promise<void>;
     _addEventListeners(): void;
+    _updateHeight(): void;
     _handleInput(): void;
     _handleKeyup(e: any): void;
     _handleFocus(): void;

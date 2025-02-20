@@ -17,6 +17,7 @@ export declare class ActionMenu extends LitElement {
     disablePopper: boolean;
     disableParentClick: boolean;
     open: boolean;
+    dropdownFixed: boolean;
     _fullWidth: boolean;
     _popperInstance: any;
     _parent: HTMLElement | null;

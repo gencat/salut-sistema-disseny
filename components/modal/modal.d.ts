@@ -16,6 +16,10 @@ export declare class Modal extends LitElement {
     get hasScroll(): boolean;
     set modalStyle(value: string);
     get modalStyle(): string;
+    fullHeight: boolean;
+    fullWidth: boolean;
+    flexBody: boolean;
+    removeBodyPadding: boolean;
     _size: string;
     _open: boolean;
     _modalTitle: string;

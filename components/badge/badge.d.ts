@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, PropertyValues } from 'lit';
 
 export declare class Badge extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -19,6 +19,7 @@ export declare class Badge extends LitElement {
     get dot(): boolean;
     set hideIcon(value: boolean);
     get hideIcon(): boolean;
+    tooltipPosition: string;
     _icon: string;
     _iconSize: string;
     _size: string;
@@ -29,6 +30,10 @@ export declare class Badge extends LitElement {
     _outlined: boolean;
     _dot: boolean;
     _hideIcon: boolean;
+    _isFirstUpdated: boolean;
+    _isTextTruncated: boolean;
     firstUpdated(): Promise<void>;
+    willUpdate(_changedProperties: PropertyValues): void;
+    _checkTextTruncated(): void;
     render(): import('lit-html').TemplateResult;
 }
