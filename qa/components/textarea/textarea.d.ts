@@ -14,6 +14,15 @@ export declare class Textarea extends LitElement {
     _isTextareaFocused: boolean;
     _isGroupFocusedVisible: boolean;
     _showError: boolean;
+    observerConfig: {
+        attributes: boolean;
+        childList: boolean;
+        subtree: boolean;
+    };
+    callback: (mutationList: any) => void;
+    observer: MutationObserver;
+    disconnectedCallback(): void;
+    private _checkAttributes;
     firstUpdated(): Promise<void>;
     _addEventListeners(): void;
     _updateHeight(): void;

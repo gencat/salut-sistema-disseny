@@ -10,6 +10,7 @@ export type WidgetAction = {
     label?: string;
 };
 export type ListItem = {
+    id?: string;
     title: string;
     subtitle: string;
     decorativeIcon?: string;
@@ -22,6 +23,7 @@ export type ListItem = {
     badgeSize?: string;
     badgeState?: string;
     date?: string;
+    iconBadgeLabel?: string;
     iconBadgeLeftState?: string;
     iconBadgeLeftIcon?: string;
     iconBadgeRightState?: string;

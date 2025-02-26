@@ -2,6 +2,11 @@ import { LitElement } from 'lit';
 
 export declare class Accordion extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    titleSize: string;
+    info: undefined;
+    infoBadgeState: string;
+    infoBadgeIcon: string;
+    infoBadgeOutlined: boolean;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;
