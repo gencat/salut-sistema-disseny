@@ -2,6 +2,11 @@ import { LitElement } from 'lit';
 
 export declare class Accordion extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    titleSize: string;
+    info: undefined;
+    infoBadgeState: string;
+    infoBadgeIcon: string;
+    infoBadgeOutlined: boolean;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;
@@ -75,5 +80,6 @@ export declare class Accordion extends LitElement {
     _dispatchToggleAccordion(): void;
     _dispatchWidgetNext(): void;
     _dispatchWidgetClose(): void;
+    checkTextTruncate(event: MouseEvent): void;
     render(): import('lit-html').TemplateResult;
 }

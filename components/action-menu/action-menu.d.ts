@@ -9,6 +9,7 @@ export declare class ActionMenu extends LitElement {
     _removeDropdownListener(): void;
     _handleOutsideClick(event: any): void;
     _handleFocusOut(event: FocusEvent): void;
+    _handleConnectedCallback(): void;
     private visibleObserver;
     set fullWidth(value: boolean);
     get fullWidth(): boolean;
@@ -24,6 +25,7 @@ export declare class ActionMenu extends LitElement {
     _position: string;
     _isVisible: boolean;
     _disableClickOutside: boolean;
+    _isFirstUpdate: boolean;
     createPopperInstance(parent: HTMLElement): void;
     private _openByParent;
     private _handleCloseAllMenus;
@@ -31,6 +33,7 @@ export declare class ActionMenu extends LitElement {
     private _checkClickOutside;
     private _checkFocusOut;
     _closeMenu(): void;
+    _initActionMenu(): void;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult<1>;
