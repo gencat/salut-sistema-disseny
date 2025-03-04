@@ -14,7 +14,6 @@ export declare class Tooltip extends LitElement {
     position: string;
     align: string;
     hide: boolean;
-    hideArrow: boolean;
     noHeightLimit: boolean;
     _popperInstance: any;
     firstUpdated(): Promise<void>;
