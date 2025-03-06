@@ -22,8 +22,7 @@ export declare class Checkbox extends LitElement {
     observer: MutationObserver;
     disconnectedCallback(): void;
     _checkInputAttributes(): void;
-    _handleClick(): void;
-    _handleKeydown(event: KeyboardEvent): void;
+    _handleChange(): void;
     _dispatchChange(): void;
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: Map<string | number | symbol, unknown>): void;
