@@ -124,6 +124,7 @@ export declare class InputDropdown extends LitElement {
     private _hidePlaceholder;
     private _handleValidity;
     private _cleanInput;
+    private findScrollParent;
     private _createPopperDropdown;
     private _updatePopperDropdown;
     render(): import('lit-html').TemplateResult;

@@ -7,6 +7,7 @@ export declare class Accordion extends LitElement {
     infoBadgeState: string;
     infoBadgeIcon: string;
     infoBadgeOutlined: boolean;
+    tooltipFixed: boolean;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;

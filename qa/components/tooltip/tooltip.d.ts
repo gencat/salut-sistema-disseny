@@ -15,6 +15,7 @@ export declare class Tooltip extends LitElement {
     align: string;
     hide: boolean;
     noHeightLimit: boolean;
+    tooltipFixed: boolean;
     _popperInstance: any;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
