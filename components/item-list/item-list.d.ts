@@ -34,6 +34,7 @@ export type ListItem = {
 };
 export declare class ItemList extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    tooltipFixed: boolean;
     set items(data: Array<ListItem>);
     get items(): Array<ListItem>;
     set widget(value: boolean);

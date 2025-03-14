@@ -10,10 +10,14 @@ export declare class UploadBox extends LitElement {
     filesFormat: string[];
     maxFileSize: number;
     disableOpenFile: boolean;
+    helpText: undefined;
+    maxUploadFiles: undefined;
+    maxUploadFilesMessage: string;
     get _input(): HTMLInputElement;
     _dragOver: boolean;
     _files: any[];
     _disabled: boolean;
+    _hasMaxUploadFilesError: boolean;
     _fileFormatErrorMessage: string;
     _fileSizeErrorMessage: string;
     _fileFormatAndSizeErrorMessage: string;
@@ -34,6 +38,7 @@ export declare class UploadBox extends LitElement {
     _onDrop(event: DragEvent): void;
     _onClick(): void;
     _onSlotInputChange(): void;
+    _checkMaxUploadFiles(uploadFilesLength: number): true | undefined;
     _isValidFileFormat(file: File): boolean;
     _isValidFileSize(file: File): boolean;
     _validateFile(file: File): boolean;
