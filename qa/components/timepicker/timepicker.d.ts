@@ -12,8 +12,6 @@ export declare class Timepicker extends LitElement {
     get value(): string;
     set invalid(invalid: boolean);
     get invalid(): boolean;
-    set inputSize(size: string);
-    get inputSize(): string;
     set helpText(text: string);
     get helpText(): string;
     set errorTimeFormatText(text: string);
@@ -32,8 +30,8 @@ export declare class Timepicker extends LitElement {
     get maxHour(): number;
     set customTimeListOptions(options: DssTimepickerOption[]);
     get customTimeListOptions(): DssTimepickerOption[];
-    set icon(icon: string);
-    get icon(): string;
+    inputSize: string;
+    icon: string;
     dropdownPlacement: string;
     dropdownFixed: boolean;
     _value: string;
@@ -58,7 +56,6 @@ export declare class Timepicker extends LitElement {
     _customTimeListOptions: DssTimepickerOption[];
     _timeManualHourOptions: string[];
     _timeManualMinutesOptions: string[];
-    _icon: string;
     _inputValidity: boolean;
     _isFirstUpdated: boolean;
     _popperInstanceList: any;
@@ -109,5 +106,7 @@ export declare class Timepicker extends LitElement {
     _timeManualSelectorAccept(): void;
     _timeListOptionsScrollTo(): void;
     _timeManualOptionsScrollTo(value?: string): void;
+    _isTruncated: boolean;
+    _checkInputOverflow(): void;
     render(): import('lit-html').TemplateResult;
 }
