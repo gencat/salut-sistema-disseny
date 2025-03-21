@@ -12,6 +12,7 @@ export declare class Chip extends LitElement {
     _isLabelTruncated: boolean;
     _isFirstUpdated: boolean;
     handleToggle(): void;
+    handleKeydown(event: KeyboardEvent): void;
     handleDelete(event: Event): void;
     firstUpdated(): Promise<void>;
     willUpdate(_changedProperties: PropertyValues): void;

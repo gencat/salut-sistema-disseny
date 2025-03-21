@@ -23,8 +23,8 @@ export declare class Datepicker_ extends LitElement {
     get maxDate(): string;
     set invalid(invalid: boolean);
     get invalid(): boolean;
-    set inputSize(size: string);
-    get inputSize(): string;
+    icon: string;
+    inputSize: string;
     set helpText(text: string);
     get helpText(): string;
     set timepicker(value: string);
@@ -41,8 +41,6 @@ export declare class Datepicker_ extends LitElement {
     get timepickerLabel(): string;
     set value(value: string);
     get value(): string;
-    set icon(icon: string);
-    get icon(): string;
     dropdownPlacement: string;
     dropdownFixed: boolean;
     _timepickerLabel: string;
@@ -51,7 +49,6 @@ export declare class Datepicker_ extends LitElement {
     _minHour: number;
     _maxHour: number;
     _customTimeListOptions: DssTimepickerOption[];
-    _icon: string;
     _placeholder: string;
     _externalPlaceholder: string;
     _previousDate: string;
@@ -68,7 +65,6 @@ export declare class Datepicker_ extends LitElement {
     _rightLabel: string;
     _isFocused: boolean;
     _helpText: string;
-    _inputSize: string;
     _inputValidity: boolean;
     _popperInstance: any;
     constructor();
@@ -102,5 +98,7 @@ export declare class Datepicker_ extends LitElement {
     _onDateChange(e: CustomEvent): void;
     _onCancel(): void;
     _dispatchValueChange(): void;
+    _isTruncated: boolean;
+    _checkInputOverflow(): void;
     render(): import('lit-html').TemplateResult;
 }

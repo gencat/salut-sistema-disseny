@@ -8,10 +8,8 @@ export declare class InputAction extends LitElement {
     get _secondaryAction(): HTMLInputElement;
     set label(label: string);
     get label(): string;
-    set icon(icon: string);
-    get icon(): string;
-    set inputSize(size: string);
-    get inputSize(): string;
+    icon: string;
+    inputSize: string;
     set helpText(text: string);
     get helpText(): string;
     set invalid(status: boolean);
@@ -21,9 +19,7 @@ export declare class InputAction extends LitElement {
     set value(value: string);
     get value(): string;
     _label: string;
-    _icon: string;
     _placeholder: string;
-    _inputSize: string;
     _maxLength: number | undefined;
     _invalid: boolean;
     _helpText: string;
@@ -49,6 +45,11 @@ export declare class InputAction extends LitElement {
     _stepDown(): void;
     _dispatchValueChange(): void;
     _checkInputAttributes(): void;
+    _isTruncated: boolean;
+    _checkInputOverflow(): void;
+    private intervalId;
+    _onHold(action: string): void;
+    _stopHold(): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }

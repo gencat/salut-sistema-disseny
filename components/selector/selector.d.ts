@@ -6,6 +6,7 @@ export type SelectorElement = {
 };
 export declare class Selector extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    readonly: boolean;
     set multiple(multiple: boolean);
     get multiple(): boolean;
     set tick(tick: boolean);

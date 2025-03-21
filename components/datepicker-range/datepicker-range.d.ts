@@ -18,8 +18,7 @@ export declare class DatepickerRange extends LitElement {
     get maxDate(): string;
     set invalid(invalid: boolean);
     get invalid(): boolean;
-    set inputSize(size: string);
-    get inputSize(): string;
+    inputSize: string;
     set helpText(text: string);
     get helpText(): string;
     set showButtons(showButtons: boolean);
@@ -40,7 +39,6 @@ export declare class DatepickerRange extends LitElement {
     _helpText: string;
     _minDate: string;
     _maxDate: string;
-    _inputSize: string;
     _calendarShowButtons: boolean;
     _calendarLeftButtonLabel: string;
     _calendarRightButtonLabel: string;
