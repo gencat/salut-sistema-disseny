@@ -108,7 +108,6 @@ export declare class InputDropdown extends LitElement {
     _handleInput(): void;
     _handleBlurEsc(): void;
     _handleBlurSelector(dropdown: any, event: any): void;
-    _openDropdown(): void;
     _toggleDropdown(): void;
     _dispatchValueChange(): void;
     _onSelectorChanges(e: CustomEvent): void;

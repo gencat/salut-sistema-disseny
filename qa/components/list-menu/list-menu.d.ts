@@ -11,6 +11,7 @@ export declare class ListMenu extends LitElement {
         hasNotification?: boolean;
         hasAction?: boolean;
         disabled?: boolean;
+        isTruncated?: boolean;
     }[];
     disabled: boolean;
     selectedItemIndex: number | null;
@@ -19,5 +20,7 @@ export declare class ListMenu extends LitElement {
     moveFocus(direction: number): void;
     connectedCallback(): void;
     disconnectedCallback(): void;
+    _checkTextsToTruncated(): void;
+    firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }
