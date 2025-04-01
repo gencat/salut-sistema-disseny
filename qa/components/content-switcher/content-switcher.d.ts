@@ -11,10 +11,13 @@ export declare class ContentSwitcher extends LitElement {
     size: string;
     tabs: ContentSwitcherTab[];
     tabSelected?: ContentSwitcherTab;
+    _isFirstUpdate: boolean;
+    _tabs: ContentSwitcherTab[];
     static get styles(): import('lit').CSSResult[];
     _onSelect(tab: ContentSwitcherTab): void;
     _checkFullWidth(): void;
     private _initializeSelectedTab;
+    protected willUpdate(_changedProperties: PropertyValues): void;
     protected updated(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult<1>;
 }

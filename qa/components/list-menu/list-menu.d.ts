@@ -15,11 +15,16 @@ export declare class ListMenu extends LitElement {
     }[];
     disabled: boolean;
     selectedItemIndex: number | null;
+    private _isFirstUpdate;
+    private _handleResizeBound;
+    constructor();
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    private _resizeTimer;
+    _handleResize(): void;
     handleItemClick(index: number): void;
     onKeyDown(event: KeyboardEvent): void;
     moveFocus(direction: number): void;
-    connectedCallback(): void;
-    disconnectedCallback(): void;
     _checkTextsToTruncated(): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;

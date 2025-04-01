@@ -18,10 +18,17 @@ export declare class PresetTexts extends LitElement {
     descriptionLabel: string;
     items: PresetTextsItem[];
     open: boolean;
+    searchThreshold: number;
+    noResultsTitle: string;
+    noResultsLabel: string;
+    noDataTitle: string;
+    noDataLabel: string;
     _categories: Category[];
     _currentCategory: string;
     _selectedText: string;
     _isFirstUpdate: boolean;
+    _itemsBackup: PresetTextsItem[];
+    _filter: string;
     _handleTabChange(event: CustomEvent): void;
     _handleCancel(): void;
     _handleSelect(): void;
@@ -32,6 +39,9 @@ export declare class PresetTexts extends LitElement {
     _getDefaultSelectedText(category: string): void;
     private _checkScroll;
     private _handleScroll;
+    _handleSearch(event: Event): void;
+    _clearFilter(): void;
+    _filterItems(): PresetTextsItem[];
     firstUpdated(): Promise<void>;
     willUpdate(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
