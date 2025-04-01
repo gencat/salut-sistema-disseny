@@ -55,6 +55,7 @@ export declare class SidemenuListItem extends LitElement {
     _handleMouseUp(): void;
     _handleKeyDown(event: KeyboardEvent): void;
     _handleFocusout(event: any): void;
+    _toggleTooltip(): void;
     _closeItemDropdown(): void;
     focusItem(): void;
     blurItem(): void;

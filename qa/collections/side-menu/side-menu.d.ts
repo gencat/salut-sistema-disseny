@@ -65,6 +65,7 @@ export declare class Sidemenu_ extends LitElement {
     _closeCreateDropdown(): void;
     _handleDocumentClick(event: Event): void;
     _openCreateMenu(): void;
+    _toggleCreateMenuTooltip(): void;
     _toggleSidemenu(): void;
     _handleCreateMouseEnter(): void;
     _handleCreateMouseLeave(): void;
