@@ -7,6 +7,7 @@ export type CatalogOption = {
 export declare class SearchBar extends LitElement {
     static get styles(): import('lit').CSSResult[];
     get _input(): HTMLInputElement;
+    innerFocus: boolean;
     set multiple(value: boolean);
     get multiple(): boolean;
     set icon(icon: string);

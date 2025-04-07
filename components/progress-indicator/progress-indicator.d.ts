@@ -7,6 +7,7 @@ export declare class ProgressIndicator extends LitElement {
     state: StateType;
     percentage: number;
     hasFailed: boolean;
+    hidePercentage: boolean;
     set title(value: string);
     get title(): string;
     _title: string | undefined;
