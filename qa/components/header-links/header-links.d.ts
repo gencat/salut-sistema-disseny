@@ -7,6 +7,10 @@ export type LinksItem = {
 };
 export declare class HeaderLinks extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _handleResizeBound;
+    constructor();
+    connectedCallback(): void;
+    disconnectedCallback(): void;
     set hideHelp(value: boolean);
     get hideHelp(): boolean;
     set disableHelp(value: boolean);
@@ -19,7 +23,10 @@ export declare class HeaderLinks extends LitElement {
     _disableHelp: boolean;
     _helpLabel: string;
     _items: LinksItem[];
+    _isBreakpointSm: boolean;
     _dispatchItemAction(item: LinksItem): void;
     _handleHelp(): void;
+    private _resizeTimer;
+    _handleResize(): void;
     render(): import('lit-html').TemplateResult;
 }

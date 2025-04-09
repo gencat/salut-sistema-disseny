@@ -57,6 +57,7 @@ export declare class Sidemenu_ extends LitElement {
     private _propagateProperties;
     private _resizeTimer;
     private _handleResize;
+    _getHiddenRoleNotifications(): void;
     _othersTopItem: HTMLElement | null;
     private _getTopMenuItems;
     private _updateTopMenu;
@@ -79,6 +80,7 @@ export declare class Sidemenu_ extends LitElement {
     private _getCreateDropdownFixedPosition;
     _handleContainerScroll(): void;
     _handleAxia(): void;
+    private _isFirstUpdated;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
