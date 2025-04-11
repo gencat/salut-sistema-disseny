@@ -5,5 +5,9 @@ export declare class Header extends LitElement {
     title: string;
     area: string | undefined;
     logoSrc: string;
+    jcef: boolean;
+    private _propagateProperties;
+    private _updateSlotsDivider;
+    firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult<1>;
 }

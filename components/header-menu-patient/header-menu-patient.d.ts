@@ -8,7 +8,6 @@ export declare class HeaderMenuPatient extends LitElement {
     disconnectedCallback(): void;
     disabled: boolean;
     variant: string;
-    size: string;
     name: string | undefined;
     cip: string | undefined;
     age: string | undefined;
@@ -17,6 +16,8 @@ export declare class HeaderMenuPatient extends LitElement {
     phoneAlt: string | undefined;
     infoLabel: string;
     detailsLabel: string;
+    hideViewDetails: boolean;
+    jcef: boolean;
     _showDropdown: boolean;
     _toggleIcon: string;
     _toggleLabel: string;

@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, PropertyValues } from 'lit';
 
 export declare class Button extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -16,5 +16,6 @@ export declare class Button extends LitElement {
     _size: string;
     _iconSize: string;
     _handleClick(): void;
+    willUpdate(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

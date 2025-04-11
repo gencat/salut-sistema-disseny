@@ -6,7 +6,6 @@ export declare class HeaderMenuProfessional extends LitElement {
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
-    size: string;
     disabled: boolean;
     name: string | undefined;
     center: string | undefined;
@@ -24,6 +23,7 @@ export declare class HeaderMenuProfessional extends LitElement {
     hideViewDetails: boolean;
     hideDropdownDetails: boolean;
     hideDropdownPreferences: boolean;
+    jcef: boolean;
     _showDropdown: boolean;
     _toggleIcon: string;
     _toggleLabel: string;

@@ -11,6 +11,7 @@ export declare class HeaderLinks extends LitElement {
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    jcef: boolean;
     set hideHelp(value: boolean);
     get hideHelp(): boolean;
     set disableHelp(value: boolean);
@@ -24,6 +25,7 @@ export declare class HeaderLinks extends LitElement {
     _helpLabel: string;
     _items: LinksItem[];
     _isBreakpointSm: boolean;
+    _buttonSize: string;
     _dispatchItemAction(item: LinksItem): void;
     _handleHelp(): void;
     private _resizeTimer;

@@ -22,6 +22,7 @@ export declare class Badge extends LitElement {
     tooltipPosition: string;
     _icon: string;
     _iconSize: string;
+    _iconFill: boolean;
     _size: string;
     _text: string;
     _state: string;
@@ -35,5 +36,6 @@ export declare class Badge extends LitElement {
     firstUpdated(): Promise<void>;
     willUpdate(_changedProperties: PropertyValues): void;
     _checkTextTruncated(): void;
+    _updateIconFill(state: string): void;
     render(): import('lit-html').TemplateResult;
 }
