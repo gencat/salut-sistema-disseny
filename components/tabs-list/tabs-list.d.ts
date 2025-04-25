@@ -45,6 +45,7 @@ export declare class TabsList extends LitElement {
     moveFocusToPreviousTab(currentTab: any): void;
     moveFocusToNextTab(currentTab: any): void;
     setSelectedTab(currentTab: any): void;
+    selectTab(tabId: string): void;
     _centerTabIntoScroll(tab: any): void;
     addNewTab(): void;
     _updateArrows(): void;
