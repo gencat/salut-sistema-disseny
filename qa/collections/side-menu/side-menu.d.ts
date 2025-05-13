@@ -5,6 +5,7 @@ type MenuItem = {
     icon?: string;
     selected?: boolean;
     disabled?: boolean;
+    external?: boolean;
     notifications?: number;
     nestedMenu?: MenuItem[];
 };

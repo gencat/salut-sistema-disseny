@@ -1,5 +1,9 @@
 import { LitElement } from 'lit';
 
+export type CalendarItem = {
+    date: string;
+    type: string;
+};
 export type DssTimepickerOption = {
     value: string;
     state: string;
@@ -8,6 +12,7 @@ export declare const MONTH: string[];
 export declare const WEEK: string[];
 export declare class Calendar extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    customCalendar: CalendarItem[] | undefined;
     set range(value: boolean);
     get range(): boolean;
     set isRangeStartFocused(value: boolean);
@@ -84,6 +89,7 @@ export declare class Calendar extends LitElement {
     _next(): void;
     _update(): void;
     _getDays(): number[];
+    _getCustomType(day: number): string | false;
     _isToday(day: number): boolean;
     _isWeekend(day: number): boolean;
     _isInactive(day: number): boolean;
