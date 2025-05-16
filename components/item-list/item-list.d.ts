@@ -22,6 +22,10 @@ export type ListItem = {
     badgeIcon?: string;
     badgeSize?: string;
     badgeState?: string;
+    chipText?: string;
+    chipSize?: string;
+    chipSelected?: boolean;
+    chipIcon?: string;
     date?: string;
     iconBadgeLabel?: string;
     iconBadgeLeftState?: string;
@@ -48,6 +52,7 @@ export declare class ItemList extends LitElement {
     _widgetActions: WidgetAction[];
     _widgetIcons: WidgetIcon[];
     _dispatchItemAction(item: ListItem): void;
+    _dispatchItemChip(item: ListItem): void;
     _dispatchWidgetAction(item: ListItem, action: string): void;
     render(): import('lit-html').TemplateResult;
 }

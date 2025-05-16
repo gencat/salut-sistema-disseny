@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, TemplateResult } from 'lit';
 
 export interface IFilter {
     value: string;
@@ -9,8 +9,11 @@ export interface IColumnHeader {
     label: string;
     style?: string;
     align?: string;
+    srOnly?: boolean;
     sortType?: 'number' | 'date' | 'string';
     sortOrder?: 'asc' | 'desc' | 'none';
+    highlight?: boolean;
+    renderTemplate?: () => HTMLElement | TemplateResult;
 }
 export declare class CustomTable extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -140,5 +143,5 @@ export declare class CustomTable extends LitElement {
     private _cellsToSticky;
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: any): void;
-    render(): import('lit-html').TemplateResult;
+    render(): TemplateResult;
 }

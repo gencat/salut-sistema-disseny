@@ -1,5 +1,9 @@
 import { LitElement } from 'lit';
 
+export type CalendarItem = {
+    date: string;
+    type: string;
+};
 export type DssTimepickerOption = {
     value: string;
     state: string;
@@ -29,6 +33,7 @@ export declare class DatepickerRange extends LitElement {
     get calendarRightButtonLabel(): string;
     dropdownPlacement: string;
     dropdownFixed: boolean;
+    customCalendar: CalendarItem[] | undefined;
     _iconRangeStart: string;
     _iconRangeEnd: string;
     _dateformatPlaceholder: string;
