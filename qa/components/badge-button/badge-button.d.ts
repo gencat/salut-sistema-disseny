@@ -11,11 +11,15 @@ export declare class BadgeButton extends LitElement {
     outlined: boolean;
     set size(size: string);
     get size(): string;
+    set action(value: string);
+    get action(): string;
     set state(state: string);
     get state(): string;
     set icon(icon: string);
     get icon(): string;
     _size: string;
+    _action: string;
+    _actionIcon: string;
     _state: string;
     _icon: string;
     _isIconDefined: boolean;

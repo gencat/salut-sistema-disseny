@@ -48,6 +48,10 @@ export declare class Datepicker_ extends LitElement {
     dropdownPlacement: string;
     dropdownFixed: boolean;
     customCalendar: CalendarItem[] | undefined;
+    validate: boolean;
+    errorMessageFormat: string;
+    errorMessageMinDate: string;
+    errorMessageMaxDate: string;
     _timepickerLabel: string;
     _timepicker: string;
     _minutesRange: number;
@@ -70,6 +74,7 @@ export declare class Datepicker_ extends LitElement {
     _rightLabel: string;
     _isFocused: boolean;
     _helpText: string;
+    _helpTextBackup: string;
     _inputValidity: boolean;
     _popperInstance: any;
     constructor();
@@ -105,5 +110,9 @@ export declare class Datepicker_ extends LitElement {
     _dispatchValueChange(): void;
     _isTruncated: boolean;
     _checkInputOverflow(): void;
+    _validateDate(): void;
+    _checkDateFormat(date: string): boolean;
+    _convertToISO(dateStr: string): string;
+    _dispatchOnValidate(invalid: boolean): void;
     render(): import('lit-html').TemplateResult;
 }
