@@ -141,6 +141,8 @@ export declare class CustomTable extends LitElement {
     private _checkAllRowsSelected;
     private _fixColumns;
     private _cellsToSticky;
+    _initScrollX(element: HTMLElement): void;
+    _handleScrollX(event: Event): void;
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: any): void;
     render(): TemplateResult;

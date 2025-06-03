@@ -8,6 +8,7 @@ export declare class BadgeButton extends LitElement {
     disabled: boolean;
     hidden: boolean;
     hideIcon: boolean;
+    showIcon: boolean;
     outlined: boolean;
     set size(size: string);
     get size(): string;
@@ -17,6 +18,7 @@ export declare class BadgeButton extends LitElement {
     get state(): string;
     set icon(icon: string);
     get icon(): string;
+    width: string | undefined;
     _size: string;
     _action: string;
     _actionIcon: string;
