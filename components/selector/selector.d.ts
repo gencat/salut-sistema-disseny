@@ -69,6 +69,8 @@ export declare class Selector extends LitElement {
     private _blurEvent;
     firstUpdated(): Promise<void>;
     private _areAllElementsSelected;
+    selectFirstMatch(): void;
+    moveFocus(): void;
     private generateListInputsElements;
     private generatElementSelectAll;
     render(): import('lit-html').TemplateResult;

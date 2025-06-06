@@ -118,6 +118,7 @@ export declare class InputDropdown extends LitElement {
     _handleKeyDown(e: KeyboardEvent): void;
     _handleClick(): void;
     _focusInput(): void;
+    _keyboardFilterMatch(): void;
     _showPlaceholder(): void;
     _hidePlaceholder(): void;
     _handleValidity(): void;

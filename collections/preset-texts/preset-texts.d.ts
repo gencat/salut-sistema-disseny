@@ -33,7 +33,8 @@ export declare class PresetTexts extends LitElement {
     _handleCancel(): void;
     _handleSelect(): void;
     _onClose(): void;
-    _onSelectText(text: string): void;
+    _onSelectText(index: number, text: string): void;
+    _selectedIndex: number | undefined;
     _dispatchSelectText(): void;
     _setCategories(): void;
     _getDefaultSelectedText(category: string): void;

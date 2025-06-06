@@ -34,6 +34,10 @@ export declare class DatepickerRange extends LitElement {
     dropdownPlacement: string;
     dropdownFixed: boolean;
     customCalendar: CalendarItem[] | undefined;
+    validate: boolean;
+    errorMessageFormat: string;
+    errorMessageMinDate: string;
+    errorMessageMaxDate: string;
     _iconRangeStart: string;
     _iconRangeEnd: string;
     _dateformatPlaceholder: string;
@@ -51,6 +55,7 @@ export declare class DatepickerRange extends LitElement {
     _copyInputRangeEndPlaceholder: string;
     _isFirstInputsCheck: boolean;
     _popperInstance: any;
+    _helpTextBackup: string;
     constructor();
     disconnectedCallback(): void;
     _addCalendarListener(): void;
@@ -73,6 +78,10 @@ export declare class DatepickerRange extends LitElement {
     _checkFocusOut(event: FocusEvent): void;
     _closeCalendar(): void;
     _formatDate(value: string): string;
+    _validateDate(): void;
+    _checkDateFormat(date: string): boolean;
+    _convertToISO(dateStr: string): string;
+    _dispatchOnValidate(invalid: boolean): void;
     _createPopperCalendar(): void;
     observerConfig: {
         attributes: boolean;
