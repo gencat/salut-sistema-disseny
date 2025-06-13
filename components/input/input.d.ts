@@ -6,6 +6,9 @@ export declare class Input extends LitElement {
     get _labelSlot(): HTMLInputElement;
     set label(label: string);
     get label(): string;
+    maskRegex: string | undefined;
+    maskReplace: string | undefined;
+    allowedChars: string | undefined;
     icon: string;
     inputSize: string;
     set helpText(text: string);
@@ -34,6 +37,7 @@ export declare class Input extends LitElement {
     observer: MutationObserver;
     disconnectedCallback(): void;
     _handleClick(): void;
+    _previousValue: string | undefined;
     _handleInput(): void;
     _handleFocusIn(): void;
     _handleFocusOut(): void;

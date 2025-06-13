@@ -25,6 +25,8 @@ export declare class Popover extends LitElement {
     actionIcon: string | undefined;
     position: string;
     popoverFixed: boolean;
+    removeMaxHeight: boolean;
+    fullWidth: boolean;
     _popperInstance: any;
     _parent: HTMLElement | null;
     _disableClickOutside: boolean;
