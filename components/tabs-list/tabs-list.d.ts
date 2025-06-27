@@ -23,6 +23,8 @@ export declare class TabsList extends LitElement {
     get addTabText(): string;
     set addTabEnabled(value: boolean);
     get addTabEnabled(): boolean;
+    fullHeight: boolean;
+    get _wrapper(): HTMLElement | undefined;
     get _header(): HTMLElement | undefined;
     get _menu(): HTMLElement | undefined;
     get _prevScroll(): HTMLElement | undefined;

@@ -12,6 +12,7 @@ export declare class Tile extends LitElement {
     logoURL: string;
     heightAuto: boolean;
     widget: boolean;
+    marker: string | undefined;
     _onClick(): void;
     render(): import('lit-html').TemplateResult;
 }

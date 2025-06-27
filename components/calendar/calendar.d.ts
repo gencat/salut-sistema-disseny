@@ -94,6 +94,7 @@ export declare class Calendar extends LitElement {
     _isWeekend(day: number): boolean;
     _isInactive(day: number): boolean;
     _isSelected(day: number): boolean;
+    _isFocusable(day: number): boolean;
     _isSelectedRangeStart(day: number): boolean;
     _isSelectedRangeEnd(day: number): boolean;
     _isOverRangeDate(day: number): boolean;

@@ -43,6 +43,7 @@ export declare class CustomTableHeader extends LitElement {
     filtersPopoverTitle: string;
     jcef: boolean;
     filtersPopoverFixed: boolean;
+    customActions: boolean;
     _filters: string[] | IFilter[] | undefined;
     _visibleFilters: any;
     _hiddenFilters: any;

@@ -3,6 +3,7 @@ import { LitElement } from 'lit';
 export declare class Drawer extends LitElement {
     static get styles(): import('lit').CSSResult[];
     variant: string;
+    jcef: boolean;
     set open(value: boolean);
     set title(value: string);
     set size(value: string);

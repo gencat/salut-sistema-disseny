@@ -21,6 +21,7 @@ export declare class InputAction extends LitElement {
     maskRegex: string | undefined;
     maskReplace: string | undefined;
     allowedChars: string | undefined;
+    units: string | undefined;
     _label: string;
     _placeholder: string;
     _maxLength: number | undefined;
