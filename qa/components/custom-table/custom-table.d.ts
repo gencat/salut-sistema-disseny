@@ -34,8 +34,10 @@ export declare class CustomTable extends LitElement {
     get selectedRowsLabel(): string;
     set selectedRowsCounter(value: number);
     get selectedRowsCounter(): number;
+    filtersPopoverFixed: boolean;
     showConfig: boolean;
     configTableLabel: string;
+    customActions: boolean;
     private _hideHeader;
     private _hidePaginator;
     private _columnsHeader;
@@ -105,6 +107,10 @@ export declare class CustomTable extends LitElement {
     get pageSizeOptionsDisabled(): boolean;
     set hideFooter(value: boolean);
     get hideFooter(): boolean;
+    hideActionExpand: boolean;
+    showActionFilters: boolean;
+    filtersVariant: string;
+    filtersPopoverTitle: string;
     private _isPaginationStarted;
     private _totalResults;
     private _currentIndex;
@@ -119,6 +125,7 @@ export declare class CustomTable extends LitElement {
     fixedColumnsBefore: undefined;
     fixedColumnsAfter: undefined;
     tableInfo: undefined;
+    jcef: boolean;
     private _getDataLength;
     private _sortBy;
     private _updateColumnSortState;
@@ -145,5 +152,6 @@ export declare class CustomTable extends LitElement {
     _handleScrollX(event: Event): void;
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: any): void;
+    filtersPopoverClose(): void;
     render(): TemplateResult;
 }

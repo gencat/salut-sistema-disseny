@@ -20,6 +20,7 @@ export declare class Modal extends LitElement {
     fullWidth: boolean;
     flexBody: boolean;
     removeBodyPadding: boolean;
+    jcef: boolean;
     _size: string;
     _open: boolean;
     _modalTitle: string;
