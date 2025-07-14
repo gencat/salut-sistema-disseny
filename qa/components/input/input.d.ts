@@ -12,6 +12,7 @@ export declare class Input extends LitElement {
     icon: string;
     inputSize: string;
     units: string | undefined;
+    inputPrefix: string | undefined;
     set helpText(text: string);
     get helpText(): string;
     set invalid(status: boolean);

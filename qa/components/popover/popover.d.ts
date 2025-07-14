@@ -18,6 +18,7 @@ export declare class Popover extends LitElement {
     _handleOutsideClick(event: any): void;
     _handleConnectedCallback(): void;
     open: boolean;
+    variant: string;
     hasDivider: boolean;
     hideCloseIcon: boolean;
     disableParentClick: boolean;
