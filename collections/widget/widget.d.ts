@@ -6,7 +6,6 @@ export declare class Widget extends LitElement {
     icon: string | undefined;
     iconStatus: string | undefined;
     title: string;
-    titleSize: string;
     results: string | undefined;
     resultsState: string;
     resultsLabel: string;
@@ -19,6 +18,7 @@ export declare class Widget extends LitElement {
     hasAction: boolean;
     hasNext: boolean;
     hasClose: boolean;
+    actionLabel: string | undefined;
     actionIcon: string | undefined;
     actionVariant: string;
     actionDisabled: boolean;

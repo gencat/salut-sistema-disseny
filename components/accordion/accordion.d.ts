@@ -2,7 +2,6 @@ import { LitElement } from 'lit';
 
 export declare class Accordion extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    titleSize: string;
     info: undefined;
     infoBadgeState: string;
     infoBadgeIcon: string;
