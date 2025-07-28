@@ -10,6 +10,8 @@ export declare class Textarea extends LitElement {
     get _label(): HTMLElement;
     get _textarea(): HTMLTextAreaElement;
     get _description(): HTMLElement;
+    size: string;
+    icon: string | undefined;
     _maxLength: number;
     _isTextareaFocused: boolean;
     _isGroupFocusedVisible: boolean;
