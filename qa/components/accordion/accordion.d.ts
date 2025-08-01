@@ -8,6 +8,11 @@ export declare class Accordion extends LitElement {
     infoBadgeOutlined: boolean;
     tooltipFixed: boolean;
     secondaryActionLabel: string;
+    hasAlternativeAction: boolean;
+    alternativeActionLabel: string;
+    alternativeActionIcon: string;
+    alternativeActionStatus: string;
+    alternativeActionDisabled: boolean;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;
@@ -78,6 +83,7 @@ export declare class Accordion extends LitElement {
     _toggleAccordion(): void;
     _dispatchCheckboxChange(): void;
     _dispatchSecondaryAction(): void;
+    _dispatchAlternativeAction(): void;
     _dispatchToggleAccordion(): void;
     _dispatchWidgetNext(): void;
     _dispatchWidgetClose(): void;
