@@ -2,8 +2,6 @@ import { LitElement } from 'lit';
 
 export declare class Modal extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    set size(value: string);
-    get size(): string;
     set open(value: boolean);
     get open(): boolean;
     set modalTitle(value: string);
@@ -21,11 +19,9 @@ export declare class Modal extends LitElement {
     flexBody: boolean;
     removeBodyPadding: boolean;
     jcef: boolean;
-    _size: string;
     _open: boolean;
     _modalTitle: string;
     _state: string;
-    _hasDivider: boolean;
     _hideCloseIcon: boolean;
     _hasScroll: boolean;
     _modalStyle: string | undefined;
