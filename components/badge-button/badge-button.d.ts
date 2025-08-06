@@ -31,6 +31,7 @@ export declare class BadgeButton extends LitElement {
     _isFirstUpdated: boolean;
     _handleClick(): void;
     _updateIconFill(state: string): void;
+    _generateDefaultIcon(state: string): void;
     _checkTextTruncated(): void;
     willUpdate(_changedProperties: PropertyValues): void;
     firstUpdated(): Promise<void>;

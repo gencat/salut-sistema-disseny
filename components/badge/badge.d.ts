@@ -21,6 +21,7 @@ export declare class Badge extends LitElement {
     get hideIcon(): boolean;
     tooltipPosition: string;
     width: string | undefined;
+    showIcon: boolean;
     _icon: string;
     _iconSize: string;
     _iconFill: boolean;
@@ -38,5 +39,6 @@ export declare class Badge extends LitElement {
     willUpdate(_changedProperties: PropertyValues): void;
     _checkTextTruncated(): void;
     _updateIconFill(state: string): void;
+    _generateDefaultIcon(state: string): void;
     render(): import('lit-html').TemplateResult;
 }

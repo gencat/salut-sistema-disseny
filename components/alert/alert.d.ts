@@ -15,6 +15,7 @@ export declare class Alert extends LitElement {
     set buttonLabel(value: string);
     get buttonLabel(): string;
     fullWidth: boolean;
+    buttonBottom: boolean;
     _state: string;
     _size: string;
     _iconSize: string;
