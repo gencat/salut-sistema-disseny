@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, PropertyValues } from 'lit';
 import { ActionMenu } from '../action-menu/action-menu';
 
 export declare class SplitButton extends LitElement {
@@ -28,6 +28,9 @@ export declare class SplitButton extends LitElement {
     get hasMenu(): boolean;
     secondaryLabelOpen: string;
     secondaryLabelClose: string;
+    icon: string | undefined;
+    iconFill: boolean;
+    _iconSize: string;
     _size: string;
     _iconClose: string;
     _iconOpen: string;
@@ -44,5 +47,6 @@ export declare class SplitButton extends LitElement {
     _handleDocumentClick(event: Event): void;
     private _clickedOutsideItem;
     firstUpdated(): Promise<void>;
+    willUpdate(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

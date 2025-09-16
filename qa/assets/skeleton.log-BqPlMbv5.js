@@ -1,4 +1,0 @@
-import{j as t,M as i}from"./index-Clk5vX7U.js";import{useMDXComponents as e}from"./index-DEUIWE5v.js";import{S as r}from"./skeleton.stories-DjxzHEBx.js";import"./iframe-rOuWfouE.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-C_pJYAGD.js";import"./index-DxHf6ONh.js";import"./index-DrFu-skq.js";import"./lit-html-D6a8R3xZ.js";import"./skeleton-BIuQ3MdV.js";import"./lit-element-Dloa6E9d.js";import"./static-D_OlgdGa.js";import"./class-map-t53NE6z1.js";function n(o){const s={h3:"h3",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:r,name:"Changelog"}),`
-`,t.jsxs("div",{className:"dss-sb-title",children:[t.jsx(s.h3,{id:"historial-de-canvis",children:"Historial de canvis"}),t.jsx("component-title",{children:"dss-skeleton"})]}),`
-`,t.jsx("br",{}),`
-`,t.jsx("div",{className:"dss-sb-changelog"})]})}function v(o={}){const{wrapper:s}={...e(),...o.components};return s?t.jsx(s,{...o,children:t.jsx(n,{...o})}):n(o)}export{v as default};

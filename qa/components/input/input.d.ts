@@ -48,6 +48,7 @@ export declare class Input extends LitElement {
     _stepUp(): void;
     _stepDown(): void;
     _dispatchValueChange(): void;
+    _dispatchOnChange(): void;
     _checkInputAttributes(): void;
     _isTruncated: boolean;
     _checkInputOverflow(): void;
