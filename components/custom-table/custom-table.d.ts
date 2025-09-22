@@ -17,6 +17,7 @@ export interface IColumnHeader {
 }
 export declare class CustomTable extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    disconnectedCallback(): void;
     internalSelectedCounter: number;
     set hideHeader(value: boolean);
     get hideHeader(): boolean;
@@ -137,14 +138,18 @@ export declare class CustomTable extends LitElement {
     private _getTableHeaderSortIconHTML;
     private _updateTableHeaderIcons;
     private _paginate;
-    private _rowKeydownListener;
     private _dispatchChangeFilters;
     private _dispatchExpandTable;
     private _dispatchOpenFilters;
     private _dispatchPagination;
     private _dispatchSort;
     private _dispatchMultiselect;
+    private _handleTableKeydown;
+    private _tbody;
     private _initTable;
+    private _tbodyObserver;
+    private _detectNewRows;
+    private _setFirstRowTabindex;
     private _checkAllRowsSelected;
     private _fixColumns;
     private _cellsToSticky;

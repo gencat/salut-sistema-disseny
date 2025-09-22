@@ -87,6 +87,5 @@ export declare class Accordion extends LitElement {
     _dispatchToggleAccordion(): void;
     _dispatchWidgetNext(): void;
     _dispatchWidgetClose(): void;
-    checkTextTruncate(event: MouseEvent): void;
     render(): import('lit-html').TemplateResult;
 }

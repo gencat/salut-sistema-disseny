@@ -6,6 +6,9 @@ type DssTabItem = {
     panel: string;
     selected?: boolean;
     disabled?: boolean;
+    disableEdit?: boolean;
+    disableDelete?: boolean;
+    isEditing?: boolean;
 };
 export declare class TabsList extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -23,7 +26,12 @@ export declare class TabsList extends LitElement {
     get addTabText(): string;
     set addTabEnabled(value: boolean);
     get addTabEnabled(): boolean;
+    canOrder: boolean;
+    canEdit: boolean;
+    canDelete: boolean;
     fullHeight: boolean;
+    _isEditing: boolean;
+    _focusedIndex: number | null;
     get _wrapper(): HTMLElement | undefined;
     get _header(): HTMLElement | undefined;
     get _menu(): HTMLElement | undefined;
@@ -40,7 +48,8 @@ export declare class TabsList extends LitElement {
     updated(changedProperties: Map<string, any>): void;
     changeTabWatch(): Promise<void>;
     setFirstAndLastTabs(): void;
-    changeTab(selectedPanel: string): void;
+    changeTab(selectedTab: DssTabItem): void;
+    updateTabs(selectedTabId: string): void;
     updatePanels(selectedPanel: string): void;
     _handleKeydown(event: Event): void;
     moveFocusToTab(currentTab: any): void;
@@ -54,5 +63,26 @@ export declare class TabsList extends LitElement {
     _scrollMenu(direction: number): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
+    _handleEdit(currentTab: DssTabItem): void;
+    _handleDelete(tab: DssTabItem): void;
+    _closeInputEdit(currentTab: DssTabItem): void;
+    _ignoreInputFocusout: boolean;
+    _handleEditSave(currentTab: DssTabItem): void;
+    _handleEditCancel(event: Event, currentTab: DssTabItem): void;
+    _handleInputFocusout(event: FocusEvent, tab: DssTabItem): void;
+    _handleEditCancelFocusout(event: any, currentTab: DssTabItem): void;
+    _handleEditCancelKeydown(event: KeyboardEvent, currentTab: DssTabItem): void;
+    _handleEditKeydown(event: KeyboardEvent, currentTab: DssTabItem): void;
+    _dispatchEditTabs(): void;
+    draggedIndex: number | null;
+    _lastOverEl: HTMLElement | null;
+    onDragStart(e: DragEvent, index: number): void;
+    onDragEnd(e: DragEvent): void;
+    onDragOver(e: DragEvent): void;
+    onDragLeave(e: DragEvent): void;
+    onDrop(e: DragEvent, index: number): void;
+    dispatchOrder(): void;
+    onItemFocus(index: number): void;
+    onItemBlur(index: number): void;
 }
 export {};

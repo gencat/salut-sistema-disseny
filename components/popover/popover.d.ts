@@ -8,8 +8,10 @@ export declare class Popover extends LitElement {
         subtree: boolean;
     };
     callback: (mutationList: any) => void;
-    observer: MutationObserver;
+    mutationObserver: MutationObserver;
     private visibleObserver;
+    maxHeightObserverTimeout: number | null;
+    private maxHeightObserver;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
@@ -33,6 +35,8 @@ export declare class Popover extends LitElement {
     _disableClickOutside: boolean;
     _isFirstUpdate: boolean;
     _hasFooterSlot: boolean;
+    availableHeight: number | undefined;
+    hasMaxHeight: boolean;
     _handleAction(): void;
     _handleClose(): void;
     private _checkClickOutside;
@@ -47,5 +51,6 @@ export declare class Popover extends LitElement {
     _initPopover(): void;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    _onHeightChange(newHeight: number): void;
     render(): import('lit-html').TemplateResult;
 }
