@@ -6,6 +6,7 @@ export type CatalogOption = {
 };
 export declare class SearchBar extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    _filter: string;
     get _input(): HTMLInputElement;
     innerFocus: boolean;
     set multiple(value: boolean);
@@ -34,6 +35,7 @@ export declare class SearchBar extends LitElement {
     get isCatalogLoading(): boolean;
     set dropdownStyle(style: string);
     get dropdownStyle(): string;
+    advancedFilter: boolean;
     _multiple: boolean;
     _icon: string;
     _placeholder: string;
@@ -65,6 +67,8 @@ export declare class SearchBar extends LitElement {
     _clearSearch(): void;
     _hideDropdown(): void;
     _getFilterCatalog(filter: string): CatalogOption[];
+    _applyDefaultFilter(filter: string): CatalogOption[];
+    _applyAdvancedFilter(filter: string): CatalogOption[];
     _generateSearchChips(): import('lit-html').TemplateResult[];
     _generateFilterCatalog(): import('lit-html').TemplateResult[];
     _dispatchSearchChange(): void;

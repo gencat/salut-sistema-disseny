@@ -1,0 +1,44 @@
+import { LitElement } from 'lit';
+
+export declare class FormInput extends LitElement {
+    static formAssociated: boolean;
+    static get styles(): import('lit').CSSResult[];
+    private internals;
+    constructor();
+    label: string;
+    name: string;
+    type: string;
+    placeholder: string;
+    value: string;
+    disabled: boolean;
+    readonly: boolean;
+    required: boolean;
+    invalid: boolean;
+    step?: number;
+    min?: number;
+    max?: number;
+    minLength?: number;
+    maxLength?: number;
+    pattern?: string;
+    inputmode?: string;
+    autocapitalize: string;
+    autocomplete: string;
+    autocorrect: boolean;
+    autofocus: boolean;
+    spellcheck: boolean;
+    size: string;
+    icon?: string;
+    helpText?: string;
+    maskRegex?: string;
+    maskReplace?: string;
+    allowedChars?: string;
+    unit?: string;
+    inputPrefix?: string;
+    removeMinWidth: boolean;
+    updated(changedProps: Map<string, unknown>): void;
+    formDisabledCallback(disabled: boolean): void;
+    formResetCallback(): void;
+    formStateRestoreCallback(state: string | null): void;
+    render(): import('lit-html').TemplateResult;
+    _onInput(e: Event): void;
+}
