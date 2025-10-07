@@ -72,8 +72,6 @@ export declare class CustomTable extends LitElement {
     get filtersLabel(): string;
     set cleanFiltersLabel(value: string);
     get cleanFiltersLabel(): string;
-    set noFiltersLabel(value: string);
-    get noFiltersLabel(): string;
     set hideHeaderTitleAndExpand(value: boolean);
     get hideHeaderTitleAndExpand(): boolean;
     set disableSorting(value: boolean);
@@ -86,7 +84,6 @@ export declare class CustomTable extends LitElement {
     private _collapseLabel;
     private _filtersLabel;
     private _cleanFiltersLabel;
-    private _noFiltersLabel;
     private _isTableHeaderCreated;
     private _hideHeaderTitleAndExpand;
     private _disableSorting;
