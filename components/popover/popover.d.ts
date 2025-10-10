@@ -37,6 +37,7 @@ export declare class Popover extends LitElement {
     _hasFooterSlot: boolean;
     availableHeight: number | undefined;
     hasMaxHeight: boolean;
+    hasWidget: boolean;
     _handleAction(): void;
     _handleClose(): void;
     private _checkClickOutside;

@@ -57,6 +57,7 @@ export declare class InputDropdown extends LitElement {
     set value(value: string);
     dropdownPlacement: string;
     dropdownFixed: boolean;
+    advancedFilter: boolean;
     get value(): string;
     _elements: Array<SelectorElement> | null;
     _copyElements: Array<SelectorElement> | null;
@@ -99,7 +100,9 @@ export declare class InputDropdown extends LitElement {
     private callback;
     private observer;
     private visibleObserver;
-    _getFilteredElements(): SelectorElement[] | null | undefined;
+    _getFilteredElements(): any[] | null | undefined;
+    _applyDefaultFilter(filter: string, selectedElements: any[]): any[] | undefined;
+    _applyAdvancedFilter(filter: string, selectedElements: any[]): any[];
     firstUpdated(): Promise<void>;
     _initElementsSelected(): void;
     _isTruncated: boolean;

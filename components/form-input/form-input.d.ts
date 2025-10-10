@@ -5,7 +5,10 @@ export declare class FormInput extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private internals;
     constructor();
+    disconnectedCallback(): void;
+    _input: HTMLInputElement;
     label: string;
+    hideLabel: boolean;
     name: string;
     type: string;
     placeholder: string;
@@ -34,11 +37,22 @@ export declare class FormInput extends LitElement {
     allowedChars?: string;
     unit?: string;
     inputPrefix?: string;
-    removeMinWidth: boolean;
+    _isFocused: boolean;
+    _isTruncated: boolean;
+    _onHoldInterval: number | null;
+    _previousValue: string | null;
     updated(changedProps: Map<string, unknown>): void;
     formDisabledCallback(disabled: boolean): void;
     formResetCallback(): void;
     formStateRestoreCallback(state: string | null): void;
     render(): import('lit-html').TemplateResult;
+    _handleFocusin(): void;
+    _handleFocusout(): void;
     _onInput(e: Event): void;
+    _handleValidity(): void;
+    _stepUp(): void;
+    _stepDown(): void;
+    _onHold(direction: 'up' | 'down'): void;
+    _stopHold(): void;
+    _emitChange(): void;
 }

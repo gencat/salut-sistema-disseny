@@ -8,8 +8,8 @@ export declare class Card extends LitElement {
     disabled: boolean;
     hasClose: boolean;
     hasDetails: boolean;
-    private _propagateProperties;
-    private _dispatchClose;
+    _propagateProperties(): void;
+    _dispatchClose(): void;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }

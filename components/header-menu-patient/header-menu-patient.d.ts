@@ -5,7 +5,7 @@ export type Assignments = {
     ui?: string;
     uas?: string;
     center?: string;
-    up?: string;
+    up?: boolean;
 };
 export declare class HeaderMenuPatient extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -32,6 +32,9 @@ export declare class HeaderMenuPatient extends LitElement {
     jcef: boolean;
     edit: boolean;
     assignments: Assignments | undefined;
+    hideCopyCip: boolean;
+    upLabel: string;
+    upMessage: string;
     _showDropdown: boolean;
     _toggleIcon: string;
     _toggleLabel: string;

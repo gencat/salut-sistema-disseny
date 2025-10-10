@@ -8,6 +8,8 @@ export declare class Selector extends LitElement {
     static get styles(): import('lit').CSSResult[];
     readonly: boolean;
     boxShadow: boolean;
+    advancedFilter: boolean;
+    searchThreshold: number;
     set multiple(multiple: boolean);
     get multiple(): boolean;
     set tick(tick: boolean);
@@ -44,7 +46,6 @@ export declare class Selector extends LitElement {
     private _manuallySelectAll;
     private _returnSelecteAllValues;
     private _returnSelectedValues;
-    private _getIndexSubtext;
     private _elementId;
     private _elements;
     private _elementSelectAll;

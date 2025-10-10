@@ -35,8 +35,6 @@ export declare class CustomTableHeader extends LitElement {
     get filtersLabel(): string;
     set cleanFiltersLabel(value: string);
     get cleanFiltersLabel(): string;
-    set noFiltersLabel(value: string);
-    get noFiltersLabel(): string;
     hideActionExpand: boolean;
     showActionFilters: boolean;
     filtersVariant: string;
@@ -58,18 +56,19 @@ export declare class CustomTableHeader extends LitElement {
     _filtersLabel: string;
     _cleanFiltersLabel: string;
     _openFiltersLabel: string;
-    _noFiltersLabel: string;
     _hidetableTitleAndExpand: boolean;
+    _isFirstUpdated: boolean;
     _generateFilterChips(filters: string[] | IFilter[]): (import('lit-html').TemplateResult | typeof nothing)[] | undefined;
     _clearFilters(): void;
     _emitExpandAction(): void;
     _emitOpenFilters(): void;
     _emitConfigTable(): void;
     _emitChangeFilters(): void;
-    _splitFiltersByLine(): void;
+    _splitFiltersByLine(): Promise<void>;
     _filtersToggleMore(): void;
     _checkInnerFiltersOverflow(): void;
     filtersPopoverClose(): void;
     firstUpdated(): Promise<void>;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }
