@@ -37,6 +37,7 @@ export declare class FormInput extends LitElement {
     allowedChars?: string;
     unit?: string;
     inputPrefix?: string;
+    hasActions: boolean;
     _isFocused: boolean;
     _isTruncated: boolean;
     _onHoldInterval: number | null;

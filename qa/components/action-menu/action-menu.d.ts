@@ -22,6 +22,7 @@ export declare class ActionMenu extends LitElement {
     _fullWidth: boolean;
     _popperInstance: any;
     _parent: HTMLElement | null;
+    _trigger: HTMLElement | null;
     _position: string;
     _isVisible: boolean;
     _disableClickOutside: boolean;
