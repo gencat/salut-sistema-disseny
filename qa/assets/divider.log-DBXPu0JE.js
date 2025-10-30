@@ -1,4 +1,0 @@
-import{j as t,M as i}from"./index-C6REoxga.js";import{useMDXComponents as e}from"./index-Bcw9cYpG.js";import{S as r}from"./divider.stories-gYhPG8dN.js";import"./iframe-DwujomfX.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-C_pJYAGD.js";import"./index-Ca4lBP7z.js";import"./index-DrFu-skq.js";import"./lit-html-D6cejpwM.js";import"./storybook-decorators-DSS85Rnr.js";function o(s){const n={h3:"h3",...e(),...s.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:r,name:"Changelog"}),`
-`,t.jsxs("div",{className:"dss-sb-title",children:[t.jsx(n.h3,{id:"historial-de-canvis",children:"Historial de canvis"}),t.jsx("component-title",{children:"dss-divider"})]}),`
-`,t.jsx("br",{}),`
-`,t.jsx("div",{className:"dss-sb-changelog"})]})}function f(s={}){const{wrapper:n}={...e(),...s.components};return n?t.jsx(n,{...s,children:t.jsx(o,{...s})}):o(s)}export{f as default};

@@ -55,5 +55,6 @@ export declare class FormInput extends LitElement {
     _stepDown(): void;
     _onHold(direction: 'up' | 'down'): void;
     _stopHold(): void;
+    _emitInput(): void;
     _emitChange(): void;
 }
