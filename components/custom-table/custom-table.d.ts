@@ -35,7 +35,6 @@ export declare class CustomTable extends LitElement {
     get selectedRowsLabel(): string;
     set selectedRowsCounter(value: number);
     get selectedRowsCounter(): number;
-    filtersPopoverFixed: boolean;
     showConfig: boolean;
     configTableLabel: string;
     customActions: boolean;
@@ -107,8 +106,6 @@ export declare class CustomTable extends LitElement {
     get hideFooter(): boolean;
     hideActionExpand: boolean;
     showActionFilters: boolean;
-    filtersVariant: string;
-    filtersPopoverTitle: string;
     private _isPaginationStarted;
     private _totalResults;
     private _currentIndex;
@@ -124,8 +121,10 @@ export declare class CustomTable extends LitElement {
     fixedColumnsAfter: undefined;
     tableInfo: undefined;
     jcef: boolean;
+    _currentSortedData: any[] | undefined;
     private _getDataLength;
     private _sortBy;
+    private _resetPagination;
     private _updateColumnSortState;
     private _onSelectAll;
     private _rowsCheckedListener;
@@ -138,6 +137,7 @@ export declare class CustomTable extends LitElement {
     private _dispatchChangeFilters;
     private _dispatchExpandTable;
     private _dispatchOpenFilters;
+    private handleChangePage;
     private _dispatchPagination;
     private _dispatchSort;
     private _dispatchMultiselect;
@@ -152,6 +152,7 @@ export declare class CustomTable extends LitElement {
     private _cellsToSticky;
     _initScrollX(element: HTMLElement): void;
     _handleScrollX(event: Event): void;
+    _setDataState(): void;
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: any): void;
     filtersPopoverClose(): void;

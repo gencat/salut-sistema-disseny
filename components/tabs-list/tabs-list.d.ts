@@ -9,6 +9,7 @@ type DssTabItem = {
     disableEdit?: boolean;
     disableDelete?: boolean;
     isEditing?: boolean;
+    icon?: string;
 };
 export declare class TabsList extends LitElement {
     static get styles(): import('lit').CSSResult[];

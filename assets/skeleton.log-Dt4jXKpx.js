@@ -1,0 +1,4 @@
+import{j as t,M as i}from"./index-B0o4jD7T.js";import{useMDXComponents as e}from"./index-CI2KCRmc.js";import{S as r}from"./skeleton.stories-BGcVlUtq.js";import"./iframe-BHr_tuW3.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-C_pJYAGD.js";import"./index-Ca4lBP7z.js";import"./index-DrFu-skq.js";import"./lit-html-D6cejpwM.js";import"./skeleton-B26T2z1K.js";import"./lit-element-BL4lq474.js";import"./static-BGxLalzl.js";import"./class-map-BdrBOWJy.js";function n(o){const s={h3:"h3",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:r,name:"Changelog"}),`
+`,t.jsxs("div",{className:"dss-sb-title",children:[t.jsx(s.h3,{id:"historial-de-canvis",children:"Historial de canvis"}),t.jsx("component-title",{children:"dss-skeleton"})]}),`
+`,t.jsx("br",{}),`
+`,t.jsx("div",{className:"dss-sb-changelog"})]})}function v(o={}){const{wrapper:s}={...e(),...o.components};return s?t.jsx(s,{...o,children:t.jsx(n,{...o})}):n(o)}export{v as default};
