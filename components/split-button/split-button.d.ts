@@ -30,6 +30,7 @@ export declare class SplitButton extends LitElement {
     secondaryLabelClose: string;
     icon: string | undefined;
     iconFill: boolean;
+    tooltipFixed: boolean;
     _iconSize: string;
     _size: string;
     _iconClose: string;
@@ -45,6 +46,7 @@ export declare class SplitButton extends LitElement {
     _toggleMenu(): void;
     _handleActionMenuClosed(): void;
     _handleDocumentClick(event: Event): void;
+    checkTextTruncate(event: MouseEvent): void;
     private _clickedOutsideItem;
     firstUpdated(): Promise<void>;
     willUpdate(_changedProperties: PropertyValues): void;

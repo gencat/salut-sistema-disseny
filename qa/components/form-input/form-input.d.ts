@@ -10,6 +10,7 @@ export declare class FormInput extends LitElement {
     label: string;
     hideLabel: boolean;
     name: string;
+    id: string;
     type: string;
     placeholder: string;
     value: string;
@@ -38,6 +39,8 @@ export declare class FormInput extends LitElement {
     unit?: string;
     inputPrefix?: string;
     hasActions: boolean;
+    private _defaultId;
+    _getEffectiveId(): string;
     _isFocused: boolean;
     _isTruncated: boolean;
     _onHoldInterval: number | null;

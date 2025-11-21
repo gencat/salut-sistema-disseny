@@ -7,6 +7,7 @@ export interface IFilter {
 export declare class CustomTableHeader extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private _handleResizeBound;
+    private _sideMenuResizeObserver?;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
@@ -55,6 +56,7 @@ export declare class CustomTableHeader extends LitElement {
     _openFiltersLabel: string;
     _hidetableTitleAndExpand: boolean;
     _isFirstUpdated: boolean;
+    _isSideMenuLoaded: boolean;
     _generateFilterChips(filters: string[] | IFilter[]): (import('lit-html').TemplateResult | typeof nothing)[] | undefined;
     _clearFilters(): void;
     _emitExpandAction(): void;

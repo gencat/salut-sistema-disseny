@@ -20,6 +20,8 @@ export declare class Tooltip extends LitElement {
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
     createPopperInstance(parent: HTMLElement): void;
+    _openTooltip(): void;
+    _closeTooltip(): void;
     _propagatePlacement(placement: string): void;
     updateTooltip(): void;
     render(): import('lit-html').TemplateResult;

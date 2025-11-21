@@ -76,6 +76,7 @@ export declare class DatepickerRange extends LitElement {
     _onCalendarCancel(): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
+    _clearDate(range: 'rangeStart' | 'rangeEnd'): void;
     _closeCalendar(): void;
     _formatDate(value: string): string;
     _validateDate(): void;

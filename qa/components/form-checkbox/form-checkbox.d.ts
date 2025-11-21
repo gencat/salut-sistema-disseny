@@ -9,6 +9,7 @@ export declare class FormCheckbox extends LitElement {
     _input: HTMLInputElement;
     label: string;
     hideLabel: boolean;
+    id: string;
     name: string;
     value: string | boolean;
     disabled: boolean;
@@ -19,6 +20,7 @@ export declare class FormCheckbox extends LitElement {
     variant: string;
     indeterminate: boolean;
     private defaultValue;
+    private _defaultId;
     updated(changedProps: Map<string, unknown>): void;
     formDisabledCallback(disabled: boolean): void;
     formResetCallback(): void;
@@ -27,5 +29,6 @@ export declare class FormCheckbox extends LitElement {
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult<1>;
     _handleChange(e: Event): void;
+    _getEffectiveId(): string;
     _emitChange(): void;
 }

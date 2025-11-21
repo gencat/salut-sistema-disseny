@@ -11,6 +11,8 @@ export declare class IconButton extends LitElement {
     hidden: boolean;
     disableTabindex: boolean;
     ariaExpanded: any;
+    tooltipFixed: boolean;
+    hideTooltip: boolean;
     _handleClick(): void;
     render(): import('lit-html').TemplateResult;
 }

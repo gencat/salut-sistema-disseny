@@ -1,0 +1,4 @@
+import{j as t,M as i}from"./index-CXNEF6Ou.js";import{useMDXComponents as e}from"./index-eHRSTGpG.js";import{S as r}from"./stepper.stories-CDZR5Nrq.js";import"./iframe-CIo2Z1b8.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-Cu4lwwaE.js";import"./index-Ca4lBP7z.js";import"./index-DrFu-skq.js";import"./lit-element-BL4lq474.js";import"./lit-html-D6cejpwM.js";import"./storybook-decorators-DSS85Rnr.js";function o(s){const n={h3:"h3",...e(),...s.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{of:r,name:"Changelog"}),`
+`,t.jsxs("div",{className:"dss-sb-title",children:[t.jsx(n.h3,{id:"historial-de-canvis",children:"Historial de canvis"}),t.jsx("component-title",{children:"dss-stepper"})]}),`
+`,t.jsx("br",{}),`
+`,t.jsx("div",{className:"dss-sb-changelog"})]})}function M(s={}){const{wrapper:n}={...e(),...s.components};return n?t.jsx(n,{...s,children:t.jsx(o,{...s})}):o(s)}export{M as default};

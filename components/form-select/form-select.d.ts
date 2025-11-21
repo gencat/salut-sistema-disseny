@@ -12,6 +12,7 @@ export declare class FormSelect extends LitElement {
     label: string;
     hideLabel: boolean;
     name: string;
+    id: string;
     placeholder: string;
     value: string;
     disabled: boolean;
@@ -62,6 +63,8 @@ export declare class FormSelect extends LitElement {
     dropdownPlacement: string;
     dropdownFixed: boolean;
     advancedFilter: boolean;
+    private _defaultId;
+    _getEffectiveId(): string;
     _isFocused: boolean;
     _isTruncated: boolean;
     _onHoldInterval: number | null;
@@ -91,6 +94,7 @@ export declare class FormSelect extends LitElement {
     private _enableAnimations;
     private _initializeElements;
     private _setupSearchMode;
+    private _applyValue;
     private _applyOpenWithSearch;
     private _applyElements;
     private _applySelectedValue;

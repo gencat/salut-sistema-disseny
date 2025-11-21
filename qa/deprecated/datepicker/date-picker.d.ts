@@ -6,6 +6,8 @@ export declare class DatePicker extends LitElement {
         delegatesFocus: boolean;
         mode: ShadowRootMode;
         slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
     };
     static get styles(): import('lit').CSSResult;
     get _input(): HTMLInputElement;

@@ -65,6 +65,7 @@ export declare class Sidemenu_ extends LitElement {
     private _checkWindowInnerwidth;
     private _clickedOutsideCreateMenu;
     _closeCreateDropdown(): void;
+    _handleKeydownEscape(event: CustomEvent): void;
     _handleDocumentClick(event: Event): void;
     _openCreateMenu(): void;
     _toggleCreateMenuTooltip(): void;

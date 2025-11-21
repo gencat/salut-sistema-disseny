@@ -1,4 +1,4 @@
-import { LitElement, PropertyValues } from 'lit';
+import { LitElement } from 'lit';
 
 export declare class Button extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -11,11 +11,10 @@ export declare class Button extends LitElement {
     hidden: boolean;
     onlyIcon: boolean;
     fullWidth: boolean;
-    set size(value: string);
-    get size(): string;
-    _size: string;
-    _iconSize: string;
+    size: string;
+    tooltipFixed: boolean;
     _handleClick(): void;
-    willUpdate(_changedProperties: PropertyValues): void;
+    _getIconSize(): "md" | "sm";
+    checkTextTruncate(event: MouseEvent): void;
     render(): import('lit-html').TemplateResult;
 }

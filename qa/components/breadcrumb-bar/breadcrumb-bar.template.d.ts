@@ -1,3 +1,3 @@
 import { BreadcrumbBar } from './breadcrumb-bar';
 
-export declare const template: (component: BreadcrumbBar) => import('lit-html').TemplateResult;
+export declare const template: (component: BreadcrumbBar) => import('lit-html').TemplateResult<1>;

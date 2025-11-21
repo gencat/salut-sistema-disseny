@@ -7,6 +7,7 @@ export type FormSelectOption = {
 export declare class FormSelectOptions extends LitElement {
     static get styles(): import('lit').CSSResult[];
     disconnectedCallback(): void;
+    isOpen: boolean;
     elements: Array<FormSelectOption> | null;
     value: Array<FormSelectOption> | Array<string> | null;
     _value: Array<FormSelectOption> | null;

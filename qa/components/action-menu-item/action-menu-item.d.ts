@@ -12,6 +12,7 @@ export declare class ActionMenuItem extends LitElement {
     rightIconFill: boolean;
     set rightIcon(value: string);
     get rightIcon(): string;
+    actionLabel: string;
     set actionIcon(value: string);
     get actionIcon(): string;
     set actionState(value: string);

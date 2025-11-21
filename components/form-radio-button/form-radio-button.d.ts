@@ -10,12 +10,14 @@ export declare class FormRadioButton extends LitElement {
     label: string;
     hideLabel: boolean;
     name: string;
+    id: string;
     value: string;
     disabled: boolean;
     readonly: boolean;
     required: boolean;
     checked: boolean;
     tabIndex: number;
+    private _defaultId;
     updated(changedProps: Map<string, unknown>): void;
     formDisabledCallback(disabled: boolean): void;
     formResetCallback(): void;
@@ -23,5 +25,6 @@ export declare class FormRadioButton extends LitElement {
     focusInput(): void;
     render(): import('lit-html').TemplateResult;
     _handleChange(e: Event): void;
+    _getEffectiveId(): string;
     _emitChange(): void;
 }

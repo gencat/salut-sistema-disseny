@@ -6,6 +6,7 @@ export type SelectorElement = {
 };
 export declare class Selector extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    isOpen: boolean;
     readonly: boolean;
     boxShadow: boolean;
     advancedFilter: boolean;

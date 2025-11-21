@@ -114,5 +114,6 @@ export declare class Datepicker_ extends LitElement {
     _checkDateFormat(date: string): boolean;
     _convertToISO(dateStr: string): string;
     _dispatchOnValidate(invalid: boolean): void;
+    _clearDate(): void;
     render(): import('lit-html').TemplateResult;
 }
