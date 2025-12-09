@@ -86,6 +86,8 @@ export declare class FormTimepicker extends LitElement {
     _onInput(): void;
     _handleValidity(): void;
     _handleFocusin(): void;
+    _labelClicked: boolean;
+    _handleLabelClick(event: MouseEvent): void;
     _handleFocusout(): void;
     _focusInput(): void;
     _checkInputOverflow(): void;

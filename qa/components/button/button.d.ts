@@ -13,6 +13,8 @@ export declare class Button extends LitElement {
     fullWidth: boolean;
     size: string;
     tooltipFixed: boolean;
+    loading: boolean;
+    loadingIcon: string;
     _handleClick(): void;
     _getIconSize(): "md" | "sm";
     checkTextTruncate(event: MouseEvent): void;
