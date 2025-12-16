@@ -8,8 +8,8 @@ export declare class BadgeButton extends LitElement {
     disabled: boolean;
     hidden: boolean;
     hideIcon: boolean;
-    showIcon: boolean;
     outlined: boolean;
+    width: string | undefined;
     set size(size: string);
     get size(): string;
     set action(value: string);
@@ -18,7 +18,6 @@ export declare class BadgeButton extends LitElement {
     get state(): string;
     set icon(icon: string);
     get icon(): string;
-    width: string | undefined;
     _size: string;
     _action: string;
     _actionIcon: string;
@@ -32,6 +31,7 @@ export declare class BadgeButton extends LitElement {
     _handleClick(): void;
     _updateIconFill(state: string): void;
     _generateDefaultIcon(state: string): void;
+    _isInformativeState(): boolean;
     _checkTextTruncated(): void;
     willUpdate(_changedProperties: PropertyValues): void;
     firstUpdated(): Promise<void>;

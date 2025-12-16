@@ -51,6 +51,8 @@ export declare class FormInput extends LitElement {
     formStateRestoreCallback(state: string | null): void;
     render(): import('lit-html').TemplateResult;
     _handleFocusin(): void;
+    _labelClicked: boolean;
+    _handleLabelClick(event: MouseEvent): void;
     _handleFocusout(): void;
     _onInput(e: Event): void;
     _handleValidity(): void;

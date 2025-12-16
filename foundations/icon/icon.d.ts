@@ -5,6 +5,7 @@ export declare class Icon extends LitElement {
     size: string;
     icon: string;
     fill: boolean;
+    spin: boolean;
     fontLoaded: boolean;
     firstUpdated(): void;
     render(): import('lit-html').TemplateResult<1>;

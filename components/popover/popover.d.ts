@@ -13,6 +13,8 @@ export declare class Popover extends LitElement {
     maxHeightObserverTimeout: number | null;
     private maxHeightObserver;
     constructor();
+    _parentMousedownHandler: (() => void) | null;
+    _parentKeydownHandler: ((event: KeyboardEvent) => void) | null;
     connectedCallback(): void;
     disconnectedCallback(): void;
     _addDropdownListener(): void;
@@ -44,6 +46,7 @@ export declare class Popover extends LitElement {
     private _checkClickOutside;
     private _closePopover;
     createPopperInstance(parent: HTMLElement): void;
+    _popoverParentListener(): void;
     _propagatePlacement(placement: string): void;
     _checkMaxHeight(): void;
     _resizeObserver: any;

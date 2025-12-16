@@ -7,6 +7,7 @@ export declare class FormCheckboxGroup extends LitElement {
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    _hiddenInput: HTMLInputElement;
     _checkboxes: NodeListOf<any>;
     name: string;
     label: string;
