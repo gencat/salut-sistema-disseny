@@ -7,6 +7,7 @@ export declare class Accordion extends LitElement {
     infoBadgeIcon: string;
     infoBadgeOutlined: boolean;
     tooltipFixed: boolean;
+    tooltipPosition: string;
     secondaryActionLabel: string;
     hasPrimaryAction: boolean;
     primaryActionLabel: string;

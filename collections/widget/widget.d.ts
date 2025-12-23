@@ -23,6 +23,7 @@ export declare class Widget extends LitElement {
     actionVariant: string;
     actionDisabled: boolean;
     tooltipFixed: boolean;
+    tooltipPosition: string;
     hasScroll: boolean;
     folded: boolean;
     private _eventOptions;

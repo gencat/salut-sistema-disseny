@@ -35,6 +35,8 @@ export declare class HeaderMenuPatient extends LitElement {
     hideCopyCip: boolean;
     upLabel: string;
     upMessage: string;
+    tooltipFixed: boolean;
+    tooltipPosition: string;
     _showDropdown: boolean;
     _toggleIcon: string;
     _toggleLabel: string;

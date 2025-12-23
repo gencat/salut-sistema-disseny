@@ -24,6 +24,8 @@ export declare class HeaderMenuProfessional extends LitElement {
     hideDropdownDetails: boolean;
     hideDropdownPreferences: boolean;
     jcef: boolean;
+    tooltipFixed: boolean;
+    tooltipPosition: string;
     _showDropdown: boolean;
     _toggleIcon: string;
     _toggleLabel: string;
