@@ -1,0 +1,58 @@
+import { LitElement } from 'lit';
+
+export declare class Popover extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    observerConfig: {
+        attributes: boolean;
+        childList: boolean;
+        subtree: boolean;
+    };
+    callback: (mutationList: any) => void;
+    mutationObserver: MutationObserver;
+    private visibleObserver;
+    maxHeightObserverTimeout: number | null;
+    private maxHeightObserver;
+    constructor();
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    _addDropdownListener(): void;
+    _removeDropdownListener(): void;
+    _handleOutsideClick(event: any): void;
+    _handleConnectedCallback(): void;
+    open: boolean;
+    variant: string;
+    hideCloseIcon: boolean;
+    disableParentClick: boolean;
+    title: string;
+    actionIcon: string | undefined;
+    actionLabel: string | undefined;
+    position: string;
+    popoverFixed: boolean;
+    removeMaxHeight: boolean;
+    fullWidth: boolean;
+    hideHeader: boolean;
+    _popperInstance: any;
+    _parent: HTMLElement | null;
+    _disableClickOutside: boolean;
+    _isFirstUpdate: boolean;
+    _hasFooterSlot: boolean;
+    availableHeight: number | undefined;
+    hasMaxHeight: boolean;
+    hasWidget: boolean;
+    _handleAction(): void;
+    _handleClose(): void;
+    private _checkClickOutside;
+    private _closePopover;
+    createPopperInstance(parent: HTMLElement): void;
+    _propagatePlacement(placement: string): void;
+    _checkMaxHeight(): void;
+    _resizeObserver: any;
+    _handleScroll(): void;
+    _removeScrollListener(): void;
+    _checkPopoverScroll(scrollElement: HTMLElement): void;
+    _initPopover(): void;
+    firstUpdated(): Promise<void>;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    _onHeightChange(newHeight: number): void;
+    render(): import('lit-html').TemplateResult;
+}
