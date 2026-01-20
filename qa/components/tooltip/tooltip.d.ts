@@ -16,10 +16,12 @@ export declare class Tooltip extends LitElement {
     hide: boolean;
     noHeightLimit: boolean;
     tooltipFixed: boolean;
+    interactive: boolean;
     _popperInstance: any;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
     createPopperInstance(parent: HTMLElement): void;
+    _onMouseEnter(event: MouseEvent): void;
     _openTooltip(): void;
     _closeTooltip(): void;
     _propagatePlacement(placement: string): void;

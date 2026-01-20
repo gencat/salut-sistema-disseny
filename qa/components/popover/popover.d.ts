@@ -33,6 +33,9 @@ export declare class Popover extends LitElement {
     removeMaxHeight: boolean;
     fullWidth: boolean;
     hideHeader: boolean;
+    tooltipFixed: boolean;
+    hideTooltip: boolean;
+    tooltipPosition: string;
     _popperInstance: any;
     _parent: HTMLElement | null;
     _disableClickOutside: boolean;

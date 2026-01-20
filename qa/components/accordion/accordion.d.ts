@@ -2,11 +2,13 @@ import { LitElement } from 'lit';
 
 export declare class Accordion extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    hideTooltip: boolean;
     info: undefined;
     infoBadgeState: string;
     infoBadgeIcon: string;
     infoBadgeOutlined: boolean;
     tooltipFixed: boolean;
+    tooltipPosition: string;
     secondaryActionLabel: string;
     hasPrimaryAction: boolean;
     primaryActionLabel: string;

@@ -38,21 +38,16 @@ export type ListItem = {
 };
 export declare class ItemList extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    items: ListItem[] | undefined;
+    widget: boolean;
+    hideTooltip: boolean;
     tooltipFixed: boolean;
-    set items(data: Array<ListItem>);
-    get items(): Array<ListItem>;
-    set widget(value: boolean);
-    get widget(): boolean;
-    set widgetActions(value: Array<WidgetAction>);
-    get widgetActions(): Array<WidgetAction>;
-    set widgetIcons(value: Array<WidgetIcon>);
-    get widgetIcons(): Array<WidgetIcon>;
-    _items: ListItem[];
-    _widget: boolean;
-    _widgetActions: WidgetAction[];
-    _widgetIcons: WidgetIcon[];
+    tooltipPosition: string;
+    variant: string;
     _dispatchItemAction(item: ListItem): void;
     _dispatchItemChip(item: ListItem): void;
     _dispatchWidgetAction(item: ListItem, action: string): void;
+    _applyDivider(): void;
+    firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }
