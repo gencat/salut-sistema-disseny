@@ -62,4 +62,7 @@ export declare class FormInput extends LitElement {
     _stopHold(): void;
     _emitInput(): void;
     _emitChange(): void;
+    _lastValue: string | null;
+    _handleMouseOver(): void;
+    _checkInputOverflow(): void;
 }

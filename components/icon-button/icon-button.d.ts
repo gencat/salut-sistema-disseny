@@ -13,6 +13,7 @@ export declare class IconButton extends LitElement {
     ariaLabel: string | null;
     ariaExpanded: any;
     tooltipFixed: boolean;
+    tooltipInteractive: boolean;
     tooltipPosition: string;
     hideTooltip: boolean;
     _handleClick(): void;

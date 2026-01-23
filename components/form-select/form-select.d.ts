@@ -72,6 +72,9 @@ export declare class FormSelect extends LitElement {
     _inputValidity: boolean;
     _selectElements: number;
     _popperInstance: any;
+    _intersectionObserver: IntersectionObserver | null;
+    _isInitialized: boolean;
+    _syncFromValue: boolean;
     _placeholder: string;
     _previousValue: string | null;
     _elements: OptionItem[];
@@ -84,6 +87,7 @@ export declare class FormSelect extends LitElement {
     updated(changedProps: Map<string, unknown>): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
+    _syncFormValue(): void;
     _onChange(): void;
     _handleValidity(): void;
     _emitInput(): void;
@@ -102,7 +106,11 @@ export declare class FormSelect extends LitElement {
     private _getFilteredElements;
     _applyDefaultFilter(filter: string, selectedElements: any[]): any[];
     _applyAdvancedFilter(filter: string, selectedElements: any[]): any[];
+    _isFirstInitSelectedElements: boolean;
     private _initSelectedElements;
+    _isOverflowChecked: boolean;
+    _handleInputMouseOver: () => void;
+    _checkTruncatedIfMultipleSelection(): void;
     _showSelectedValues(values: string[]): void;
     private _reorderElements;
     private _updateInputValue;

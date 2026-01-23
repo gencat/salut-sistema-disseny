@@ -104,8 +104,11 @@ export declare class InputDropdown extends LitElement {
     _applyDefaultFilter(filter: string, selectedElements: any[]): any[] | undefined;
     _applyAdvancedFilter(filter: string, selectedElements: any[]): any[];
     firstUpdated(): Promise<void>;
+    _checkTruncatedIfMultipleSelection(): void;
     _initElementsSelected(): void;
     _isTruncated: boolean;
+    _isOverflowChecked: boolean;
+    _handleInputMouseOver: () => void;
     _checkInputOverflow(): void;
     _clickedOutsideDropdown(dropdown: any, event: any): void;
     _handleInput(): void;

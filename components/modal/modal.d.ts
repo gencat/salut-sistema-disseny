@@ -34,6 +34,7 @@ export declare class Modal extends LitElement {
     _showDialog(): void;
     _hideDialog(): void;
     _close(): void;
+    _isStateValid(): boolean;
     _getStateIcon(): string;
     _handleKeydown(event: KeyboardEvent): void;
     _handleOutsideClick(event: any): void;

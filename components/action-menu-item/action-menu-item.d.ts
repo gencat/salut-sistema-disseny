@@ -35,6 +35,7 @@ export declare class ActionMenuItem extends LitElement {
     get last(): boolean;
     tooltipFixed: boolean;
     tooltipPosition: string;
+    hideTooltip: boolean;
     _state: string;
     _label: string;
     _leftIcon: string | undefined;

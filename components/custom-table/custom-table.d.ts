@@ -156,5 +156,6 @@ export declare class CustomTable extends LitElement {
     firstUpdated(): Promise<void>;
     willUpdate(changedProperties: any): void;
     filtersPopoverClose(): void;
+    _areRowsSelected(): boolean;
     render(): TemplateResult;
 }

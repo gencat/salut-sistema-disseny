@@ -8,5 +8,6 @@ export declare class DecorativeIcon extends LitElement {
     state: StateType;
     size: SizeType;
     disabled: boolean;
+    fill: boolean;
     render(): import('lit-html').TemplateResult;
 }
