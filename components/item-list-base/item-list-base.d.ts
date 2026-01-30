@@ -19,6 +19,7 @@ export declare class ItemListBase extends LitElement {
     tooltipPosition: string;
     interactive: boolean;
     selectable: boolean;
+    forceViewport: boolean;
     _checkTextTruncate(event: MouseEvent): void;
     _dispatchClickEvent(event: MouseEvent): void;
     render(): import('lit-html').TemplateResult;

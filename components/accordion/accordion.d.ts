@@ -15,6 +15,7 @@ export declare class Accordion extends LitElement {
     primaryActionIcon: string;
     primaryActionStatus: string;
     primaryActionDisabled: boolean;
+    forceViewport: boolean;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;

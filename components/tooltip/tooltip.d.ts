@@ -1,3 +1,4 @@
+import { Options } from '@popperjs/core';
 import { LitElement } from 'lit';
 
 export declare class Tooltip extends LitElement {
@@ -17,9 +18,12 @@ export declare class Tooltip extends LitElement {
     noHeightLimit: boolean;
     tooltipFixed: boolean;
     interactive: boolean;
+    forceViewport: boolean;
     _popperInstance: any;
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    _getPopperStrategy(): "absolute" | "fixed";
+    _getPopperModifiers(): Options['modifiers'];
     createPopperInstance(parent: HTMLElement): void;
     _onMouseEnter(event: MouseEvent): void;
     _openTooltip(): void;

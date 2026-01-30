@@ -16,6 +16,7 @@ export declare class IconButton extends LitElement {
     tooltipInteractive: boolean;
     tooltipPosition: string;
     hideTooltip: boolean;
+    forceViewport: boolean;
     _handleClick(): void;
     render(): import('lit-html').TemplateResult;
 }

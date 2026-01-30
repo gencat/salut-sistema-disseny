@@ -27,6 +27,7 @@ export declare class Widget extends LitElement {
     hideTooltip: boolean;
     hasScroll: boolean;
     folded: boolean;
+    forceViewport: boolean;
     private _eventOptions;
     checkTextTruncate(event: MouseEvent): void;
     handleAction(): void;

@@ -42,6 +42,7 @@ export declare class ItemList extends LitElement {
     widget: boolean;
     hideTooltip: boolean;
     tooltipFixed: boolean;
+    forceViewport: boolean;
     tooltipPosition: string;
     variant: string;
     _dispatchItemAction(item: ListItem): void;

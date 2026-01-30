@@ -16,6 +16,7 @@ export declare class Badge extends LitElement {
     hideIcon: boolean;
     tooltipPosition: string;
     width: string | undefined;
+    forceViewport: boolean;
     _icon: string;
     _iconSize: string;
     _iconFill: boolean;
