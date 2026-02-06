@@ -5,6 +5,7 @@ export declare class ItemListBase extends LitElement {
     disabled: boolean;
     value: string | undefined;
     title: string;
+    titleText: string;
     subtitle: string | undefined;
     date: string | undefined;
     decorativeIcon: string | undefined;
@@ -20,7 +21,11 @@ export declare class ItemListBase extends LitElement {
     interactive: boolean;
     selectable: boolean;
     forceViewport: boolean;
+    highlight: string | undefined;
+    highlightThreshold: number;
+    advancedHighlight: boolean;
     _checkTextTruncate(event: MouseEvent): void;
     _dispatchClickEvent(event: MouseEvent): void;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }

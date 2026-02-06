@@ -6,6 +6,7 @@ export declare class Drawer extends LitElement {
     jcef: boolean;
     open: boolean;
     title: string;
+    titleText: string;
     _drawerHeader: HTMLElement | null;
     _drawerFooter: HTMLElement | null;
     constructor();

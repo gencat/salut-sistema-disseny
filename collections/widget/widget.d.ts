@@ -6,6 +6,7 @@ export declare class Widget extends LitElement {
     icon: string | undefined;
     iconStatus: string | undefined;
     title: string;
+    titleText: string;
     results: string | undefined;
     resultsState: string;
     resultsLabel: string;
@@ -15,12 +16,14 @@ export declare class Widget extends LitElement {
     infoBadgeOutlined: boolean;
     notifications: number | undefined;
     notificationsState: string;
+    helpText: string | null;
     hasAction: boolean;
     hasNext: boolean;
     hasClose: boolean;
     actionLabel: string | undefined;
     actionIcon: string | undefined;
     actionVariant: string;
+    actionFill: boolean;
     actionDisabled: boolean;
     tooltipFixed: boolean;
     tooltipPosition: string;
@@ -34,5 +37,6 @@ export declare class Widget extends LitElement {
     handleNext(): void;
     handleClose(): void;
     protected firstUpdated(): void;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }

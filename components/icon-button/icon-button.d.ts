@@ -7,6 +7,7 @@ export declare class IconButton extends LitElement {
     size: string;
     label: string;
     icon: string | undefined;
+    fill: boolean;
     disabled: boolean;
     hidden: boolean;
     disableTabindex: boolean;

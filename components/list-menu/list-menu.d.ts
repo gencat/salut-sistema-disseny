@@ -3,6 +3,7 @@ import { LitElement } from 'lit';
 export declare class ListMenu extends LitElement {
     static get styles(): import('lit').CSSResult[];
     title: string;
+    titleText: string;
     description: string;
     icon: string | null;
     items: {
@@ -27,5 +28,6 @@ export declare class ListMenu extends LitElement {
     moveFocus(direction: number): void;
     _checkTextsToTruncated(): void;
     firstUpdated(): Promise<void>;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }

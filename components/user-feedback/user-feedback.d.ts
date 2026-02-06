@@ -7,6 +7,7 @@ export declare class UserFeedback extends LitElement {
     imageSrc: string;
     imageAlt: string;
     title: string;
+    titleText: string;
     description: string;
     hasDetails: boolean;
     detailsLabel: string;
@@ -14,5 +15,6 @@ export declare class UserFeedback extends LitElement {
     status: string;
     _detailsExpanded: boolean;
     _handleDetailsClick(): void;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }

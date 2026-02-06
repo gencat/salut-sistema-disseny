@@ -10,12 +10,15 @@ export declare class Accordion extends LitElement {
     tooltipFixed: boolean;
     tooltipPosition: string;
     secondaryActionLabel: string;
+    secondaryActionFill: boolean;
     hasPrimaryAction: boolean;
     primaryActionLabel: string;
     primaryActionIcon: string;
     primaryActionStatus: string;
     primaryActionDisabled: boolean;
+    primaryActionFill: boolean;
     forceViewport: boolean;
+    helpText: string | null;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;

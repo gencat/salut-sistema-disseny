@@ -6,6 +6,8 @@ export declare class CardHighlightsItem extends LitElement {
     disabled: boolean;
     icon: string;
     title: string;
+    titleText: string;
     text: string;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     render(): import('lit-html').TemplateResult;
 }

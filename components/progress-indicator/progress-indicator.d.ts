@@ -10,6 +10,8 @@ export declare class ProgressIndicator extends LitElement {
     hidePercentage: boolean;
     set title(value: string);
     get title(): string;
+    set titleText(value: string);
+    get titleText(): string;
     _title: string | undefined;
     _label: string;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;

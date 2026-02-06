@@ -13,6 +13,7 @@ type Category = {
 export declare class PresetTexts extends LitElement {
     static get styles(): import('lit').CSSResult[];
     title: string;
+    titleText: string;
     buttonLabelCancel: string;
     buttonLabelSelect: string;
     descriptionLabel: string;
@@ -44,6 +45,7 @@ export declare class PresetTexts extends LitElement {
     _clearFilter(): void;
     _filterItems(): PresetTextsItem[];
     firstUpdated(): Promise<void>;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     willUpdate(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

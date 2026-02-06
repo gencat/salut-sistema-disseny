@@ -26,6 +26,7 @@ export declare class Popover extends LitElement {
     hideCloseIcon: boolean;
     disableParentClick: boolean;
     title: string;
+    titleText: string;
     actionIcon: string | undefined;
     actionLabel: string | undefined;
     position: string;
