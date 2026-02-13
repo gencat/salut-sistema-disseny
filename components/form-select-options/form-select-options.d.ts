@@ -35,8 +35,10 @@ export declare class FormSelectOptions extends LitElement {
     _elementSelectAll: string[];
     _style: string | null;
     _isAllSelected: boolean;
+    _syncSelectedValue: boolean;
     updated(changedProps: Map<string, any>): void;
     firstUpdated(): Promise<void>;
+    _checkElements(): void;
     _updateSelectedValues(): void;
     _areAllElementsSelected(): void;
     _valueIsSelected(value: string): boolean;

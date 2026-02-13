@@ -54,6 +54,8 @@ export declare class FormTimepicker extends LitElement {
     minHour: number;
     maxHour: number;
     minutesRange: number;
+    tooltipFixed: boolean;
+    forceViewport: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;

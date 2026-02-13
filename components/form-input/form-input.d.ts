@@ -39,6 +39,8 @@ export declare class FormInput extends LitElement {
     unit?: string;
     inputPrefix?: string;
     hasActions: boolean;
+    tooltipFixed: boolean;
+    forceViewport: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;

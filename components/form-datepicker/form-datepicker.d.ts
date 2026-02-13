@@ -65,6 +65,8 @@ export declare class FormDatepicker extends LitElement {
     errorMessageFormat: string;
     errorMessageMinDate: string;
     errorMessageMaxDate: string;
+    tooltipFixed: boolean;
+    forceViewport: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;

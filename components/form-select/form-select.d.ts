@@ -63,6 +63,8 @@ export declare class FormSelect extends LitElement {
     dropdownPlacement: string;
     dropdownFixed: boolean;
     advancedFilter: boolean;
+    tooltipFixed: boolean;
+    forceViewport: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;
