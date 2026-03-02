@@ -13,6 +13,7 @@ export declare class CustomTableHeader extends LitElement {
     disconnectedCallback(): void;
     private _resizeTimer;
     private _handleResize;
+    enableCombinedFilters: boolean;
     tableInfo: undefined;
     showConfig: boolean;
     configTableLabel: string;

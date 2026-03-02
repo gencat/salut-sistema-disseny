@@ -2,6 +2,8 @@ import { LitElement } from 'lit';
 
 export declare class Accordion extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    showHeaderDivider: boolean;
+    hideFooterDivider: boolean;
     hideTooltip: boolean;
     info: undefined;
     infoBadgeState: string;
@@ -10,11 +12,15 @@ export declare class Accordion extends LitElement {
     tooltipFixed: boolean;
     tooltipPosition: string;
     secondaryActionLabel: string;
+    secondaryActionFill: boolean;
     hasPrimaryAction: boolean;
     primaryActionLabel: string;
     primaryActionIcon: string;
     primaryActionStatus: string;
     primaryActionDisabled: boolean;
+    primaryActionFill: boolean;
+    forceViewport: boolean;
+    helpText: string | null;
     get _checkbox(): HTMLInputElement;
     set icon(icon: string);
     get icon(): string;
