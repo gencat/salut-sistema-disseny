@@ -1,5 +1,12 @@
 import { LitElement, PropertyValues } from 'lit';
 export declare class BadgeButton extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
     static get styles(): import('lit').CSSResult[];
     get _tooltip(): any;
     type: string;

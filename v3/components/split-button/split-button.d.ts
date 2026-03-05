@@ -1,6 +1,13 @@
 import { LitElement, PropertyValues } from 'lit';
 import { ActionMenu } from '../action-menu/action-menu';
 export declare class SplitButton extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
     static get styles(): import('lit').CSSResult[];
     private _handleDocumentClickBound;
     constructor();

@@ -1,5 +1,12 @@
 import { LitElement } from 'lit';
 export declare class Button extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
     static get styles(): import('lit').CSSResult[];
     type: string;
     variant: string;
