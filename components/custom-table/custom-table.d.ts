@@ -38,6 +38,7 @@ export declare class CustomTable extends LitElement {
     showConfig: boolean;
     configTableLabel: string;
     customActions: boolean;
+    enableCombinedFilters: boolean;
     private _hideHeader;
     private _hidePaginator;
     private _columnsHeader;

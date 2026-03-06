@@ -1,0 +1,23 @@
+import{j as e,M as l}from"./index-BPgKyu7t.js";import{useMDXComponents as t}from"./index-z7LPfQjP.js";import"./DocsRenderer-CFRXHY34-CEgIn6u0.js";import"./iframe-B_sxoGeV.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-Cu4lwwaE.js";import"./index-Ca4lBP7z.js";import"./index-DrFu-skq.js";function n(i){const s={code:"code",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",ul:"ul",...t(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(l,{title:"Documentació/Changelog v2/2.13.1"}),`
+`,e.jsx(s.h2,{id:"changelog",children:"Changelog"}),`
+`,e.jsx("br",{}),`
+`,e.jsxs("div",{class:"dss-grid",children:[e.jsx("div",{class:"dss-col--6 dss-col--sm-4 sb-changelog-col",children:e.jsx("dss-badge",{size:"lg",state:"ideal",text:"Versió: 2.13.1",hideIcon:!0})}),e.jsx("div",{class:"dss-col--6 dss-col--sm-4 sb-changelog-col sb-changelog-col--right",children:e.jsx("changelog-release",{date:"06/02/2026"})})]}),`
+`,e.jsx("br",{}),`
+`,e.jsx("br",{}),`
+`,e.jsxs("div",{class:"dss-grid",children:[e.jsx("div",{class:"dss-col--8 dss-col--sm-5",children:e.jsx(s.h3,{id:"informe-de-registre-de-canvis",children:"Informe de registre de canvis"})}),e.jsx("div",{class:"dss-col--4 dss-col--sm-3 sb-changelog-col sb-changelog-col--right sb-changelog-col---legend",children:e.jsx("changelog-legend",{})})]}),`
+`,e.jsx("br",{}),`
+`,e.jsx("br",{}),`
+`,e.jsx("div",{class:"dss-grid",children:e.jsxs("div",{class:"dss-col--12 dss-col--sm-8",children:[e.jsx(s.h4,{id:"conflicte-de-la-propietat-title-vs-latribut-natiu-html",children:"Conflicte de la propietat title vs l’atribut natiu HTML"}),e.jsxs("changelog-item",{status:"bug",children:[e.jsx(s.p,{children:`S’ha detectat un conflicte entre la propietat title en diferents components que està sent interpretada com
+l’atribut natiu HTML, fet que provoca que en alguns entorns aparegui el tooltip del navegador de manera
+inesperada.`}),e.jsx("br",{}),e.jsxs(s.p,{children:["S’ha afegit la propietat ",e.jsx(s.code,{children:"titleText"})," per substituir l’actual title en els components següents:"]}),e.jsxs(s.ul,{children:[`
+`,e.jsx(s.li,{children:"Header"}),`
+`,e.jsx(s.li,{children:"Drawer"}),`
+`,e.jsx(s.li,{children:"Item List"}),`
+`,e.jsx(s.li,{children:"List Menu"}),`
+`,e.jsx(s.li,{children:"Module Header"}),`
+`,e.jsx(s.li,{children:"Popover"}),`
+`,e.jsx(s.li,{children:"Progress Indicator"}),`
+`,e.jsx(s.li,{children:"Preset Texts"}),`
+`,e.jsx(s.li,{children:"User Feedback"}),`
+`,e.jsx(s.li,{children:"Widget"}),`
+`]})]}),e.jsx("br",{}),e.jsx(s.h4,{id:"item-list",children:"Item List"}),e.jsx("changelog-item",{status:"info",children:e.jsxs(s.p,{children:["S’ha afegit la funcionalitat de ",e.jsx(s.code,{children:"highlight"})," per poder ressaltar text dins de cada ítem."]})}),e.jsx("br",{}),e.jsx(s.h4,{id:"icon-button",children:"Icon Button"}),e.jsx("changelog-item",{status:"design",children:e.jsxs(s.p,{children:["S'ha afegit la propietat ",e.jsx(s.code,{children:"fill"})," per controlar si la icona és de tipus fill o no."]})}),e.jsx("br",{}),e.jsx(s.h4,{id:"accordion",children:"Accordion"}),e.jsx("changelog-item",{status:"design",children:e.jsxs(s.p,{children:["S'ha afegit les propietats ",e.jsx(s.code,{children:"helpText"}),", ",e.jsx(s.code,{children:"primaryActionFill"})," i ",e.jsx(s.code,{children:"secondaryActionFill"}),"."]})}),e.jsx("br",{}),e.jsx(s.h4,{id:"widget",children:"Widget"}),e.jsx("changelog-item",{status:"design",children:e.jsxs(s.p,{children:["S'ha afegit les propietats ",e.jsx(s.code,{children:"helpText"})," i ",e.jsx(s.code,{children:"actionFill"}),"."]})}),e.jsx("br",{}),e.jsx(s.h4,{id:"decorative-icon",children:"Decorative Icon"}),e.jsx("changelog-item",{status:"design",children:e.jsx(s.p,{children:"La variant error s’ha reanomenat danger per alinear-la amb la resta de components."})}),e.jsx("br",{}),e.jsx(s.h4,{id:"popover",children:"Popover"}),e.jsx("changelog-item",{status:"bug",children:e.jsxs(s.p,{children:["S’ha corregit un error que es produïa quan la propietat ",e.jsx(s.code,{children:"open"})," es definia inicialment a true, fet que provocava que el popover no es posicionés correctament."]})}),e.jsx("changelog-item",{status:"design",children:e.jsx(s.p,{children:"S’ha eliminat el min-height intern del component."})}),e.jsx("br",{}),e.jsx(s.h4,{id:"header",children:"Header"}),e.jsx("changelog-item",{status:"info",children:e.jsxs(s.p,{children:["S'ha afegit la propietat ",e.jsx(s.code,{children:"titleFullWidth"})," per permetre que el títol ocupi tot l'ample disponible."]})})]})})]})}function g(i={}){const{wrapper:s}={...t(),...i.components};return s?e.jsx(s,{...i,children:e.jsx(n,{...i})}):n(i)}export{g as default};
