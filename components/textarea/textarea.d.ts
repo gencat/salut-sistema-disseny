@@ -2,6 +2,12 @@ import { LitElement } from 'lit';
 
 export declare class Textarea extends LitElement {
     static get styles(): import('lit').CSSResult;
+    private _handleInputBound;
+    private _handleFocusBound;
+    private _handleFocusOutBound;
+    private _handleBlurBound;
+    private _handleLabelClickBound;
+    private _handleKeyupBound;
     set value(value: string);
     get value(): string;
     set showError(showError: boolean);
@@ -23,6 +29,7 @@ export declare class Textarea extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    constructor();
     disconnectedCallback(): void;
     private _checkAttributes;
     firstUpdated(): Promise<void>;

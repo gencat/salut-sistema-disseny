@@ -14,6 +14,8 @@ type DssTabItem = {
 export declare class TabsList extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private _handleUpdateArrowsBound;
+    private _tabKeydownHandler;
+    private _tabMouseDownHandler;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
@@ -48,6 +50,7 @@ export declare class TabsList extends LitElement {
     _addTabText: string;
     updated(changedProperties: Map<string, any>): void;
     changeTabWatch(): Promise<void>;
+    private _removeTabListeners;
     setFirstAndLastTabs(): void;
     changeTab(selectedTab: DssTabItem): void;
     updateTabs(selectedTabId: string): void;

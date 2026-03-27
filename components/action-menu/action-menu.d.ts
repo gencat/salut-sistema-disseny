@@ -2,6 +2,9 @@ import { LitElement } from 'lit';
 
 export declare class ActionMenu extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _parentMouseDownHandler;
+    private _parentKeyDownHandler;
+    private _slotChangeHandler;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;

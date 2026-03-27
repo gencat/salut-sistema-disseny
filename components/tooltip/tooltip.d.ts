@@ -3,6 +3,11 @@ import { LitElement } from 'lit';
 
 export declare class Tooltip extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _parent;
+    private _parentMouseEnterHandler;
+    private _parentMouseLeaveHandler;
+    private _parentFocusInHandler;
+    private _parentFocusOutHandler;
     observerConfig: {
         attributes: boolean;
         childList: boolean;

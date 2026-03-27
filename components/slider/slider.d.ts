@@ -2,6 +2,13 @@ import { LitElement } from 'lit';
 
 export declare class Slider extends LitElement {
     static get styles(): import('lit').CSSResult;
+    private _handleDomContentLoaded;
+    private _handleInputEvent;
+    private _handleMouseUp;
+    private _handleKeyUp;
+    private _handleTouchStartEvent;
+    private _handleTouchMoveEvent;
+    private _handleTouchEndEvent;
     get _input(): HTMLInputElement;
     get _tooltip(): HTMLElement;
     set min(min: number);
@@ -28,7 +35,9 @@ export declare class Slider extends LitElement {
     _progress: number;
     _disabled: boolean;
     _isTooltipTouched: boolean;
+    constructor();
     firstUpdated(): Promise<void>;
+    disconnectedCallback(): void;
     _handleTouchStart(event: any): void;
     _handleTouchEnd(event: any): void;
     _handleTouchMove(event: any): void;

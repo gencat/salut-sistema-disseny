@@ -2,6 +2,8 @@ import { LitElement } from 'lit';
 
 export declare class ActionMenuItem extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _handleDocumentMouseDown;
+    disconnectedCallback(): void;
     set state(value: string);
     get state(): string;
     set label(value: string);
@@ -50,10 +52,12 @@ export declare class ActionMenuItem extends LitElement {
     _nestedMenuPosition: string;
     _first: boolean;
     _last: boolean;
+    constructor();
     _handleItemClick(): void;
     _handleKeydown(event: KeyboardEvent): void;
     _handleAction(event: Event): void;
     private _clickOutside;
+    private _onDocumentMouseDown;
     private _unselectItem;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
