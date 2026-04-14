@@ -55,6 +55,8 @@ export declare class Popover extends LitElement {
     _propagatePlacement(placement: string): void;
     _checkMaxHeight(): void;
     _resizeObserver: any;
+    _scrollHandler: (() => void) | null;
+    _scrollContent: HTMLElement | null;
     _handleScroll(): void;
     _removeScrollListener(): void;
     _checkPopoverScroll(scrollElement: HTMLElement): void;

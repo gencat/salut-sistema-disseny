@@ -2,6 +2,7 @@ import { LitElement } from 'lit';
 
 export declare class UploadBox extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _inputChangeHandler;
     fileExplorerMessage: string;
     dragAndDropMessage: string;
     dragAndDropIcon: string;

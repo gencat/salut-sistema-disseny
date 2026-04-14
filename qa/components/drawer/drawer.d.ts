@@ -9,6 +9,8 @@ export declare class Drawer extends LitElement {
     titleText: string;
     _drawerHeader: HTMLElement | null;
     _drawerFooter: HTMLElement | null;
+    _scrollHandler: ((event: Event) => void) | null;
+    _scrollContainer: HTMLElement | null;
     constructor();
     _showDrawer(): void;
     _hideDrawer(): void;

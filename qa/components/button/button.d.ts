@@ -4,6 +4,7 @@ export declare class Button extends LitElement {
     static get styles(): import('lit').CSSResult[];
     type: string;
     variant: string;
+    status: string;
     label: string;
     icon: string | undefined;
     iconPosition: string;

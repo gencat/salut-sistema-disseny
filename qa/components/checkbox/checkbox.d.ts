@@ -2,6 +2,7 @@ import { LitElement } from 'lit';
 
 export declare class Checkbox extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _handleChangeBound;
     get _input(): HTMLInputElement;
     get _label(): HTMLInputElement;
     variant: string;
@@ -20,6 +21,7 @@ export declare class Checkbox extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    constructor();
     disconnectedCallback(): void;
     _checkInputAttributes(): void;
     _handleChange(): void;

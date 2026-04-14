@@ -18,6 +18,7 @@ export declare class HeaderMenuPatient extends LitElement {
     name: string | undefined;
     cip: string | undefined;
     age: string | undefined;
+    ageLabel: string | undefined;
     gender: string | undefined;
     phoneMain: string | undefined;
     phoneAlt: string | undefined;

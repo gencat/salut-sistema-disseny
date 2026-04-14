@@ -25,6 +25,8 @@ export declare class Modal extends LitElement {
     _hideCloseIcon: boolean;
     _hasScroll: boolean;
     _modalStyle: string | undefined;
+    _scrollHandler: ((event: Event) => void) | null;
+    _scrollContainer: HTMLElement | null;
     get _headerSlot(): HTMLInputElement;
     get _footerSlot(): HTMLInputElement;
     constructor();

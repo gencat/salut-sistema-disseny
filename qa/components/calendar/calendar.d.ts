@@ -12,6 +12,7 @@ export declare const MONTH: string[];
 export declare const WEEK: string[];
 export declare class Calendar extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    standalone: boolean;
     customCalendar: CalendarItem[] | undefined;
     set range(value: boolean);
     get range(): boolean;

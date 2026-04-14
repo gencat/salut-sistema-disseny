@@ -17,6 +17,11 @@ export interface IColumnHeader {
 }
 export declare class CustomTable extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    private _tbodyKeydownHandler;
+    private _changeHandler;
+    private _scrollXHandler;
+    private _scrollBody;
+    constructor();
     disconnectedCallback(): void;
     internalSelectedCounter: number;
     set hideHeader(value: boolean);

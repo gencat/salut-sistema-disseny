@@ -17,6 +17,7 @@ export declare class Sidemenu_ extends LitElement {
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    topMenuItems: MenuItem[];
     createMenuItems: MenuItem[];
     roleMenuItems: MenuItem[];
     globalMenuItems: MenuItem[];
