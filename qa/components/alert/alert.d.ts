@@ -4,7 +4,9 @@ export declare class Alert extends LitElement {
     static get styles(): import('lit').CSSResult[];
     state: string;
     size: string;
-    message: string;
+    message: string | undefined;
+    titleText: string | undefined;
+    description: string | undefined;
     buttonLabel: string;
     showMoreLabel: string;
     showLessLabel: string;
@@ -19,6 +21,7 @@ export declare class Alert extends LitElement {
     _handleClose(): void;
     updated(_changedProperties: Map<string | number | symbol, unknown>): void;
     firstUpdated(): Promise<void>;
+    _isTextTruncated(container: HTMLElement): boolean;
     setStateIcon(): void;
     _getIconSize(): "md" | "sm";
     toggleExpand(): void;

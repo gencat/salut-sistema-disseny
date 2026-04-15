@@ -8,6 +8,9 @@ export type LinksItem = {
 export declare class HeaderLinks extends LitElement {
     static get styles(): import('lit').CSSResult[];
     jcef: boolean;
+    configLabel: string;
+    hideConfig: boolean;
+    disableConfig: boolean;
     set hideHelp(value: boolean);
     get hideHelp(): boolean;
     set disableHelp(value: boolean);
@@ -22,5 +25,6 @@ export declare class HeaderLinks extends LitElement {
     _items: LinksItem[];
     _dispatchItemAction(item: LinksItem): void;
     _handleHelp(): void;
+    _handleConfig(): void;
     render(): import('lit-html').TemplateResult;
 }
