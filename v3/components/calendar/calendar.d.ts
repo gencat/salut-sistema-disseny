@@ -11,6 +11,7 @@ export declare const MONTH: string[];
 export declare const WEEK: string[];
 export declare class Calendar extends LitElement {
     static get styles(): import('lit').CSSResult[];
+    standalone: boolean;
     open: boolean;
     openByDefault: boolean;
     placement: string;

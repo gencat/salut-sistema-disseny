@@ -5,7 +5,8 @@ export declare class ProgressIndicator extends LitElement {
     description: string;
     state: StateType;
     percentage: number;
-    hasFailed: boolean;
+    set hasFailed(value: boolean);
+    get hasFailed(): boolean;
     hidePercentage: boolean;
     set title(value: string);
     get title(): string;
@@ -13,6 +14,6 @@ export declare class ProgressIndicator extends LitElement {
     get titleText(): string;
     _title: string | undefined;
     _label: string;
-    updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    _hasFailed: boolean;
     render(): import('lit-html').TemplateResult;
 }

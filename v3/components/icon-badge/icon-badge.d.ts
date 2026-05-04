@@ -22,7 +22,6 @@ export declare class IconBadge extends LitElement {
     _bubble: boolean;
     _iconSize: string;
     _iconFill: boolean;
-    firstUpdated(): void;
     _updateIconFill(state: string): void;
     render(): import('lit-html').TemplateResult;
 }

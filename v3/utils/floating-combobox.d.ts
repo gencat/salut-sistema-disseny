@@ -5,6 +5,8 @@ type UpdatePositionOptions = {
     offsetPx?: number;
     paddingPx?: number;
     matchWidth?: boolean;
+    boundary?: Element | 'clippingAncestors';
+    rootBoundary?: 'viewport' | 'document';
 };
 type ExecuteShowOptions = {
     floatingEl: HTMLElement;

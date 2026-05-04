@@ -22,6 +22,12 @@ export declare class NgTextarea extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    private _handleInputBound;
+    private _handleFocusBound;
+    private _handleFocusOutBound;
+    private _handleBlurBound;
+    private _handelLabelClickBound;
+    private _handleKeyupBound;
     disconnectedCallback(): void;
     private _checkAttributes;
     firstUpdated(): Promise<void>;

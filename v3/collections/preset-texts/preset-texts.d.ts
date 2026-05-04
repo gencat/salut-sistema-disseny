@@ -29,6 +29,8 @@ export declare class PresetTexts extends LitElement {
     _isFirstUpdate: boolean;
     _itemsBackup: PresetTextsItem[];
     _filter: string;
+    private _handleScrollBound;
+    private _optionsWrapper;
     _handleTabChange(event: CustomEvent): void;
     _handleCancel(): void;
     _handleSelect(): void;
@@ -45,6 +47,7 @@ export declare class PresetTexts extends LitElement {
     _filterItems(): PresetTextsItem[];
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    disconnectedCallback(): void;
     willUpdate(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

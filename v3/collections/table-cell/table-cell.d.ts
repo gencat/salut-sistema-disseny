@@ -16,6 +16,7 @@ export declare class TableCell extends LitElement {
     currentSortedColumn: string | undefined;
     borderRight: boolean;
     borderLeft: boolean;
+    borderTop: boolean;
     reverse: boolean;
     valueMaxWidth: boolean;
     slotMaxWidth: boolean;
@@ -23,7 +24,7 @@ export declare class TableCell extends LitElement {
     icon: string | undefined;
     iconTooltip: string | undefined;
     value: string | undefined;
-    boldDivider: boolean;
+    divider: 'default' | 'group' | 'strong';
     hideDivider: boolean;
     nested: boolean;
     hasIndicator: boolean;

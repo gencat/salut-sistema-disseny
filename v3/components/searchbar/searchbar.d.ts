@@ -51,7 +51,13 @@ export declare class SearchBar extends LitElement {
     autofocus: boolean;
     spellcheck: boolean;
     private _defaultId;
+    tooltipFixed: boolean;
+    forceViewport: boolean;
+    _isTruncated: boolean;
+    private _handleDocumentMouseDown;
+    private _handleDocumentFocusOut;
     updated(changedProps: Map<string, unknown>): void;
+    disconnectedCallback(): void;
     _getEffectiveId(): string;
     _getSearchStyle(): string;
     get _inputValidity(): boolean;
@@ -73,6 +79,11 @@ export declare class SearchBar extends LitElement {
     _handleChange(): void;
     _emitChange(): void;
     _closeDropdown(): void;
+    _addDropdownListeners(): void;
+    _removeDropdownListeners(): void;
     firstUpdated(): Promise<void>;
+    _lastValue: string | null;
+    _handleMouseOver(): void;
+    _checkInputOverflow(): void;
     render(): import('lit-html').TemplateResult;
 }

@@ -55,6 +55,8 @@ export declare class NgSearchBar extends LitElement {
     _dropdownStyle: string;
     _searchboxStyle: string;
     _showAllChips: boolean;
+    private _handleDocumentMouseDown;
+    private _handleDocumentFocusOut;
     _getSearchStyle(): string;
     get _inputValidity(): boolean;
     _handleClick(): void;

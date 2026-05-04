@@ -4,11 +4,11 @@ export type TableConfig = {
     scrollable?: boolean;
     leftStickyColumns?: number;
     rightStickyColumns?: number;
-    format?: 'inline' | 'grid';
 };
 export declare class TableMain extends LitElement {
     static get styles(): import('lit').CSSResult[];
     config: TableConfig;
+    private _handleScrollXBound;
     connectedCallback(): void;
     disconnectedCallback(): void;
     private _onSlotChange;

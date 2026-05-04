@@ -62,6 +62,7 @@ export declare class Datepicker extends LitElement {
     errorMessageFormat: string;
     errorMessageMinDate: string;
     errorMessageMaxDate: string;
+    hasStepper: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;
@@ -108,4 +109,9 @@ export declare class Datepicker extends LitElement {
     _getPortalCalendar(): Element | null | undefined;
     private _enableAnimations;
     private _disableAnimations;
+    _prevDate(): void;
+    _nextDate(): void;
+    _currentValueToDate(value: string): Date;
+    _newDateToValue(newDateObj: Date): string;
+    isValidDate(): boolean;
 }

@@ -19,6 +19,7 @@ export declare class NgCheckbox extends LitElement {
     };
     callback: (mutationList: any) => void;
     observer: MutationObserver;
+    private _handleChangeBound;
     disconnectedCallback(): void;
     _checkInputAttributes(): void;
     _handleChange(): void;
