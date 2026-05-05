@@ -67,6 +67,7 @@ export declare class FormDatepicker extends LitElement {
     errorMessageMaxDate: string;
     tooltipFixed: boolean;
     forceViewport: boolean;
+    hasStepper: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;
@@ -107,4 +108,9 @@ export declare class FormDatepicker extends LitElement {
     _closeCalendar(): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
+    _prevDate(): void;
+    _nextDate(): void;
+    _currentValueToDate(value: string): Date;
+    _newDateToValue(newDateObj: Date): string;
+    isValidDate(): boolean;
 }
