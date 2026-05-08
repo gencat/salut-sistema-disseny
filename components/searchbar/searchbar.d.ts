@@ -55,6 +55,7 @@ export declare class SearchBar_ extends LitElement {
     tooltipFixed: boolean;
     forceViewport: boolean;
     _isTruncated: boolean;
+    _isCatalogLoaded: boolean;
     updated(changedProps: Map<string, unknown>): void;
     _getEffectiveId(): string;
     _getSearchStyle(): string;

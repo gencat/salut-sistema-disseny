@@ -52,6 +52,7 @@ export declare class Datepicker_ extends LitElement {
     errorMessageFormat: string;
     errorMessageMinDate: string;
     errorMessageMaxDate: string;
+    hasStepper: boolean;
     _timepickerLabel: string;
     _timepicker: string;
     _minutesRange: number;
@@ -115,5 +116,13 @@ export declare class Datepicker_ extends LitElement {
     _convertToISO(dateStr: string): string;
     _dispatchOnValidate(invalid: boolean): void;
     _clearDate(): void;
+    _prevDate(): void;
+    _nextDate(): void;
+    _isPrevDateDisabled(): boolean;
+    _isNextDateDisabled(): boolean;
+    _currentValueToDate(value: string): Date;
+    _getDateFromValue(value?: string): Date | null;
+    _newDateToValue(newDateObj: Date): string;
+    isValidDate(): boolean;
     render(): import('lit-html').TemplateResult;
 }
