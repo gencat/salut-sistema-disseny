@@ -3,6 +3,8 @@ import { LitElement } from 'lit';
 export type CatalogOption = {
     value: string;
     icon?: string;
+    key?: string;
+    data?: any;
 };
 export declare class SearchBar_ extends LitElement {
     static formAssociated: boolean;
@@ -21,6 +23,7 @@ export declare class SearchBar_ extends LitElement {
     innerFocus: boolean;
     threshold: number;
     searchTerms: string[];
+    searchItems: any[];
     catalog: CatalogOption[];
     emptyDropdownText: string;
     recentSearchesLabel: string;
@@ -73,7 +76,7 @@ export declare class SearchBar_ extends LitElement {
     _applyAdvancedFilter(filter: string): CatalogOption[];
     _generateSearchChips(): import('lit-html').TemplateResult[];
     _generateFilterCatalog(): import('lit-html').TemplateResult[];
-    _dispatchSearchChange(): void;
+    _dispatchSearchChange(item?: CatalogOption): void;
     _emitInput(): void;
     _handleChange(): void;
     _emitChange(): void;

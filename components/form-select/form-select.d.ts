@@ -123,6 +123,7 @@ export declare class FormSelect extends LitElement {
     _handleFocusOut(event: any): void;
     _handleBlurEsc(): void;
     _handleKeyDown(e: KeyboardEvent): void;
+    _dispatchFilterChange(): void;
     _cleanInput(): void;
     _keyboardFilterMatch(): void;
     _showPlaceholder(): void;

@@ -16,6 +16,7 @@ export declare class Button extends LitElement {
     tooltipFixed: boolean;
     loading: boolean;
     forceViewport: boolean;
+    tooltipPosition: string;
     loadingIcon: string;
     _handleClick(): void;
     _getIconSize(): "md" | "sm";

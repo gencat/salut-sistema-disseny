@@ -8,6 +8,7 @@ export declare class Tooltip extends LitElement {
     private _parentMouseLeaveHandler;
     private _parentFocusInHandler;
     private _parentFocusOutHandler;
+    private _closeTimeoutId;
     observerConfig: {
         attributes: boolean;
         childList: boolean;
@@ -31,8 +32,11 @@ export declare class Tooltip extends LitElement {
     _getPopperModifiers(): Options['modifiers'];
     createPopperInstance(parent: HTMLElement): void;
     _onMouseEnter(event: MouseEvent): void;
+    _onMouseLeave(): void;
     _openTooltip(): void;
     _closeTooltip(): void;
+    _scheduleClose(): void;
+    _clearCloseTimeout(): void;
     _propagatePlacement(placement: string): void;
     updateTooltip(): void;
     render(): import('lit-html').TemplateResult;

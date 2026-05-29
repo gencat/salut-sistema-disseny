@@ -9,16 +9,16 @@ export declare class Chip extends LitElement {
     disabled: boolean;
     selected: boolean;
     disableSelect: boolean;
+    _isSelectFocused: boolean;
     _isLabelTruncated: boolean;
     _isFirstUpdated: boolean;
     handleToggle(): void;
     handleKeydown(event: KeyboardEvent): void;
     handleDelete(event: Event): void;
+    onSelectFocusIn(event: FocusEvent): void;
+    onSelectFocusOut(): void;
     firstUpdated(): Promise<void>;
     willUpdate(_changedProperties: PropertyValues): void;
     _checkLabelTruncated(): void;
-    connectedCallback(): void;
-    disconnectedCallback(): void;
-    onKeyDown(event: KeyboardEvent): void;
     render(): import('lit-html').TemplateResult;
 }
