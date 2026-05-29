@@ -1,0 +1,14 @@
+import{j as s,M as r}from"./index-CsBN5yOs.js";import{useMDXComponents as c}from"./index-DHt3m49f.js";import"./DocsRenderer-CFRXHY34-CVsGF8OW.js";import"./iframe-CSr0S3c1.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-Cu4lwwaE.js";import"./index-Ca4lBP7z.js";import"./index-DrFu-skq.js";function l(n){const e={h2:"h2",h3:"h3",h4:"h4",p:"p",...c(),...n.components};return s.jsxs(s.Fragment,{children:[s.jsx(r,{title:"Documentació/Changelog v2/2.15.2"}),`
+`,s.jsx(e.h2,{id:"changelog",children:"Changelog"}),`
+`,s.jsx("br",{}),`
+`,s.jsxs("div",{class:"dss-grid",children:[s.jsx("div",{class:"dss-col--6 dss-col--sm-4 sb-changelog-col",children:s.jsx("dss-badge",{size:"lg",state:"ideal",text:"Versió: 2.15.2",hideIcon:!0})}),s.jsx("div",{class:"dss-col--6 dss-col--sm-4 sb-changelog-col sb-changelog-col--right",children:s.jsx("changelog-release",{date:"11/05/2026"})})]}),`
+`,s.jsx("br",{}),`
+`,s.jsx("br",{}),`
+`,s.jsxs("div",{class:"dss-grid",children:[s.jsx("div",{class:"dss-col--8 dss-col--sm-5",children:s.jsx(e.h3,{id:"informe-de-registre-de-canvis",children:"Informe de registre de canvis"})}),s.jsx("div",{class:"dss-col--4 dss-col--sm-3 sb-changelog-col sb-changelog-col--right sb-changelog-col---legend",children:s.jsx("changelog-legend",{})})]}),`
+`,s.jsx("br",{}),`
+`,s.jsx("br",{}),`
+`,s.jsx("div",{class:"dss-grid",children:s.jsxs("div",{class:"dss-col--12 dss-col--sm-8",children:[s.jsx(e.h4,{id:"calendar",children:"Calendar"}),s.jsx("changelog-item",{status:"bug",children:s.jsxs(e.p,{children:[`S'ha corregit un error pel qual, en reinicialitzar el valor seleccionat des del datepicker, els dies mostrats
+al calendari no s'actualitzaven correctament.`,s.jsx("br",{}),`
+Mentre que el mes i l’any es reajusten al dia actual, els dies del calendari continuen mostrant els
+corresponents a l’últim mes seleccionat, fet que provoca una desincronització entre el mes i l’any mostrats
+i els dies del calendari d’un altre mes diferent.`]})})]})})]})}function x(n={}){const{wrapper:e}={...c(),...n.components};return e?s.jsx(e,{...n,children:s.jsx(l,{...n})}):l(n)}export{x as default};
