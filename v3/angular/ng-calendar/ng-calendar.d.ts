@@ -108,6 +108,7 @@ export declare class NgCalendar extends LitElement {
     _emitDate(): void;
     _emitRange(): void;
     _updateCurrentDate(): void;
+    _resetCalendar(): void;
     _getDateString(selectedDate: string): Date | null;
     _onSelectTime(e: CustomEvent): void;
     _toggleMonthSelector(): void;

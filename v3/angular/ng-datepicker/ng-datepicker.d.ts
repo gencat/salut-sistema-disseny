@@ -120,7 +120,10 @@ export declare class NgDatepicker extends LitElement {
     _clearDate(): void;
     _prevDate(): void;
     _nextDate(): void;
+    _isPrevDateDisabled(): boolean;
+    _isNextDateDisabled(): boolean;
     _currentValueToDate(value: string): Date;
+    _getDateFromValue(value?: string): Date | null;
     _newDateToValue(newDateObj: Date): string;
     isValidDate(): boolean;
     render(): import('lit-html').TemplateResult;

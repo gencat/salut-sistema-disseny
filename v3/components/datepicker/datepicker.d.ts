@@ -111,7 +111,10 @@ export declare class Datepicker extends LitElement {
     private _disableAnimations;
     _prevDate(): void;
     _nextDate(): void;
+    _isPrevDateDisabled(): boolean;
+    _isNextDateDisabled(): boolean;
     _currentValueToDate(value: string): Date;
+    _getDateFromValue(value?: string): Date | null;
     _newDateToValue(newDateObj: Date): string;
     isValidDate(): boolean;
 }

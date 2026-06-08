@@ -8,7 +8,9 @@ export declare class TableRow extends LitElement {
     disabled: boolean;
     deleted: boolean;
     highlight: boolean;
+    isCurrentFocused: boolean;
     gridTemplateColumns: string | undefined;
     updated(changedProps: Map<string, any>): void;
+    firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }

@@ -29,6 +29,7 @@ export declare class TableCell extends LitElement {
     nested: boolean;
     hasIndicator: boolean;
     srOnly: boolean;
+    isCurrentFocused: boolean;
     updated(changedProps: Map<string, any>): void;
     isFirstUpdate: boolean;
     fontWeightBackup: FontWeight;

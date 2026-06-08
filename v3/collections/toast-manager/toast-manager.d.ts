@@ -4,10 +4,13 @@ export declare class ToastManager extends LitElement {
     private readonly _toastSelector_;
     private _slotObserver_;
     maxVisibleToasts: number;
+    leftPosition?: string;
+    bottomPosition?: string;
     constructor();
     connectedCallback(): void;
     firstUpdated(): void;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    private applyHostCssVar;
     private initSlotObserver;
     private handleSlotMutations;
     private handleToastClose;
