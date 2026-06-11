@@ -64,6 +64,7 @@ export declare class SearchBar extends LitElement {
     _isCatalogLoaded: boolean;
     private _handleDocumentMouseDown;
     private _portalManager;
+    private visibleObserver;
     _getPortalCombobox(): Element | null | undefined;
     updated(changedProps: Map<string, unknown>): void;
     disconnectedCallback(): void;
