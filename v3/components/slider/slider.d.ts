@@ -21,7 +21,7 @@ export declare class Slider extends LitElement {
     _vertical: boolean;
     _isTooltipTouched: boolean;
     set orient(orient: string);
-    get state(): string;
+    get orient(): string;
     updated(changedProperties: any): void;
     constructor();
     firstUpdated(): Promise<void>;

@@ -62,7 +62,7 @@ export declare class SearchBar extends LitElement {
     forceViewport: boolean;
     _isTruncated: boolean;
     _isCatalogLoaded: boolean;
-    private _handleDocumentMouseDown;
+    _handleDocumentMouseDown: ((event: MouseEvent) => void) | null;
     private _portalManager;
     private visibleObserver;
     _getPortalCombobox(): Element | null | undefined;

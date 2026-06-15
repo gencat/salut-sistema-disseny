@@ -1,4 +1,4 @@
-import { LitElement, PropertyValues } from 'lit';
+import { LitElement } from 'lit';
 import { ActionMenu } from '../action-menu/action-menu';
 export declare class SplitButton extends LitElement {
     static shadowRootOptions: {
@@ -15,38 +15,22 @@ export declare class SplitButton extends LitElement {
     connectedCallback(): void;
     disconnectedCallback(): void;
     get _actionMenu(): ActionMenu;
-    set iconClose(icon: string);
-    get iconClose(): string;
-    set iconOpen(icon: string);
-    get iconOpen(): string;
-    set variant(value: string);
-    get variant(): string;
-    set text(value: string);
+    variant: string;
+    size: 'sm' | 'md' | 'lg';
+    label: string;
+    iconOpen: string;
+    iconClose: string;
+    set text(text: string);
     get text(): string;
-    set disabled(value: boolean);
-    get disabled(): boolean;
-    set isOpen(value: boolean);
-    get isOpen(): boolean;
-    set size(value: string);
-    get size(): string;
-    set dropdownPosition(value: string);
-    get dropdownPosition(): string;
-    set hasMenu(value: boolean);
-    get hasMenu(): boolean;
+    disabled: boolean;
+    isOpen: boolean;
+    hasMenu: boolean;
+    dropdownPosition: string;
     secondaryLabelOpen: string;
     secondaryLabelClose: string;
     icon: string | undefined;
     iconFill: boolean;
-    _iconSize: string;
-    _size: string;
-    _iconClose: string;
-    _iconOpen: string;
-    _variant: string;
-    _text: string;
-    _disabled: boolean;
-    _isOpen: boolean;
-    _dropdownPosition: string;
-    _hasMenu: boolean;
+    get _iconSize(): "md" | "sm";
     _dispatchMainClick(): void;
     _dispatchIconClick(): void;
     _toggleMenu(): void;
@@ -55,6 +39,5 @@ export declare class SplitButton extends LitElement {
     checkTextTruncate(event: MouseEvent): void;
     private _clickedOutsideItem;
     firstUpdated(): Promise<void>;
-    willUpdate(_changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

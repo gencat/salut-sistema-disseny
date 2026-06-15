@@ -19,7 +19,6 @@ export declare class IconButton extends LitElement {
     disableTabindex: boolean;
     ariaLabel: string | null;
     ariaExpanded: any;
-    tooltipFixed: boolean;
     tooltipInteractive: boolean;
     tooltipPosition: string;
     hideTooltip: boolean;

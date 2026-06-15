@@ -16,11 +16,13 @@ export declare class Badge extends LitElement {
     set state(state: string);
     get state(): string;
     _isFirstUpdated: boolean;
+    private _tooltipUpdateTimeout;
     _isLabelTruncated: boolean;
     get _iconSize(): "md" | "sm";
     get _icon(): string;
     get _iconFill(): boolean;
     firstUpdated(): Promise<void>;
+    disconnectedCallback(): void;
     willUpdate(_changedProperties: PropertyValues): void;
     _checkTextTruncated(): void;
     _isInformativeStatus(): boolean;

@@ -1,15 +1,8 @@
 import { LitElement } from 'lit';
 export declare class SidemenuList extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    set expanded(value: boolean);
-    get expanded(): boolean;
-    set disabled(value: boolean);
-    get disabled(): boolean;
-    set scrollContainerClass(value: string);
-    get scrollContainerClass(): string;
-    _disabled: boolean;
-    _expanded: boolean;
-    _scrollContainerClass: string;
+    expanded: boolean;
+    disabled: boolean;
     private _propagateProperties;
     _handleItemFocus(event: CustomEvent): void;
     _handleNavigate(event: CustomEvent): void;

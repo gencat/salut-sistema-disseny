@@ -59,8 +59,7 @@ export declare class Select extends LitElement {
     showDropdown: boolean;
     openWithSearch: boolean;
     advancedFilter: boolean;
-    tooltipFixed: boolean;
-    forceViewport: boolean;
+    serverSideFilter: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;
