@@ -21,7 +21,12 @@ export declare class HeaderMenuPatient extends LitElement {
     gender: string | undefined;
     phoneMain: string | undefined;
     phoneAlt: string | undefined;
+    hasPhoneMainCall: boolean;
+    hasPhoneMainChat: boolean;
+    hasPhoneAltCall: boolean;
+    hasPhoneAltChat: boolean;
     mail: string | undefined;
+    mailHref: string | undefined;
     address: string | undefined;
     addressURL: string;
     infoLabel: string;
@@ -45,6 +50,8 @@ export declare class HeaderMenuPatient extends LitElement {
     _toggleDropdown(): void;
     _handleCIPClick(event: Event): void;
     _handleCopyCIP(event: Event): void;
+    _handlePhoneCall(phoneNumber: string): void;
+    _handlePhoneChat(phoneNumber: string): void;
     _getGenderIcon(): "female" | "male";
     private _handleDocumentClick;
     private _clickedOutside;

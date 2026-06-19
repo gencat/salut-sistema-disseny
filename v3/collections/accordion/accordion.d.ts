@@ -4,7 +4,7 @@ export declare class Accordion extends LitElement {
     showHeaderDivider: boolean;
     hideFooterDivider: boolean;
     hideTooltip: boolean;
-    info: undefined;
+    info: string | undefined;
     infoBadgeStatus: string;
     set infoBadgeState(value: string);
     get infoBadgeState(): string;

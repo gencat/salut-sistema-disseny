@@ -14,7 +14,7 @@ export declare class SidemenuListItem extends LitElement {
     notifications: number;
     notificationsStatus: string;
     set notificationsState(state: string);
-    get text(): string;
+    get notificationsState(): string;
     nestedMenuPosition: string;
     focusEnabled: boolean;
     private get _notificationBadge();

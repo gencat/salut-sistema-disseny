@@ -44,6 +44,8 @@ export declare class NgInput extends LitElement {
     _handleFocusOut(): void;
     _focusInput(): void;
     _handleValidity(): void;
+    _roundFloat(value: number): number;
+    _stepWithFallback(direction: 1 | -1): void;
     _stepUp(): void;
     _stepDown(): void;
     _dispatchValueChange(): void;
