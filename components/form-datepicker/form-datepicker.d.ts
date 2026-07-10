@@ -116,4 +116,5 @@ export declare class FormDatepicker extends LitElement {
     _isNextDateDisabled(): boolean;
     _getDateFromValue(value?: string): Date | null;
     isValidDate(): boolean;
+    focus(options?: FocusOptions): void;
 }

@@ -99,6 +99,7 @@ export declare class FormTimepicker extends LitElement {
     _createPopperList(): void;
     _createPopperManual(): void;
     _closeDropdown(): void;
+    focus(options?: FocusOptions): void;
     _timeMask(value: string, limit: number, separator: any): string;
     _timeUnmask(value: string): string;
     _timeValidate(value: string): void;

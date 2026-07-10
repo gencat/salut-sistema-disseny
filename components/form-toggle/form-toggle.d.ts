@@ -32,4 +32,5 @@ export declare class FormToggle extends LitElement {
     _handleKeydown(event: KeyboardEvent): void;
     _handleChange(): void;
     _emitChange(): void;
+    focus(options?: FocusOptions): void;
 }

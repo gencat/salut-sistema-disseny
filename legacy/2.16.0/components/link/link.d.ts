@@ -22,6 +22,7 @@ export declare class Link extends LitElement {
     protected updated(_changedProperties: PropertyValues): void;
     _getIconSize(): string;
     checkTextTruncate(event: MouseEvent): void;
+    focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;
 }
 export {};

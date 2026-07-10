@@ -89,6 +89,7 @@ export declare class FormSelect extends LitElement {
     updated(changedProps: Map<string, unknown>): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
+    focus(options?: FocusOptions): void;
     _syncFormValue(): void;
     _onChange(): void;
     _handleValidity(): void;

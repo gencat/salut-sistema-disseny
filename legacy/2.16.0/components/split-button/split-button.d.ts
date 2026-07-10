@@ -50,5 +50,6 @@ export declare class SplitButton extends LitElement {
     private _clickedOutsideItem;
     firstUpdated(): Promise<void>;
     willUpdate(_changedProperties: PropertyValues): void;
+    focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;
 }

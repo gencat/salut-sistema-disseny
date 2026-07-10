@@ -36,5 +36,6 @@ export declare class BadgeButton extends LitElement {
     _checkTextTruncated(): void;
     willUpdate(_changedProperties: PropertyValues): void;
     firstUpdated(): Promise<void>;
+    focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;
 }

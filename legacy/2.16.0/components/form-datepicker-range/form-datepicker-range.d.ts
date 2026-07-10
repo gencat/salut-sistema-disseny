@@ -115,4 +115,5 @@ export declare class FormDatepickerRange extends LitElement {
     _closeCalendar(): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
+    focus(options?: FocusOptions): void;
 }

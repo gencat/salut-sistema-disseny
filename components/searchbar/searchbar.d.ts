@@ -85,5 +85,6 @@ export declare class SearchBar_ extends LitElement {
     _lastValue: string | null;
     _handleMouseOver(): void;
     _checkInputOverflow(): void;
+    focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;
 }

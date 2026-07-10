@@ -27,4 +27,5 @@ export declare class FormRadioButton extends LitElement {
     _handleChange(e: Event): void;
     _getEffectiveId(): string;
     _emitChange(): void;
+    focus(options?: FocusOptions): void;
 }
