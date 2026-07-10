@@ -4,7 +4,6 @@ export declare class Tooltip extends LitElement {
     position: string;
     align: string;
     hidden: boolean;
-    noHeightLimit: boolean;
     delay: number;
     interactive: boolean;
     _tooltipEl: HTMLElement;

@@ -11,7 +11,7 @@ export declare class TableCell extends LitElement {
     variant: 'default' | 'header' | 'expanded';
     hover: boolean;
     highlight: boolean;
-    sort: boolean;
+    sortable: boolean;
     sortState: 'asc' | 'desc' | 'none';
     currentSortedColumn: string | undefined;
     borderRight: boolean;
@@ -31,6 +31,7 @@ export declare class TableCell extends LitElement {
     srOnly: boolean;
     isCurrentFocused: boolean;
     updated(changedProps: Map<string, any>): void;
+    willUpdate(changedProps: Map<string, any>): void;
     isFirstUpdate: boolean;
     fontWeightBackup: FontWeight;
     isValueTruncaded: boolean;

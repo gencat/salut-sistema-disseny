@@ -1,7 +1,6 @@
 import { LitElement } from 'lit';
 export declare class UploadBox extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    private _inputChangeHandler;
     fileExplorerMessage: string;
     dragAndDropMessage: string;
     dragAndDropIcon: string;
@@ -13,10 +12,13 @@ export declare class UploadBox extends LitElement {
     helpText: undefined;
     maxUploadFiles: undefined;
     maxUploadFilesMessage: string;
+    disabled: boolean;
+    multiple: boolean;
     get _input(): HTMLInputElement;
+    get _allowMultipleFiles(): boolean;
+    get _acceptFiles(): string | undefined;
     _dragOver: boolean;
     _files: any[];
-    _disabled: boolean;
     _hasMaxUploadFilesError: boolean;
     _fileFormatErrorMessage: string;
     _fileSizeErrorMessage: string;
@@ -24,20 +26,11 @@ export declare class UploadBox extends LitElement {
     _fileErrors: {
         [fileName: string]: string;
     };
-    observerConfig: {
-        attributes: boolean;
-        childList: boolean;
-        subtree: boolean;
-    };
-    callback: (mutationList: any) => void;
-    observer: MutationObserver;
     disconnectedCallback(): void;
-    _checkInputAttributes(): void;
     _onDragOver(event: DragEvent): void;
     _onDragLeave(event: DragEvent): void;
     _onDrop(event: DragEvent): void;
     _onClick(): void;
-    _onSlotInputChange(): void;
     _checkMaxUploadFiles(uploadFilesLength: number): true | undefined;
     _isValidFileFormat(file: File): boolean;
     _isValidFileSize(file: File): boolean;

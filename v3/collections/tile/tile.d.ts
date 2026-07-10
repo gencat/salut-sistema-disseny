@@ -5,6 +5,7 @@ export declare class Tile extends LitElement {
     icon: string;
     tileTitle: string;
     description: string;
+    highlighted: boolean;
     selected: boolean;
     disabled: boolean;
     hasLogo: boolean;

@@ -20,6 +20,7 @@ export declare class Button extends LitElement {
     fullWidth: boolean;
     size: string;
     loading: boolean;
+    hideTooltip: boolean;
     loadingIcon: string;
     _isTextTruncated: boolean;
     _handleClick(): void;

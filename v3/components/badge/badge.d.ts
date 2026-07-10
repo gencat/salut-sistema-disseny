@@ -1,7 +1,6 @@
 import { LitElement, PropertyValues } from 'lit';
 export declare class Badge extends LitElement {
     static get styles(): import('lit').CSSResult[];
-    get _tooltip(): any;
     icon: string | undefined;
     size: string;
     label: string;
@@ -16,7 +15,6 @@ export declare class Badge extends LitElement {
     set state(state: string);
     get state(): string;
     _isFirstUpdated: boolean;
-    private _tooltipUpdateTimeout;
     _isLabelTruncated: boolean;
     get _iconSize(): "md" | "sm";
     get _icon(): string;
@@ -25,6 +23,7 @@ export declare class Badge extends LitElement {
     disconnectedCallback(): void;
     willUpdate(_changedProperties: PropertyValues): void;
     _checkTextTruncated(): void;
+    _isCriticalStatus(): boolean;
     _isInformativeStatus(): boolean;
     render(): import('lit-html').TemplateResult;
 }
