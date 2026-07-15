@@ -1,0 +1,1 @@
+const n={type:Boolean,converter:{fromAttribute:t=>t!==null&&t!=="false",toAttribute:t=>t?"true":null}},o={fromAttribute:t=>!(t===null||t==="false"),toAttribute:t=>t?"":null},s={type:Array,converter:{fromAttribute:t=>{if(!t)return[];const r=JSON.parse(t);return Array.isArray(r)?r.map(e=>e.toString()):[r.toString()]},toAttribute:t=>JSON.stringify(t)}};export{o as a,n as b,s};

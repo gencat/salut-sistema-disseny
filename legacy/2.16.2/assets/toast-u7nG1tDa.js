@@ -1,0 +1,35 @@
+import{i as g,r as v}from"./lit-element-BL4lq474.js";import{E as c}from"./lit-html-D6cejpwM.js";import{s as u,i as m,u as d,n as o,r as y}from"./static-BGxLalzl.js";import{b as h}from"./property-types-BdBkOe9l.js";import{e as x}from"./class-map-BdrBOWJy.js";import{n as p}from"./when-BR7zwNJC.js";import{g as f}from"./custom-element-scope-Dp4Dg8bo.js";const k=':host{position:absolute;z-index:999}:host([data-position="top-left"]){top:var(--dss-spacing-xxs);left:var(--dss-spacing-xxs)}:host([data-position="top-right"]){top:var(--dss-spacing-xxs);right:var(--dss-spacing-xxs)}:host([data-position="bottom-left"]){bottom:var(--dss-spacing-xxs);left:var(--dss-spacing-xxs)}:host([data-position="bottom-right"]){bottom:var(--dss-spacing-xxs);right:var(--dss-spacing-xxs)}:host([data-animation="show"]){display:block}:host([data-animation="hide"]){display:none}:host([data-animation="show"][data-position="top-left"]),:host([data-animation="show"][data-position="bottom-left"]){animation:openFromLeft .5s cubic-bezier(.68,-.55,.25,1.35) forwards}:host([data-animation="show"][data-position="top-right"]),:host([data-animation="show"][data-position="bottom-right"]){animation:openFromRight .5s cubic-bezier(.68,-.55,.25,1.35) forwards}:host([data-animation="hide"][data-position="top-left"]),:host([data-animation="hide"][data-position="bottom-left"]){animation:closeLeft .5s cubic-bezier(.68,-.55,.25,1.35) forwards}:host([data-animation="hide"][data-position="top-right"]),:host([data-animation="hide"][data-position="bottom-right"]){animation:closeRight .5s cubic-bezier(.68,-.55,.25,1.35) forwards}.dss-toast{width:-moz-fit-content;width:fit-content;max-width:540px;border-radius:var(--dss-radius-sm);padding:var(--dss-spacing-md);box-shadow:var(--dss-elevation-md)}.dss-toast .dss-toast__content{font-weight:var(--font-semibold);font-size:14px;line-height:var(--line-24);display:flex;justify-content:space-between;gap:var(--dss-spacing-xs)}.dss-toast .dss-toast__icon,.dss-toast .dss-toast__close-icon,.dss-toast .dss-toast__button{align-self:self-start}.dss-toast__info{background-color:var(--color-blue-500);color:var(--color-white)}.dss-toast__success{background-color:var(--color-green-500);color:var(--color-white)}.dss-toast__warning{background-color:var(--color-yellow-500);color:var(--color-neutral-700)}.dss-toast__error{background-color:var(--color-red-500);color:var(--color-white)}@keyframes openFromLeft{0%{display:none;transform:translate(calc(-100% - var(--dss-spacing-xxs)))}to{display:block;transform:translate(0)}}@keyframes closeLeft{0%{display:block;transform:translate(0)}to{display:none;transform:translate(calc(-100% - var(--dss-spacing-xxs)))}}@keyframes openFromRight{0%{display:none;transform:translate(calc(100% + var(--dss-spacing-xxs)))}to{display:block;transform:translate(0)}}@keyframes closeRight{0%{display:block;transform:translate(0)}to{display:none;transform:translate(calc(100% + var(--dss-spacing-xxs)))}}',C=m`dss-icon${u(f())}`,$=m`dss-button${u(f())}`,S=m`dss-icon-button${u(f())}`,E=t=>{const s={"dss-toast":!0,"dss-toast__icon-button-close":t.hasButtonClose,"dss-toast__animation":t._firstTimeRendered_||t.isShow,[`dss-toast__${t.position}`]:!0,[`dss-toast__${t.state}`]:!0,"dss-toast__show":t.isShow,"dss-toast__hide":!t.isShow},n={info:"info",success:"check_circle",warning:"warning_amber",error:"cancel"},b={info:"alternative-light",success:"alternative-light",warning:"alternative-dark",error:"alternative-light"},e={info:"ghost",success:"ghost",warning:"neutral",error:"ghost"},r=d`
+    <div class="dss-toast__icon">
+      <${C} icon="${t.icon||n[t.state]}"/>
+    </div>
+  `,l=d`
+    <div class="dss-toast__button">
+      <${$}
+        variant="${b[t.state]}"
+        label="${t.buttonLabel}"
+        size="sm"
+        @onClick="${t.handleClickButton}"
+      />
+    </div>
+  `,_=d`
+    <div class="dss-toast__close-icon">
+      <${S}
+				variant="${e[t.state]}"
+        icon="close"
+				label="Tancar"
+				hideTooltip
+        @onClick="${t.handleClose}"
+      />
+    </div>
+  `;return d`
+    <div class="${x(s)}"
+    role=${t.state==="error"?"alert":"status"}
+    aria-live=${t.state==="error"?"assertive":"polite"}
+    aria-atomic=${!0}>
+      <div class="dss-toast__content">
+      ${p(t.hasIcon,()=>r,()=>c)}
+      <span class="dss-toast__text">${t.getText().map(w=>d`<p>${w}</p>`)}</span>
+      ${p(t.hasButton&&!t.hasButtonClose,()=>l,()=>c)}
+      ${p(t.hasButtonClose&&!t.hasButton,()=>_,()=>c)}
+    </div>
+  </div>`};var B=Object.defineProperty,i=(t,s,n,b)=>{for(var e=void 0,r=t.length-1,l;r>=0;r--)(l=t[r])&&(e=l(s,n,e)||e);return e&&B(s,n,e),e};class a extends g{constructor(){super(),this.isShow=!1,this.text=void 0,this.state="info",this.position="bottom-left",this.icon=void 0,this.hasIcon=!0,this.buttonLabel="Button",this.hasButton=!1,this.hasButtonClose=!1,this.duration=4e3,this._firstTimeRendered_=!1,this.handleAnimationEnd=this.handleAnimationEnd.bind(this),this.onKeyDown=this.onKeyDown.bind(this)}static get styles(){return[v(y),v(k)]}connectedCallback(){super.connectedCallback(),window.addEventListener("keydown",this.onKeyDown)}update(s){s.has("isShow")&&this.addEventListener("animationend",this.handleAnimationEnd),super.update(s)}updated(s){this._firstTimeRendered_||(this._firstTimeRendered_=!0),s.has("isShow")&&(this.isShow&&this.duration>0&&this._timeoutId_===void 0?this._timeoutId_=window.setTimeout(()=>this.handleClose(),this.duration):!this.isShow&&this.duration>0&&this._timeoutId_!==void 0&&(clearTimeout(this._timeoutId_),this._timeoutId_=void 0)),(s.has("isShow")||s.has("position"))&&this.updateHostAttributes(),super.updated(s)}updateHostAttributes(){this.removeAttribute("data-position"),this.removeAttribute("data-animation"),this.isShow?this.setAttribute("data-animation","show"):this.setAttribute("data-animation","hide"),this.setAttribute("data-position",this.position)}handleAnimationEnd(){this.isShow||(this.dispatchEvent(new CustomEvent("onClose",{bubbles:!0,composed:!0})),this.remove()),this.removeEventListener("animationend",this.handleAnimationEnd)}handleClickButton(){this.dispatchEvent(new CustomEvent("onClickButton",{bubbles:!0,composed:!0}))}handleClose(){this.isShow=!1}getText(){var s;return((s=this.text)==null?void 0:s.split(/\\n|\n/).map(n=>n.trim()))||[]}onKeyDown(s){(s.code==="Enter"||s.code==="NumpadEnter")&&this.isShow&&this.handleClose()}render(){return E(this)}disconnectedCallback(){super.disconnectedCallback(),this._timeoutId_!==void 0&&clearTimeout(this._timeoutId_),this.removeEventListener("animationend",this.handleAnimationEnd),window.removeEventListener("keydown",this.onKeyDown)}}i([o(h)],a.prototype,"isShow");i([o({type:String})],a.prototype,"text");i([o({type:String})],a.prototype,"state");i([o({type:String})],a.prototype,"position");i([o({type:String})],a.prototype,"icon");i([o(h)],a.prototype,"hasIcon");i([o({type:String})],a.prototype,"buttonLabel");i([o(h)],a.prototype,"hasButton");i([o(h)],a.prototype,"hasButtonClose");i([o({type:Number})],a.prototype,"duration");export{a as T};
