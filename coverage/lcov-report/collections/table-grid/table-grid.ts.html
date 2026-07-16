@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.95% </span>
+                <span class="strong">92.55% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>171/188</span>
+                <span class='fraction'>174/188</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.91% </span>
+                <span class="strong">98% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>47/49</span>
+                <span class='fraction'>49/50</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.95% </span>
+                <span class="strong">92.55% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>171/188</span>
+                <span class='fraction'>174/188</span>
             </div>
         
             
@@ -307,6 +307,8 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -323,10 +325,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -361,22 +361,22 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">4x</span>
@@ -429,8 +429,8 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">7x</span>
@@ -496,9 +496,9 @@ export class TableGrid extends LitElement {
 &nbsp;
 	private _applyStickyConfig() {
 		const tableSlot = this.shadowRoot?.querySelector('slot');
-		if (!tableSlot) <span class="branch-0 cbranch-no" title="branch not covered" >return;</span>
-<span class="cstat-no" title="statement not covered" >		const tableElements = tableSlot.assignedElements();</span>
-<span class="cstat-no" title="statement not covered" >		tableElements.forEach((rowGroup: any) =&gt; {</span>
+		if (!tableSlot) return;
+		const tableElements = tableSlot.assignedElements();
+		tableElements.forEach((rowGroup: any) =&gt; {
 <span class="cstat-no" title="statement not covered" >			const rows = rowGroup.querySelectorAll('dss-row');</span>
 <span class="cstat-no" title="statement not covered" >			for (const row of rows) {</span>
 <span class="cstat-no" title="statement not covered" >				const cells = row.querySelectorAll('dss-cell');</span>
@@ -513,7 +513,7 @@ export class TableGrid extends LitElement {
 <span class="cstat-no" title="statement not covered" >					this._cellsToSticky(rightStickyCells, 'right');</span>
 <span class="cstat-no" title="statement not covered" >				}</span>
 <span class="cstat-no" title="statement not covered" >			}</span>
-<span class="cstat-no" title="statement not covered" >		});</span>
+		});
 	}
 &nbsp;
 	private _cellsToSticky(cells: any, position: string) {
@@ -634,7 +634,7 @@ export class TableGrid extends LitElement {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-07-16T10:45:11.180Z
+                at 2026-07-16T13:28:16.852Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
