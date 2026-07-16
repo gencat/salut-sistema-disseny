@@ -1,6 +1,5 @@
 import { LitElement, PropertyValues } from 'lit';
 import { FontWeight } from '../../utils/property-types';
-
 type LinkTarget = '_self' | '_blank' | '_parent' | '_top';
 export declare class Link extends LitElement {
     static get styles(): import('lit').CSSResult[];
@@ -17,8 +16,6 @@ export declare class Link extends LitElement {
     fontWeight: FontWeight;
     fontSize: string;
     fullWidth: boolean;
-    tooltipFixed: boolean;
-    forceViewport: boolean;
     protected updated(_changedProperties: PropertyValues): void;
     _getIconSize(): string;
     checkTextTruncate(event: MouseEvent): void;

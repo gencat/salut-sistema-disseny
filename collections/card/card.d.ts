@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export declare class Card extends LitElement {
     static get styles(): import('lit').CSSResult[];
     selected: boolean;

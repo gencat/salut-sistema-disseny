@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export declare class CardForm extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private get _formContent();

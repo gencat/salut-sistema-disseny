@@ -1,5 +1,4 @@
 import { LitElement, PropertyValues } from 'lit';
-
 interface ContentSwitcherTab {
     label: string;
     icon?: string;

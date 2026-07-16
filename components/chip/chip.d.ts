@@ -1,5 +1,4 @@
 import { LitElement, PropertyValues } from 'lit';
-
 export declare class Chip extends LitElement {
     static get styles(): import('lit').CSSResult[];
     size: string;

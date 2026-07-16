@@ -1,6 +1,12 @@
 import { LitElement } from 'lit';
-
 export declare class IconButton extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
     static get styles(): import('lit').CSSResult[];
     type: string;
     variant: string;
@@ -13,11 +19,9 @@ export declare class IconButton extends LitElement {
     disableTabindex: boolean;
     ariaLabel: string | null;
     ariaExpanded: any;
-    tooltipFixed: boolean;
     tooltipInteractive: boolean;
     tooltipPosition: string;
     hideTooltip: boolean;
-    forceViewport: boolean;
     _handleClick(): void;
     focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;

@@ -1,3 +1,2 @@
-import { Datepicker_ } from './datepicker';
-
-export declare const template: (component: Datepicker_) => import('lit-html').TemplateResult;
+import { Datepicker } from './datepicker';
+export declare const template: (component: Datepicker) => import('lit-html').TemplateResult;

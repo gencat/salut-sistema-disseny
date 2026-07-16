@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export declare class Slider extends LitElement {
     static get styles(): import('lit').CSSResult;
     private _handleDomContentLoaded;
@@ -11,30 +10,19 @@ export declare class Slider extends LitElement {
     private _handleTouchEndEvent;
     get _input(): HTMLInputElement;
     get _tooltip(): HTMLElement;
-    set min(min: number);
-    get min(): number;
-    set max(max: number);
-    get max(): number;
-    set step(step: number);
-    get step(): number;
+    label: string;
+    value: number;
+    min: number;
+    max: number;
+    step: number;
+    orientation: string;
+    disabled: boolean;
+    _progress: number;
+    _vertical: boolean;
+    _isTooltipTouched: boolean;
     set orient(orient: string);
     get orient(): string;
-    set value(value: number);
-    get value(): number;
-    set disabled(disabled: boolean);
-    get disabled(): boolean;
-    set label(label: string);
-    get label(): string;
-    _label: string;
-    _min: number;
-    _max: number;
-    _step: number;
-    _orient: string;
-    _vertical: boolean;
-    _value: number;
-    _progress: number;
-    _disabled: boolean;
-    _isTooltipTouched: boolean;
+    updated(changedProperties: any): void;
     constructor();
     firstUpdated(): Promise<void>;
     disconnectedCallback(): void;

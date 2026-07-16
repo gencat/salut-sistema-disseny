@@ -1,0 +1,44 @@
+import { LitElement } from 'lit';
+import { ActionMenu } from '../action-menu/action-menu';
+export declare class SplitButton extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
+    static get styles(): import('lit').CSSResult[];
+    private _handleDocumentClickBound;
+    private _handleActionMenuClosedBound;
+    constructor();
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    get _actionMenu(): ActionMenu;
+    variant: string;
+    size: 'sm' | 'md' | 'lg';
+    label: string;
+    iconOpen: string;
+    iconClose: string;
+    set text(text: string);
+    get text(): string;
+    disabled: boolean;
+    isOpen: boolean;
+    hasMenu: boolean;
+    dropdownPosition: string;
+    secondaryLabelOpen: string;
+    secondaryLabelClose: string;
+    icon: string | undefined;
+    iconFill: boolean;
+    get _iconSize(): "md" | "sm";
+    _dispatchMainClick(): void;
+    _dispatchIconClick(): void;
+    _toggleMenu(): void;
+    _handleActionMenuClosed(): void;
+    _handleDocumentClick(event: Event): void;
+    checkTextTruncate(event: MouseEvent): void;
+    private _clickedOutsideItem;
+    firstUpdated(): Promise<void>;
+    focus(options?: FocusOptions): void;
+    render(): import('lit-html').TemplateResult;
+}

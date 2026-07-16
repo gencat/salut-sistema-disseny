@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export type CalendarItem = {
     date: string;
     type: string;
@@ -13,6 +12,9 @@ export declare const WEEK: string[];
 export declare class Calendar extends LitElement {
     static get styles(): import('lit').CSSResult[];
     standalone: boolean;
+    open: boolean;
+    openByDefault: boolean;
+    placement: string;
     customCalendar: CalendarItem[] | undefined;
     set range(value: boolean);
     get range(): boolean;
@@ -82,9 +84,27 @@ export declare class Calendar extends LitElement {
     _yearsRangeEnd: number;
     _isTimeFormatValid: boolean;
     _focusFirstElementHandler: () => void;
+    _floatingCombobox: HTMLElement;
+    delay: number;
+    private _parent?;
+    private _initialParent;
+    private _cleanupAutoUpdate?;
+    private _showTimeout?;
+    private _hideTimeout?;
+    private _portalManager;
+    private _isTabbingOut;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    _isFirstUpdated: boolean;
+    firstUpdated(): Promise<void>;
+    updated(changedProps: Map<string, any>): void;
+    _toggle(): void;
+    show(): void;
+    private _executeShow;
+    hide(): void;
+    updateFloatingCalendar(): void;
+    private _updatePosition;
     _focusFirstElement(): void;
     _prev(): void;
     _next(): void;
@@ -125,5 +145,7 @@ export declare class Calendar extends LitElement {
     _onHeaderYearKeyDown(e: KeyboardEvent): void;
     _validateSelectedDate(): boolean;
     _handleCalendarKeydown(e: KeyboardEvent): void;
+    _getFocusableElements(): HTMLElement[];
+    _handleCalendarFocusOut(e: FocusEvent): void;
     render(): import('lit-html').TemplateResult;
 }

@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export declare class Widget extends LitElement {
     static get styles(): import('lit').CSSResult[];
     variant: string;
@@ -25,12 +24,10 @@ export declare class Widget extends LitElement {
     actionVariant: string;
     actionFill: boolean;
     actionDisabled: boolean;
-    tooltipFixed: boolean;
     tooltipPosition: string;
     hideTooltip: boolean;
     hasScroll: boolean;
     folded: boolean;
-    forceViewport: boolean;
     private _eventOptions;
     checkTextTruncate(event: MouseEvent): void;
     handleAction(): void;

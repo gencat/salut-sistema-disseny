@@ -1,0 +1,38 @@
+import { LitElement } from 'lit';
+export declare class Modal extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    open: boolean;
+    modalTitle: string;
+    status: string;
+    set state(state: string);
+    get state(): string;
+    hideCloseIcon: boolean;
+    hasScroll: boolean;
+    modalStyle: string | undefined;
+    fullHeight: boolean;
+    fullWidth: boolean;
+    flexBody: boolean;
+    removeBodyPadding: boolean;
+    jcef: boolean;
+    _scrollHandler: ((event: Event) => void) | null;
+    _scrollContainer: HTMLElement | null;
+    get _headerSlot(): HTMLInputElement;
+    get _footerSlot(): HTMLInputElement;
+    constructor();
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    updated(changedProperties: any): void;
+    _showDialog(): void;
+    _hideDialog(): void;
+    _close(): void;
+    _isStatusValid(): boolean;
+    _getStatusIcon(): string;
+    _handleKeydown(event: KeyboardEvent): void;
+    _handleOutsideClick(event: any): void;
+    private fixEmptyFooter;
+    private _handleScroll;
+    private _modalHeader;
+    private _modalFooter;
+    firstUpdated(): Promise<void>;
+    render(): import('lit-html').TemplateResult;
+}

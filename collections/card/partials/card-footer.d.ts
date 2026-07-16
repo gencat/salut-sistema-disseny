@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export declare class CardFooter extends LitElement {
     static get styles(): import('lit').CSSResult;
     private get _footerContent();
