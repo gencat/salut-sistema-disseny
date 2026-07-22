@@ -37,8 +37,6 @@ export declare class TabsList extends LitElement {
     _tabsElements: NodeListOf<Element>;
     _firstTab: Element;
     _lastTab: Element;
-    _addTabEnabled: boolean;
-    _addTabText: string;
     updated(changedProperties: Map<string, any>): void;
     changeTabWatch(): Promise<void>;
     private _removeTabListeners;
