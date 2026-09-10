@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.56% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>80/82</span>
+                <span class='fraction'>72/72</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.23% </span>
+                <span class="strong">89.47% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>20/21</span>
+                <span class='fraction'>17/19</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.56% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>80/82</span>
+                <span class='fraction'>72/72</span>
             </div>
         
             
@@ -135,17 +135,7 @@
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -161,13 +151,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
@@ -199,20 +182,17 @@
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">15x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">15x</span>
@@ -243,22 +223,15 @@ interface ContentSwitcherTab {
 }
 &nbsp;
 export class ContentSwitcher extends LitElement {
-	connectedCallback() {
-		super.connectedCallback();
-		this._initializeSelectedTab();
-	}
-&nbsp;
 	@property(booleanType) fullWidth = false;
 &nbsp;
 	@property({ type: String }) size = 'md';
 &nbsp;
-	@property({ type: Array }) tabs: ContentSwitcherTab[] = [];
+	@property({ type: Array }) tabs: ContentSwitcherTab[] | undefined = undefined;
 &nbsp;
 	@state() tabSelected?: ContentSwitcherTab;
 &nbsp;
-	_isFirstUpdate = true;
-&nbsp;
-	_tabs: ContentSwitcherTab[] = [];
+	@state() _tabs: ContentSwitcherTab[] = [];
 &nbsp;
 	static get styles() {
 		return [unsafeCSS(resetStyles), unsafeCSS(elevationStyles), unsafeCSS(styles)];
@@ -281,20 +254,17 @@ export class ContentSwitcher extends LitElement {
 	}
 &nbsp;
 	private _initializeSelectedTab() {
-		this._tabs = this.tabs.map((tab) =&gt; ({ ...tab }));
+		if (!this.tabs) <span class="branch-0 cbranch-no" title="branch not covered" >return;</span>
+&nbsp;
+		const parsedTabs: ContentSwitcherTab[] = typeof this.tabs === <span class="branch-0 cbranch-no" title="branch not covered" >'string' ? JSON.parse(this.tabs) : t</span>his.tabs;
+&nbsp;
+		this._tabs = parsedTabs.map((tab) =&gt; ({ ...tab }));
 		this.tabSelected = this._tabs.find((tab) =&gt; tab.selected) || this._tabs.find((tab) =&gt; !tab.disabled);
 	}
 &nbsp;
 	protected willUpdate(_changedProperties: PropertyValues): void {
-		if (_changedProperties.has('tabs')) {
-			if (this._isFirstUpdate) {
-				this._isFirstUpdate = false;
-				return;
-			}
-			const previousTabs = _changedProperties.get('tabs') as ContentSwitcherTab[] | undefined;
-			if (JSON.stringify(previousTabs) === JSON.stringify(this.tabs)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >				return;</span>
-<span class="cstat-no" title="statement not covered" >			}</span>
+		const hasTabsChanged = _changedProperties.has('tabs');
+		if (hasTabsChanged) {
 			this._initializeSelectedTab();
 		}
 	}
@@ -316,7 +286,7 @@ export class ContentSwitcher extends LitElement {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-02T09:00:40.716Z
+                at 2026-09-10T13:15:07.938Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
