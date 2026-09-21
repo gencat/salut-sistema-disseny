@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.35% </span>
+                <span class="strong">75.78% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>229/285</span>
+                <span class='fraction'>216/285</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.31% </span>
+                <span class="strong">84.78% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>43/51</span>
+                <span class='fraction'>39/46</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.35% </span>
+                <span class="strong">75.78% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>229/285</span>
+                <span class='fraction'>216/285</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -457,22 +457,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -480,6 +465,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">14x</span>
@@ -742,8 +742,8 @@ export class Modal extends LitElement {
 			this.style.visibility = 'visible';
 		}, 0);
 		setTimeout(() =&gt; {
-			const startSentinel = this.shadowRoot?.querySelector&lt;HTMLElement&gt;('.modal-focus-sentinel--start');
-			startSentinel?.focus();
+<span class="cstat-no" title="statement not covered" >			const startSentinel = this.shadowRoot?.querySelector&lt;HTMLElement&gt;('.modal-focus-sentinel--start');</span>
+<span class="cstat-no" title="statement not covered" >			startSentinel?.focus();</span>
 		}, 100);
 		document.addEventListener('keydown', this._handleKeydown);
 		document.body.style.overflow = 'hidden';
@@ -753,18 +753,18 @@ export class Modal extends LitElement {
 		this.classList.add('hide');
 		this.classList.remove('show');
 		setTimeout(() =&gt; {
-			this.classList.remove('hide');
-			this.style.visibility = 'hidden';
-			document.removeEventListener('keydown', this._handleKeydown);
-			if (this._previouslyFocusedElement &amp;&amp; typeof this._previouslyFocusedElement.focus === 'function') {
-				if (this._closedViaKeyboard) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >			this.classList.remove('hide');</span>
+<span class="cstat-no" title="statement not covered" >			this.style.visibility = 'hidden';</span>
+<span class="cstat-no" title="statement not covered" >			document.removeEventListener('keydown', this._handleKeydown);</span>
+<span class="cstat-no" title="statement not covered" >			if (this._previouslyFocusedElement &amp;&amp; typeof this._previouslyFocusedElement.focus === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >				if (this._closedViaKeyboard) {</span>
 <span class="cstat-no" title="statement not covered" >					this._previouslyFocusedElement.focus();</span>
-				} else {
-					const focusOptions = { focusVisible: false } as FocusOptions;
-					this._previouslyFocusedElement.focus(focusOptions);
-				}
-				this._previouslyFocusedElement = null;
-			}
+<span class="cstat-no" title="statement not covered" >				} else {</span>
+<span class="cstat-no" title="statement not covered" >					const focusOptions = { focusVisible: false } as FocusOptions;</span>
+<span class="cstat-no" title="statement not covered" >					this._previouslyFocusedElement.focus(focusOptions);</span>
+<span class="cstat-no" title="statement not covered" >				}</span>
+<span class="cstat-no" title="statement not covered" >				this._previouslyFocusedElement = null;</span>
+<span class="cstat-no" title="statement not covered" >			}</span>
 		}, ANIMATION_DURATION);
 		document.body.style.overflow = '';
 	}
@@ -925,7 +925,7 @@ export class Modal extends LitElement {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-21T08:42:43.396Z
+                at 2026-09-21T09:12:42.383Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
