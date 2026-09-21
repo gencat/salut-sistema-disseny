@@ -12,7 +12,8 @@ export declare const WEEK: string[];
 export declare class Calendar extends LitElement {
     static get styles(): import('lit').CSSResult[];
     standalone: boolean;
-    open: boolean;
+    set open(value: boolean);
+    get open(): boolean;
     openByDefault: boolean;
     placement: string;
     customCalendar: CalendarItem[] | undefined;
@@ -52,6 +53,7 @@ export declare class Calendar extends LitElement {
     get rangeStartDate(): string;
     set rangeEndDate(value: string);
     get rangeEndDate(): string;
+    _open: boolean;
     _range: boolean;
     _isRangeStartFocused: boolean;
     _isRangeEndFocused: boolean;
@@ -84,6 +86,7 @@ export declare class Calendar extends LitElement {
     _yearsRangeEnd: number;
     _isTimeFormatValid: boolean;
     _focusFirstElementHandler: () => void;
+    _previouslyFocusedElement: HTMLElement | null;
     _floatingCombobox: HTMLElement;
     delay: number;
     private _parent?;
@@ -106,6 +109,9 @@ export declare class Calendar extends LitElement {
     updateFloatingCalendar(): void;
     private _updatePosition;
     _focusFirstElement(): void;
+    _focusActiveDay(): void;
+    _handleCalendarFocusIn(event: FocusEvent): void;
+    _handleEndSentinelFocus(): void;
     _prev(): void;
     _next(): void;
     _update(): void;
@@ -113,6 +119,8 @@ export declare class Calendar extends LitElement {
     _getCustomType(day: number): string | false;
     _isToday(day: number): boolean;
     _isWeekend(day: number): boolean;
+    _getDayAriaLabel(day: number): string;
+    _getFirstEnabledDay(): number | null;
     _isInactive(day: number): boolean;
     _isSelected(day: number): boolean;
     _isFocusable(day: number): boolean;
@@ -134,14 +142,24 @@ export declare class Calendar extends LitElement {
     _getDateString(selectedDate: string): Date | null;
     _onSelectTime(e: CustomEvent): void;
     _toggleMonthSelector(): void;
-    _onMonthSelectorClick(month: string): void;
+    _closeMonthSelector(options?: {
+        focusActiveDay?: boolean;
+    }): void;
+    _onMonthSelectorClick(month: string, options?: {
+        focusActiveDay?: boolean;
+    }): void;
     _toggleYearSelector(): void;
-    _onYearSelectorClick(year: number): void;
+    _closeYearSelector(options?: {
+        focusActiveDay?: boolean;
+    }): void;
+    _onYearSelectorClick(year: number, options?: {
+        focusActiveDay?: boolean;
+    }): void;
     _generateYearsRangeOptions(): import('lit-html').TemplateResult[];
     _generateMonthsOptions(): import('lit-html').TemplateResult[];
     _onYearRangeStepUp(): void;
     _onYearRangeStepDown(): void;
-    _onHeaderMonthKeyDown(e: KeyboardEvent): void;
+    _onShiftTabKeyDown(e: KeyboardEvent): void;
     _onHeaderYearKeyDown(e: KeyboardEvent): void;
     _validateSelectedDate(): boolean;
     _handleCalendarKeydown(e: KeyboardEvent): void;

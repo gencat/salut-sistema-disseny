@@ -48,7 +48,7 @@ export declare class Timepicker extends LitElement {
     dropdown: string;
     dropdownPlacement: string;
     dropdownFixed: boolean;
-    customTimeListOptions: TimepickerOptionItem[];
+    customTimeListOptions: TimepickerOptionItem[] | undefined;
     errorTimeFormatText: string;
     errorTimeOptionText: string;
     minHour: number;
@@ -67,12 +67,12 @@ export declare class Timepicker extends LitElement {
     _manualHourSelector: string;
     _manualMinuteSelector: string;
     _timeListOptions: string[];
-    _customTimeListOptions: TimepickerOptionItem[];
     _timeManualHourOptions: string[];
     _timeManualMinutesOptions: string[];
     _inputValidity: boolean;
     _isFirstUpdated: boolean;
     private _portalManager;
+    private visibleObserver;
     firstUpdated(): Promise<void>;
     updated(changedProps: Map<string, unknown>): void;
     formDisabledCallback(disabled: boolean): void;
@@ -83,6 +83,7 @@ export declare class Timepicker extends LitElement {
     private _disableAnimations;
     _getPortalCombobox(): Element | null | undefined;
     _handleClick(): void;
+    _moveFocusToPortalCombobox(): void;
     _handleKeyDown(e: KeyboardEvent): void;
     _handleInput(): void;
     _onInput(): void;

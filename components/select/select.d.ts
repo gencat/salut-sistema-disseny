@@ -120,6 +120,7 @@ export declare class Select extends LitElement {
     _handleFocusOut(event: any): void;
     _handleBlurEsc(): void;
     _handleOptionsFocusOut(): void;
+    _moveFocusToDropdown(): void;
     _handleKeyDown(e: KeyboardEvent): void;
     _cleanInput(): void;
     _keyboardFilterMatch(): void;
@@ -134,4 +135,5 @@ export declare class Select extends LitElement {
     _toggleDropdown(): void;
     _closeDropdown(): void;
     focus(options?: FocusOptions): void;
+    _handleOptionsSentinel(): void;
 }

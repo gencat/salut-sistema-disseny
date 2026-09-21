@@ -81,7 +81,7 @@ export declare class DatepickerRange extends LitElement {
     _helpTextBackup: string;
     _isFirstUpdated: boolean;
     private _portalManager;
-    _calendar: HTMLInputElement;
+    _calendar: any;
     private visibleObserver;
     firstUpdated(): Promise<void>;
     updated(changedProps: Map<string, unknown>): void;
@@ -110,7 +110,9 @@ export declare class DatepickerRange extends LitElement {
     _dispatchOnValidate(invalid: boolean): void;
     _formatDate(value: string): string;
     _clearDate(range: 'rangeStart' | 'rangeEnd'): void;
-    _closeCalendar(): void;
+    _closeCalendar(options?: {
+        restoreFocus?: boolean;
+    }): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
     private _defaultId;

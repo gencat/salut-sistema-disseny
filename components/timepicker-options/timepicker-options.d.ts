@@ -8,7 +8,7 @@ export declare class TimepickerOptions extends LitElement {
     value: string | null;
     variant: string;
     timeListOptions: string[];
-    customTimeListOptions: TimepickerOptionItem[];
+    customTimeListOptions: TimepickerOptionItem[] | undefined;
     timeManualHourOptions: string[];
     timeManualMinutesOptions: string[];
     manualHourSelector: string;
@@ -22,6 +22,9 @@ export declare class TimepickerOptions extends LitElement {
     private _showTimeout?;
     private _hideTimeout?;
     private _portalManager;
+    private _cachedTimeListOptions?;
+    private _cachedTimeListCustomOptions?;
+    private _cachedTimeListHTML?;
     firstUpdated(): Promise<void>;
     updated(changedProps: Map<string, unknown>): void;
     _toggle: () => void;
@@ -30,8 +33,9 @@ export declare class TimepickerOptions extends LitElement {
     hide(): void;
     updateFloatingCombobox(): void;
     private _updatePosition;
-    _generateTimeListOptionsHTML(options: string[], customOptions?: TimepickerOptionItem[]): import('lit-html').TemplateResult[];
+    _generateTimeListOptionsHTML(options: string[], customOptions?: TimepickerOptionItem[]): {};
     _generateTimeManualOptionsHTML(inputName: string, options: string[]): import('lit-html').TemplateResult[];
+    _handleActionsKeyDown(e: KeyboardEvent): void;
     _handleManualCancel(): void;
     _handleManualAccept(): void;
     _checkDisableTimeManualSelector(): boolean;

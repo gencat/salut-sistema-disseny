@@ -19,6 +19,7 @@ export declare class Datepicker extends LitElement {
     _handleFocusOut(event: FocusEvent): void;
     _input: HTMLInputElement;
     _label: HTMLLabelElement;
+    _calendar: any;
     label: string;
     hideLabel: boolean;
     name: string;
@@ -76,7 +77,6 @@ export declare class Datepicker extends LitElement {
     _oldHelpText: string;
     _isFirstUpdated: boolean;
     private _portalManager;
-    _calendar: HTMLInputElement;
     _backFromCalendar: boolean;
     private visibleObserver;
     firstUpdated(): Promise<void>;
@@ -86,10 +86,13 @@ export declare class Datepicker extends LitElement {
     formStateRestoreCallback(state: string | null): void;
     render(): import('lit-html').TemplateResult;
     _handleInput(event: any): void;
+    _handleClick(): void;
+    _handleFocusout(): void;
     _handleFocusin(): void;
     _focusInput(): void;
     _handleKeydown(e: KeyboardEvent): void;
     _handleCalendarFocusOut(): void;
+    _openCalendar(): void;
     _emitInput(): void;
     _emitChange(): void;
     _checkInputOverflow(): void;
@@ -103,7 +106,9 @@ export declare class Datepicker extends LitElement {
     _onCancel(): void;
     _dispatchValueChange(): void;
     _clearDate(): void;
-    _closeCalendar(): void;
+    _closeCalendar(options?: {
+        restoreFocus?: boolean;
+    }): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
     _getPortalCalendar(): Element | null | undefined;

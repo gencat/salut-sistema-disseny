@@ -16,6 +16,8 @@ export declare class Modal extends LitElement {
     jcef: boolean;
     _scrollHandler: ((event: Event) => void) | null;
     _scrollContainer: HTMLElement | null;
+    _previouslyFocusedElement: HTMLElement | null;
+    _closedViaKeyboard: boolean;
     get _headerSlot(): HTMLInputElement;
     get _footerSlot(): HTMLInputElement;
     constructor();
@@ -24,9 +26,12 @@ export declare class Modal extends LitElement {
     updated(changedProperties: any): void;
     _showDialog(): void;
     _hideDialog(): void;
-    _close(): void;
+    _close(event?: Event): void;
     _isStatusValid(): boolean;
     _getStatusIcon(): string;
+    _handleStartSentinelFocus(event: FocusEvent): void;
+    _handleStartSentinelKeydown(event: KeyboardEvent): void;
+    _handleEndSentinelFocus(): void;
     _handleKeydown(event: KeyboardEvent): void;
     _handleOutsideClick(event: any): void;
     private fixEmptyFooter;
