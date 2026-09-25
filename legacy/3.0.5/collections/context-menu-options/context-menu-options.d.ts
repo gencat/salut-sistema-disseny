@@ -1,0 +1,44 @@
+import { Placement } from '@floating-ui/dom';
+import { LitElement } from 'lit';
+import { ContextMenuItem } from '../context-menu/context-menu';
+export declare class ContextMenuOptions extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
+    static get styles(): import('lit').CSSResult[];
+    isOpen: boolean;
+    items: ContextMenuItem[];
+    placement: Placement;
+    referenceEl?: HTMLElement | null;
+    _isFirstUpdated: boolean;
+    _floatingCombobox: HTMLElement;
+    _itemEls: NodeListOf<HTMLElement>;
+    delay: number;
+    private _parent?;
+    private _initialParent;
+    private _cleanupAutoUpdate?;
+    private _showTimeout?;
+    private _hideTimeout?;
+    private _portalManager;
+    _toggle: () => void;
+    show(): void;
+    private _executeShow;
+    hide(): void;
+    updateFloatingCombobox(): void;
+    private _updatePosition;
+    _handleClick(id: string): void;
+    private _getFirstEnabledIndex;
+    private _getNextEnabledIndex;
+    private _focusItemByIndex;
+    private _resetRovingTabIndex;
+    _getInitialTabIndex(index: number): -1 | 0;
+    _onItemKeydown(event: KeyboardEvent, index: number): void;
+    _focusSentinel(): void;
+    updated(changedProps: Map<string, any>): void;
+    firstUpdated(): Promise<void>;
+    render(): import('lit-html').TemplateResult;
+}

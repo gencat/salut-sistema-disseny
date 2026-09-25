@@ -1,0 +1,21 @@
+import { LitElement } from 'lit';
+export type NavItem = {
+    label: string;
+    icon?: string;
+    disabled?: boolean;
+};
+export declare class HeaderNavigation extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    jcef: boolean;
+    hideHelp: boolean;
+    disableHelp: boolean;
+    helpLabel: string;
+    configLabel: string;
+    hideConfig: boolean;
+    disableConfig: boolean;
+    items: NavItem[];
+    _dispatchItemAction(item: NavItem): void;
+    _handleHelp(): void;
+    _handleConfig(): void;
+    render(): import('lit-html').TemplateResult;
+}

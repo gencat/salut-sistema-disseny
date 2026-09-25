@@ -58,6 +58,8 @@ export declare class NgInputDropdown extends LitElement {
     dropdownFixed: boolean;
     advancedFilter: boolean;
     get value(): string;
+    _defaultId: string;
+    _getEffectiveId(): string;
     _elements: Array<SelectorElement> | null;
     _copyElements: Array<SelectorElement> | null;
     _tick: boolean;
@@ -123,9 +125,12 @@ export declare class NgInputDropdown extends LitElement {
     _checkInputAttributes(): void;
     _handleFocusIn(): void;
     _handleFocusOut(event: any): void;
+    _moveFocusToDropdown(): void;
+    _moveFocusBackToInput(): void;
     _handleKeyDown(e: KeyboardEvent): void;
     _handleClick(): void;
     _focusInput(): void;
+    _handleOptionsSentinel(): void;
     _keyboardFilterMatch(): void;
     _showPlaceholder(): void;
     _hidePlaceholder(): void;
@@ -133,5 +138,7 @@ export declare class NgInputDropdown extends LitElement {
     _cleanInput(): void;
     _createPopperDropdown(): void;
     _updatePopperDropdown(): Promise<void>;
+    _handleInputSlotChange(): void;
+    _updateShowDropdown(state: boolean): void;
     render(): import('lit-html').TemplateResult;
 }

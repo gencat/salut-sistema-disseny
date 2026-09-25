@@ -33,6 +33,8 @@ export declare class NgTimepicker extends LitElement {
     icon: string;
     dropdownPlacement: string;
     dropdownFixed: boolean;
+    _defaultId: string;
+    _getEffectiveId(): string;
     _value: string;
     _placeholder: string;
     _inputSize: string;
@@ -84,9 +86,13 @@ export declare class NgTimepicker extends LitElement {
     _updateTimeOptions(): void;
     _checkInputAttributes(): void;
     _handleValidity(): void;
+    _handleInputSlotChange(): void;
+    _updateShowDropdown(state: boolean): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
     _closeDropdown(): void;
+    _cancelDropdown(): void;
+    _moveFocusBackToInput(): void;
     _timePattern: RegExp;
     _timeSeparator: string;
     _timeInputOldValue: string;
@@ -97,6 +103,7 @@ export declare class NgTimepicker extends LitElement {
     _handleClick(): void;
     _handleInput(): void;
     _handleKeyDown(e: KeyboardEvent): void;
+    _focusFirstDropdownElement(): void;
     _handleFocus(): void;
     _handleBlur(): void;
     _focusInput(): void;
@@ -108,6 +115,8 @@ export declare class NgTimepicker extends LitElement {
     _checkDisableTimeManualSelector(): boolean;
     _timeManualSelectorCancel(): void;
     _timeManualSelectorAccept(): void;
+    _handleActionsKeyDown(e: KeyboardEvent): void;
+    _focusSentinel(): void;
     _timeListOptionsScrollTo(): void;
     _timeManualOptionsScrollTo(value?: string): void;
     _isTruncated: boolean;

@@ -57,6 +57,7 @@ export declare class SearchBar extends LitElement {
     autocorrect: boolean;
     autofocus: boolean;
     spellcheck: boolean;
+    disableValidation: boolean;
     private _defaultId;
     _isTruncated: boolean;
     _isCatalogLoaded: boolean;

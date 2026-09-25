@@ -79,11 +79,16 @@ export declare class NgCalendar extends LitElement {
     _yearsRangeStart: number;
     _yearsRangeEnd: number;
     _isTimeFormatValid: boolean;
+    _rovingFocusDate: Date | null;
     _focusFirstElementHandler: () => void;
+    _previouslyFocusedElement: HTMLElement | null;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
     _focusFirstElement(): void;
+    _focusActiveDay(): void;
+    _handleCalendarFocusIn(event: FocusEvent): void;
+    _handleEndSentinelFocus(): void;
     _prev(): void;
     _next(): void;
     _update(): void;
@@ -91,6 +96,8 @@ export declare class NgCalendar extends LitElement {
     _getCustomType(day: number): string | false;
     _isToday(day: number): boolean;
     _isWeekend(day: number): boolean;
+    _getDayAriaLabel(day: number): string;
+    _getFirstEnabledDay(): number | null;
     _isInactive(day: number): boolean;
     _isSelected(day: number): boolean;
     _isFocusable(day: number): boolean;
@@ -100,26 +107,37 @@ export declare class NgCalendar extends LitElement {
     _compareSelectedRangeDates(): boolean;
     _isBetweenRange(day: number): boolean;
     _isBetweenRangeOnMouseOver(day: number): boolean;
-    _selectDate(day: number): void;
+    _selectDate(day: number, isKeyboardSelection?: boolean): void;
+    _focusNextRangeDay(day: number, moveFocus: boolean): void;
     _selectRangeOverDate(day: number): void;
     _removeRangeOverDate(): void;
     _onCancel(): void;
     _onAccept(): void;
     _emitDate(): void;
-    _emitRange(): void;
+    _emitRange(isKeyboardSelection?: boolean): void;
     _updateCurrentDate(): void;
     _resetCalendar(): void;
     _getDateString(selectedDate: string): Date | null;
     _onSelectTime(e: CustomEvent): void;
     _toggleMonthSelector(): void;
-    _onMonthSelectorClick(month: string): void;
+    _onMonthSelectorClick(month: string, options?: {
+        focusActiveDay?: boolean;
+    }): void;
     _toggleYearSelector(): void;
-    _onYearSelectorClick(year: number): void;
+    _closeMonthSelector(options?: {
+        focusActiveDay?: boolean;
+    }): void;
+    _onYearSelectorClick(year: number, options?: {
+        focusActiveDay?: boolean;
+    }): void;
+    _closeYearSelector(options?: {
+        focusActiveDay?: boolean;
+    }): void;
     _generateYearsRangeOptions(): import('lit-html').TemplateResult[];
     _generateMonthsOptions(): import('lit-html').TemplateResult[];
     _onYearRangeStepUp(): void;
     _onYearRangeStepDown(): void;
-    _onHeaderMonthKeyDown(e: KeyboardEvent): void;
+    _onShiftTabKeyDown(e: KeyboardEvent): void;
     _onHeaderYearKeyDown(e: KeyboardEvent): void;
     _validateSelectedDate(): boolean;
     _handleCalendarKeydown(e: KeyboardEvent): void;

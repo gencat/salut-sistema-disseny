@@ -130,13 +130,14 @@ export declare class Calendar extends LitElement {
     _compareSelectedRangeDates(): boolean;
     _isBetweenRange(day: number): boolean;
     _isBetweenRangeOnMouseOver(day: number): boolean;
-    _selectDate(day: number): void;
+    _selectDate(day: number, isKeyboardSelection?: boolean): void;
+    _focusNextRangeDay(day: number): void;
     _selectRangeOverDate(day: number): void;
     _removeRangeOverDate(): void;
     _onCancel(): void;
     _onAccept(): void;
     _emitDate(): void;
-    _emitRange(): void;
+    _emitRange(isKeyboardSelection?: boolean): void;
     _updateCurrentDate(): void;
     _resetCalendar(): void;
     _getDateString(selectedDate: string): Date | null;

@@ -96,6 +96,7 @@ export declare class DatepickerRange extends LitElement {
     _handleRangeEndClick(): void;
     _handleRangeStartFocusIn(): void;
     _handleRangeEndFocusIn(): void;
+    _handleRangeEndFocusOut(): void;
     _handleRangeKeydown(e: KeyboardEvent): void;
     _dispatchValueChange(rangeValues: any): void;
     _updateHiddenInput(): void;
@@ -122,5 +123,6 @@ export declare class DatepickerRange extends LitElement {
     private _disableAnimations;
     _backFromCalendar: boolean;
     _handleCalendarFocusOut(): void;
+    _handleCalendarUpdated(event: CustomEvent<HTMLElement>): void;
     focus(options?: FocusOptions): void;
 }

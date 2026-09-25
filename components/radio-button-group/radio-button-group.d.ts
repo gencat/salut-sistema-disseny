@@ -12,7 +12,7 @@ export declare class RadioButtonGroup extends LitElement {
     hideLabel: boolean;
     value: string;
     orientation: 'horizontal' | 'vertical';
-    disabled: boolean;
+    disabled?: boolean;
     updated(changedProps: Map<string, unknown>): void;
     formResetCallback(): void;
     formStateRestoreCallback(state: string | null): void;

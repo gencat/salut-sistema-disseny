@@ -30,6 +30,7 @@ export declare class Textarea extends LitElement {
     icon: string | undefined;
     size: string;
     helpText: string | null;
+    disableValidation: boolean;
     _isTextareaFocused: boolean;
     _isGroupFocusedVisible: boolean;
     _lastValue: string | null;

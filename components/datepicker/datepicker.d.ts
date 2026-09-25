@@ -92,6 +92,7 @@ export declare class Datepicker extends LitElement {
     _focusInput(): void;
     _handleKeydown(e: KeyboardEvent): void;
     _handleCalendarFocusOut(): void;
+    _handleCalendarUpdated(event: CustomEvent<HTMLElement>): void;
     _openCalendar(): void;
     _emitInput(): void;
     _emitChange(): void;

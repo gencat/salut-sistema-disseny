@@ -60,6 +60,7 @@ export declare class Select extends LitElement {
     openWithSearch: boolean;
     advancedFilter: boolean;
     serverSideFilter: boolean;
+    disableValidation: boolean;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;

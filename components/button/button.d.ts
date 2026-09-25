@@ -25,7 +25,7 @@ export declare class Button extends LitElement {
     _isTextTruncated: boolean;
     _handleClick(): void;
     _getIconSize(): "md" | "sm";
-    checkTextTruncate(event: MouseEvent): void;
+    checkTextTruncate(event: Event): void;
     focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;
 }

@@ -72,6 +72,7 @@ export declare class Selector extends LitElement {
     private _areAllElementsSelected;
     selectFirstMatch(): void;
     moveFocus(): void;
+    _focusSentinel(): void;
     private generateListInputsElements;
     private generatElementSelectAll;
     render(): import('lit-html').TemplateResult;

@@ -52,6 +52,8 @@ export declare class NgDatepicker extends LitElement {
     errorMessageMinDate: string;
     errorMessageMaxDate: string;
     hasStepper: boolean;
+    _defaultId: string;
+    _getEffectiveId(): string;
     _timepickerLabel: string;
     _timepicker: string;
     _minutesRange: number;
@@ -100,7 +102,9 @@ export declare class NgDatepicker extends LitElement {
     _handleValidity(): void;
     _checkClickOutside(event: Event): void;
     _checkFocusOut(event: FocusEvent): void;
-    _closeCalendar(): void;
+    _closeCalendar(options?: {
+        restoreFocus?: boolean;
+    }): void;
     _handleKeyUp(e: KeyboardEvent): void;
     _handleInput(event: any): void;
     _formatDate(value: string): string;
@@ -110,6 +114,7 @@ export declare class NgDatepicker extends LitElement {
     _handleClick(): void;
     _onDateChange(e: CustomEvent): void;
     _onCancel(): void;
+    _moveFocusToCalendar(): void;
     _dispatchValueChange(): void;
     _isTruncated: boolean;
     _checkInputOverflow(): void;
@@ -126,5 +131,7 @@ export declare class NgDatepicker extends LitElement {
     _getDateFromValue(value?: string): Date | null;
     _newDateToValue(newDateObj: Date): string;
     isValidDate(): boolean;
+    _handleInputSlotChange(): void;
+    _updateShowCalendar(state: boolean): void;
     render(): import('lit-html').TemplateResult;
 }

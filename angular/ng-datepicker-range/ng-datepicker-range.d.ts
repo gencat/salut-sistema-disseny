@@ -63,6 +63,12 @@ export declare class NgDatepickerRange extends LitElement {
     _removeCalendarListener(): void;
     _handleOutsideClick(event: any): void;
     _handleFocusOut(event: FocusEvent): void;
+    _getFocusedInput(): HTMLInputElement;
+    _moveFocusToCalendar(): void;
+    _moveFocusBackToInput(input?: HTMLInputElement): void;
+    _handleInputSlotChange(input: HTMLInputElement | undefined): void;
+    _handleRangeStartSlotChange(): void;
+    _handleRangeEndSlotChange(): void;
     _checkInputAttributes(): void;
     _updatePlaceholders(): void;
     _removePlaceholders(): void;
@@ -72,6 +78,7 @@ export declare class NgDatepickerRange extends LitElement {
     _handleRangeEndClick(): void;
     _handleRangeStartFocusIn(): void;
     _handleRangeEndFocusIn(): void;
+    _handleRangeEndFocusOut(): void;
     _handleRangeKeydown(e: KeyboardEvent): void;
     _onCalendarChange(event: CustomEvent): void;
     _onCalendarCancel(): void;
@@ -95,5 +102,6 @@ export declare class NgDatepickerRange extends LitElement {
     observer: MutationObserver;
     private visibleObserver;
     firstUpdated(): Promise<void>;
+    _updateShowCalendar(state: boolean): void;
     render(): import('lit-html').TemplateResult;
 }

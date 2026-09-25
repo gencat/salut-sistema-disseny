@@ -38,6 +38,9 @@ export declare class Input extends LitElement {
     unit?: string;
     inputPrefix?: string;
     hasActions: boolean;
+    clearable: boolean;
+    disableValidation: boolean;
+    maxDecimals: number | undefined;
     private _defaultId;
     _getEffectiveId(): string;
     _isFocused: boolean;
@@ -68,4 +71,5 @@ export declare class Input extends LitElement {
     _checkInputOverflow(): void;
     firstUpdated(): Promise<void>;
     focus(options?: FocusOptions): void;
+    _handleClear(): void;
 }
