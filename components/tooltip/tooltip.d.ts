@@ -13,6 +13,7 @@ export declare class Tooltip extends LitElement {
     private _showTimeout?;
     private _hideTimeout?;
     private _portalManager;
+    private _visibleObserver?;
     connectedCallback(): void;
     disconnectedCallback(): void;
     private _setEventListeners;
@@ -26,7 +27,8 @@ export declare class Tooltip extends LitElement {
     _selfMouseEnter(event: MouseEvent): void;
     show(): void;
     private _executeShow;
-    hide(): void;
+    private _finishHide;
+    hide(delay?: number): void;
     updateTooltip(): void;
     private _updatePosition;
     render(): import('lit-html').TemplateResult;
