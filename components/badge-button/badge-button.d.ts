@@ -28,11 +28,15 @@ export declare class BadgeButton extends LitElement {
     get _iconFill(): boolean;
     _isTextTruncated: boolean;
     _isFirstUpdated: boolean;
+    _hasCustomTooltip: boolean;
+    private _customTooltipEl?;
+    disconnectedCallback(): void;
     _handleClick(): void;
     _isInformativeStatus(): boolean;
     _checkTextTruncated(): void;
-    willUpdate(_changedProperties: PropertyValues): void;
+    protected updated(changedProperties: PropertyValues): Promise<void>;
     firstUpdated(): Promise<void>;
     focus(options?: FocusOptions): void;
+    _onSlotChange(event: Event): void;
     render(): import('lit-html').TemplateResult;
 }

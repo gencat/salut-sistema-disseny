@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement, PropertyValues } from 'lit';
 export declare class Tooltip extends LitElement {
     static get styles(): import('lit').CSSResult[];
     position: string;
@@ -14,6 +14,8 @@ export declare class Tooltip extends LitElement {
     private _hideTimeout?;
     private _portalManager;
     private _visibleObserver?;
+    private _isPortaling;
+    private _isOpen;
     connectedCallback(): void;
     disconnectedCallback(): void;
     private _setEventListeners;
@@ -31,5 +33,6 @@ export declare class Tooltip extends LitElement {
     hide(delay?: number): void;
     updateTooltip(): void;
     private _updatePosition;
+    protected updated(changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

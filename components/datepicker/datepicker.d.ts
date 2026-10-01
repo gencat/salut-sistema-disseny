@@ -96,6 +96,8 @@ export declare class Datepicker extends LitElement {
     _openCalendar(): void;
     _emitInput(): void;
     _emitChange(): void;
+    _lastValue: string | null;
+    _handleMouseOver(): void;
     _checkInputOverflow(): void;
     _handleValidity(): void;
     _validateDate(): void;

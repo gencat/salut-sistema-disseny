@@ -93,6 +93,8 @@ export declare class Timepicker extends LitElement {
     _handleLabelClick(event: MouseEvent): void;
     _handleFocusout(): void;
     _focusInput(): void;
+    _lastValue: string | null;
+    _handleMouseOver(): void;
     _checkInputOverflow(): void;
     _emitInput(): void;
     _emitChange(): void;

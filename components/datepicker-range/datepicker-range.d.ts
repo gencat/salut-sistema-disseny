@@ -71,7 +71,10 @@ export declare class DatepickerRange extends LitElement {
     _getEffectiveEndId(): string;
     _isStartFocused: boolean;
     _isEndFocused: boolean;
-    _isTruncated: boolean;
+    _valueRangeStart: string;
+    _valueRangeEnd: string;
+    _isRangeStartTruncated: boolean;
+    _isRangeEndTruncated: boolean;
     _helpText: string;
     _dateformatPlaceholder: string;
     _copyInputRangeStartPlaceholder: string;
@@ -125,4 +128,5 @@ export declare class DatepickerRange extends LitElement {
     _handleCalendarFocusOut(): void;
     _handleCalendarUpdated(event: CustomEvent<HTMLElement>): void;
     focus(options?: FocusOptions): void;
+    _checkRangeTruncation(range: 'start' | 'end'): void;
 }
