@@ -13,6 +13,7 @@ export declare class Tile extends LitElement {
     heightAuto: boolean;
     widget: boolean;
     marker: string | undefined;
+    hideTooltip: boolean;
     isTitleTruncated: boolean;
     isDescriptionTruncated: boolean;
     private _resizeObserver?;

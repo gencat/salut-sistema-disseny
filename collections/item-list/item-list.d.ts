@@ -40,12 +40,14 @@ export declare class ItemList extends LitElement {
     items: ListItem[] | undefined;
     widget: boolean;
     hideTooltip: boolean;
+    hideOverflowX: boolean;
     tooltipPosition: string;
     variant: string;
     _dispatchItemAction(item: ListItem): void;
     _dispatchItemChip(item: ListItem): void;
     _dispatchWidgetAction(item: ListItem, action: string): void;
     _applyDivider(): void;
+    updated(changedProperties: Map<string | number | symbol, unknown>): void;
     firstUpdated(): Promise<void>;
     render(): import('lit-html').TemplateResult;
 }
