@@ -9,6 +9,7 @@ export declare class Badge extends LitElement {
     outlined: boolean;
     dot: boolean;
     hideIcon: boolean;
+    forceHideIcon: boolean;
     width: string | undefined;
     set text(text: string);
     get text(): string;

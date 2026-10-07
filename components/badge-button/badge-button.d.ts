@@ -18,6 +18,7 @@ export declare class BadgeButton extends LitElement {
     disabled: boolean;
     hidden: boolean;
     hideIcon: boolean;
+    forceHideIcon: boolean;
     outlined: boolean;
     width: string | undefined;
     set state(state: string);
