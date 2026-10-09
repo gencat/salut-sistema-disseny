@@ -1,0 +1,4 @@
+import{j as e,M as r}from"./blocks-Cx0vIq7B.js";import{useMDXComponents as o}from"./index-F9r1db-Z.js";import{S as i}from"./table.stories-BIIrPswX.js";import"./preload-helper-PPVm8Dsz.js";import"./_commonjsHelpers-CqkleIqs.js";import"./iframe-UwRFcghS.js";function n(t){const s={h3:"h3",p:"p",...o(),...t.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{of:i,name:"Props"}),`
+`,e.jsxs("div",{className:"dss-sb-title",children:[e.jsx(s.h3,{id:"propietats",children:"Propietats"}),e.jsx("component-title",{children:"dss-table"})]}),`
+`,e.jsx(s.p,{children:`Aquesta collection funciona només com a contenidor per assignar l’estil display: flex als seus elements;
+totes les propietats per configurar la taula es defineixen als seus components interns.`})]})}function u(t={}){const{wrapper:s}={...o(),...t.components};return s?e.jsx(s,{...t,children:e.jsx(n,{...t})}):n(t)}export{u as default};
