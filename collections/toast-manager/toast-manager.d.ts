@@ -3,6 +3,7 @@ export declare class ToastManager extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private readonly _toastSelector_;
     private _slotObserver_;
+    private readonly _toastStates_;
     maxVisibleToasts: number;
     leftPosition?: string;
     bottomPosition?: string;

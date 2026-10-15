@@ -5,7 +5,9 @@ export declare class Toast extends LitElement {
     static get styles(): import('lit').CSSResult[];
     isShow: boolean;
     text?: string;
-    state: ToastType;
+    status: ToastType;
+    set state(state: ToastType);
+    get state(): ToastType;
     position: PostionType;
     icon?: string;
     hasIcon: boolean;
