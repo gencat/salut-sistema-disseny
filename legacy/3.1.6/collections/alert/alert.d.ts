@@ -1,0 +1,30 @@
+import { LitElement } from 'lit';
+export declare class Alert extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    status: string;
+    set state(state: string);
+    get state(): string;
+    size: string;
+    message: string | undefined;
+    titleText: string | undefined;
+    description: string | undefined;
+    buttonLabel: string;
+    showMoreLabel: string;
+    showLessLabel: string;
+    hasCloseIcon: boolean;
+    hasButton: boolean;
+    fullWidth: boolean;
+    buttonBottom: boolean;
+    expanded: boolean;
+    isOverflowing: boolean;
+    _statusIcon: string;
+    _handleButtonClick(): void;
+    _handleClose(): void;
+    updated(_changedProperties: Map<string | number | symbol, unknown>): void;
+    firstUpdated(): Promise<void>;
+    _isTextTruncated(container: HTMLElement): boolean;
+    setStatusIcon(): void;
+    _getIconSize(): "md" | "sm";
+    toggleExpand(): void;
+    render(): import('lit-html').TemplateResult;
+}
