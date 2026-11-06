@@ -42,8 +42,9 @@ export declare class PresetTexts extends LitElement {
     _getDefaultSelectedText(category: string): void;
     private _checkScroll;
     private _handleScroll;
-    _handleSearch(event: Event): void;
-    _clearFilter(): void;
+    _handleSearchInput(event: Event): void;
+    _handleSearchChange(event: Event): void;
+    _updateDefaultSelectedText(): void;
     _filterItems(): PresetTextsItem[];
     firstUpdated(): Promise<void>;
     updated(changedProperties: Map<string | number | symbol, unknown>): void;
