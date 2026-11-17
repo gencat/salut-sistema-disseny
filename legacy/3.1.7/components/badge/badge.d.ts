@@ -1,0 +1,33 @@
+import { LitElement, PropertyValues } from 'lit';
+export declare class Badge extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    icon: string | undefined;
+    size: string;
+    label: string;
+    status: string;
+    disabled: boolean;
+    outlined: boolean;
+    dot: boolean;
+    hideIcon: boolean;
+    forceHideIcon: boolean;
+    width: string | undefined;
+    set text(text: string);
+    get text(): string;
+    set state(state: string);
+    get state(): string;
+    _isFirstUpdated: boolean;
+    _isLabelTruncated: boolean;
+    _hasCustomTooltip: boolean;
+    private _customTooltipEl?;
+    get _iconSize(): "md" | "sm";
+    get _icon(): string;
+    get _iconFill(): boolean;
+    firstUpdated(): Promise<void>;
+    disconnectedCallback(): void;
+    protected updated(changedProperties: PropertyValues): Promise<void>;
+    _checkTextTruncated(): void;
+    _isCriticalStatus(): boolean;
+    _isInformativeStatus(): boolean;
+    _onSlotChange(event: Event): void;
+    render(): import('lit-html').TemplateResult;
+}

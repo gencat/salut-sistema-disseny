@@ -1,0 +1,38 @@
+import { LitElement, PropertyValues } from 'lit';
+export declare class Tooltip extends LitElement {
+    static get styles(): import('lit').CSSResult[];
+    position: string;
+    align: string;
+    hidden: boolean;
+    delay: number;
+    interactive: boolean;
+    _tooltipEl: HTMLElement;
+    private _parent?;
+    private _initialParent;
+    private _cleanupAutoUpdate?;
+    private _showTimeout?;
+    private _hideTimeout?;
+    private _portalManager;
+    private _visibleObserver?;
+    private _isPortaling;
+    private _isOpen;
+    connectedCallback(): void;
+    disconnectedCallback(): void;
+    private _setEventListeners;
+    private _destroyEventListeners;
+    private _setAccessibility;
+    private _onFocusIn;
+    private _onFocusOut;
+    private _onTooltipMouseEnter;
+    private _onMouseEnter;
+    private _onMouseLeave;
+    _selfMouseEnter(event: MouseEvent): void;
+    show(): void;
+    private _executeShow;
+    private _finishHide;
+    hide(delay?: number): void;
+    updateTooltip(): void;
+    private _updatePosition;
+    protected updated(changedProperties: PropertyValues): void;
+    render(): import('lit-html').TemplateResult;
+}
