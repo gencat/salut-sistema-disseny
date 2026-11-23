@@ -1,6 +1,12 @@
 import { LitElement } from 'lit';
-
 export declare class Button extends LitElement {
+    static shadowRootOptions: {
+        delegatesFocus: boolean;
+        mode: ShadowRootMode;
+        slotAssignment?: SlotAssignmentMode | undefined;
+        customElements?: CustomElementRegistry | undefined;
+        registry?: CustomElementRegistry | undefined;
+    };
     static get styles(): import('lit').CSSResult[];
     type: string;
     variant: string;
@@ -13,12 +19,13 @@ export declare class Button extends LitElement {
     onlyIcon: boolean;
     fullWidth: boolean;
     size: string;
-    tooltipFixed: boolean;
     loading: boolean;
-    forceViewport: boolean;
+    hideTooltip: boolean;
     loadingIcon: string;
+    _isTextTruncated: boolean;
     _handleClick(): void;
     _getIconSize(): "md" | "sm";
-    checkTextTruncate(event: MouseEvent): void;
+    checkTextTruncate(event: Event): void;
+    focus(options?: FocusOptions): void;
     render(): import('lit-html').TemplateResult;
 }

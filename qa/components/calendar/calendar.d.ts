@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export type CalendarItem = {
     date: string;
     type: string;
@@ -13,6 +12,10 @@ export declare const WEEK: string[];
 export declare class Calendar extends LitElement {
     static get styles(): import('lit').CSSResult[];
     standalone: boolean;
+    set open(value: boolean);
+    get open(): boolean;
+    openByDefault: boolean;
+    placement: string;
     customCalendar: CalendarItem[] | undefined;
     set range(value: boolean);
     get range(): boolean;
@@ -50,6 +53,7 @@ export declare class Calendar extends LitElement {
     get rangeStartDate(): string;
     set rangeEndDate(value: string);
     get rangeEndDate(): string;
+    _open: boolean;
     _range: boolean;
     _isRangeStartFocused: boolean;
     _isRangeEndFocused: boolean;
@@ -82,10 +86,32 @@ export declare class Calendar extends LitElement {
     _yearsRangeEnd: number;
     _isTimeFormatValid: boolean;
     _focusFirstElementHandler: () => void;
+    _previouslyFocusedElement: HTMLElement | null;
+    _floatingCombobox: HTMLElement;
+    delay: number;
+    private _parent?;
+    private _initialParent;
+    private _cleanupAutoUpdate?;
+    private _showTimeout?;
+    private _hideTimeout?;
+    private _portalManager;
+    private _isTabbingOut;
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;
+    _isFirstUpdated: boolean;
+    firstUpdated(): Promise<void>;
+    updated(changedProps: Map<string, any>): void;
+    _toggle(): void;
+    show(): void;
+    private _executeShow;
+    hide(): void;
+    updateFloatingCalendar(): void;
+    private _updatePosition;
     _focusFirstElement(): void;
+    _focusActiveDay(): void;
+    _handleCalendarFocusIn(event: FocusEvent): void;
+    _handleEndSentinelFocus(): void;
     _prev(): void;
     _next(): void;
     _update(): void;
@@ -93,6 +119,8 @@ export declare class Calendar extends LitElement {
     _getCustomType(day: number): string | false;
     _isToday(day: number): boolean;
     _isWeekend(day: number): boolean;
+    _getDayAriaLabel(day: number): string;
+    _getFirstEnabledDay(): number | null;
     _isInactive(day: number): boolean;
     _isSelected(day: number): boolean;
     _isFocusable(day: number): boolean;
@@ -102,27 +130,41 @@ export declare class Calendar extends LitElement {
     _compareSelectedRangeDates(): boolean;
     _isBetweenRange(day: number): boolean;
     _isBetweenRangeOnMouseOver(day: number): boolean;
-    _selectDate(day: number): void;
+    _selectDate(day: number, isKeyboardSelection?: boolean): void;
+    _focusNextRangeDay(day: number): void;
     _selectRangeOverDate(day: number): void;
     _removeRangeOverDate(): void;
     _onCancel(): void;
     _onAccept(): void;
     _emitDate(): void;
-    _emitRange(): void;
+    _emitRange(isKeyboardSelection?: boolean): void;
     _updateCurrentDate(): void;
+    _resetCalendar(): void;
     _getDateString(selectedDate: string): Date | null;
     _onSelectTime(e: CustomEvent): void;
     _toggleMonthSelector(): void;
-    _onMonthSelectorClick(month: string): void;
+    _closeMonthSelector(options?: {
+        focusActiveDay?: boolean;
+    }): void;
+    _onMonthSelectorClick(month: string, options?: {
+        focusActiveDay?: boolean;
+    }): void;
     _toggleYearSelector(): void;
-    _onYearSelectorClick(year: number): void;
+    _closeYearSelector(options?: {
+        focusActiveDay?: boolean;
+    }): void;
+    _onYearSelectorClick(year: number, options?: {
+        focusActiveDay?: boolean;
+    }): void;
     _generateYearsRangeOptions(): import('lit-html').TemplateResult[];
     _generateMonthsOptions(): import('lit-html').TemplateResult[];
     _onYearRangeStepUp(): void;
     _onYearRangeStepDown(): void;
-    _onHeaderMonthKeyDown(e: KeyboardEvent): void;
+    _onShiftTabKeyDown(e: KeyboardEvent): void;
     _onHeaderYearKeyDown(e: KeyboardEvent): void;
     _validateSelectedDate(): boolean;
     _handleCalendarKeydown(e: KeyboardEvent): void;
+    _getFocusableElements(): HTMLElement[];
+    _handleCalendarFocusOut(e: FocusEvent): void;
     render(): import('lit-html').TemplateResult;
 }

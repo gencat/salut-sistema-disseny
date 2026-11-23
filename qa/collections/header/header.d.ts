@@ -1,5 +1,4 @@
 import { LitElement } from 'lit';
-
 export declare class Header extends LitElement {
     static get styles(): import('lit').CSSResult[];
     private _handleResizeBound;

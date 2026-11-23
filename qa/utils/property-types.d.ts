@@ -1,5 +1,4 @@
 import { PropertyDeclaration } from 'lit';
-
 export declare const booleanType: PropertyDeclaration<boolean>;
 export declare const booleanConverter: {
     fromAttribute: (value: string | null) => boolean;

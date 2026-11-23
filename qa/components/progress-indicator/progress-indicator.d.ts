@@ -1,19 +1,17 @@
-import { LitElement } from 'lit';
-
-export type StateType = 'default' | 'info' | 'success' | 'warning' | 'error';
+import { LitElement, PropertyValues } from 'lit';
 export declare class ProgressIndicator extends LitElement {
     static get styles(): import('lit').CSSResult;
+    titleText: string;
     description: string;
-    state: StateType;
+    status: string;
     percentage: number;
-    hasFailed: boolean;
     hidePercentage: boolean;
-    set title(value: string);
+    hasFailed: boolean;
+    _currentStatus: string;
+    set state(state: string);
+    get state(): string;
+    set title(text: string);
     get title(): string;
-    set titleText(value: string);
-    get titleText(): string;
-    _title: string | undefined;
-    _label: string;
-    updated(changedProperties: Map<string | number | symbol, unknown>): void;
+    updated(changedProperties: PropertyValues): void;
     render(): import('lit-html').TemplateResult;
 }

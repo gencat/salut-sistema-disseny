@@ -1,5 +1,4 @@
 import { LitElement, PropertyValues } from 'lit';
-
 export declare class Sidebar extends LitElement {
     static get styles(): import('lit').CSSResult[];
     titleText: string | undefined;
@@ -7,8 +6,6 @@ export declare class Sidebar extends LitElement {
     placement: string;
     iconToggleRight: string;
     iconToggleLeft: string;
-    tooltipFixed: boolean;
-    forceViewport: boolean;
     _iconToggleExpanded: string;
     _iconToggleCollapsed: string;
     _isTruncated: boolean;

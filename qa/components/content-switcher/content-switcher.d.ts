@@ -1,5 +1,4 @@
 import { LitElement, PropertyValues } from 'lit';
-
 interface ContentSwitcherTab {
     label: string;
     icon?: string;
@@ -7,12 +6,10 @@ interface ContentSwitcherTab {
     disabled?: boolean;
 }
 export declare class ContentSwitcher extends LitElement {
-    connectedCallback(): void;
     fullWidth: boolean;
     size: string;
-    tabs: ContentSwitcherTab[];
+    tabs: ContentSwitcherTab[] | undefined;
     tabSelected?: ContentSwitcherTab;
-    _isFirstUpdate: boolean;
     _tabs: ContentSwitcherTab[];
     static get styles(): import('lit').CSSResult[];
     _onSelect(tab: ContentSwitcherTab): void;
