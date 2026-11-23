@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.94% </span>
+                <span class="strong">90.64% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>274/298</span>
+                <span class='fraction'>281/310</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.59% </span>
+                <span class="strong">86.2% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>25/27</span>
+                <span class='fraction'>25/29</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.94% </span>
+                <span class="strong">90.64% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>274/298</span>
+                <span class='fraction'>281/310</span>
             </div>
         
             
@@ -361,7 +361,19 @@
 <a name='L296'></a><a href='#L296'>296</a>
 <a name='L297'></a><a href='#L297'>297</a>
 <a name='L298'></a><a href='#L298'>298</a>
-<a name='L299'></a><a href='#L299'>299</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -388,6 +400,7 @@
 <span class="cline-any cline-yes">37x</span>
 <span class="cline-any cline-yes">37x</span>
 <span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -475,6 +488,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -494,7 +508,17 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -689,6 +713,7 @@ export class Input extends LitElement {
 &nbsp;
 	// Inner Elements
 	@query('input.dss-input') _input!: HTMLInputElement;
+	@query('.dss-input-group') _inputGroup!: HTMLInputElement;
 &nbsp;
 	// Native input properties
 	@property({ type: String }) label = '';
@@ -772,6 +797,7 @@ export class Input extends LitElement {
 &nbsp;
 <span class="fstat-no" title="function not covered" >	_handleFocusin() {</span>
 <span class="cstat-no" title="statement not covered" >		this._isFocused = true;</span>
+<span class="cstat-no" title="statement not covered" >		this._inputGroup.classList.add('dss-input-group--focusin');</span>
 <span class="cstat-no" title="statement not covered" >	}</span>
 &nbsp;
 	@state() _labelClicked = false;
@@ -792,7 +818,17 @@ export class Input extends LitElement {
 			this._checkInputOverflow();
 			this._lastValue = this._input.value;
 		}
+		this._isFocused = false;
+		this._inputGroup.classList.remove('dss-input-group--focusin');
 	}
+&nbsp;
+<span class="fstat-no" title="function not covered" >	_handleClearFocusin() {</span>
+<span class="cstat-no" title="statement not covered" >		this._inputGroup.classList.add('dss-input-group--clear-focusin');</span>
+<span class="cstat-no" title="statement not covered" >	}</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >	_handleClearFocusout() {</span>
+<span class="cstat-no" title="statement not covered" >		this._inputGroup.classList.remove('dss-input-group--clear-focusin');</span>
+<span class="cstat-no" title="statement not covered" >	}</span>
 &nbsp;
 	_onInput(e: Event) {
 		const input = e.target as HTMLInputElement;
@@ -964,7 +1000,7 @@ export class Input extends LitElement {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-11-17T12:18:58.376Z
+                at 2026-11-23T13:00:55.749Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

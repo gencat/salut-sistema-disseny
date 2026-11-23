@@ -16,11 +16,13 @@ export declare class Tile extends LitElement {
     hideTooltip: boolean;
     isTitleTruncated: boolean;
     isDescriptionTruncated: boolean;
-    private _resizeObserver?;
+    private _observedTextContainer;
+    private _resizeTimer;
     private _setTruncatedAttribute;
     private _syncOverflowState;
-    firstUpdated(): Promise<void>;
-    updated(_changedProperties: PropertyValues): void;
+    private _observeTextContainer;
+    connectedCallback(): void;
+    updated(changedProperties: PropertyValues): void;
     disconnectedCallback(): void;
     _onClick(): void;
     render(): import('lit-html').TemplateResult;

@@ -42,7 +42,6 @@ export declare class NgSearchBar extends LitElement {
     _invalid: boolean;
     _helpText: string;
     _isFocused: boolean;
-    _showClearButton: boolean;
     _threshold: number;
     _searchTerms: string[];
     _catalog: CatalogOption[];

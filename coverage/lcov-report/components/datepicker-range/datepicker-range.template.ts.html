@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">99.29% </span>
+                <span class="strong">99.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>280/282</span>
+                <span class='fraction'>287/289</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">99.29% </span>
+                <span class="strong">99.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>280/282</span>
+                <span class='fraction'>287/289</span>
             </div>
         
             
@@ -345,7 +345,14 @@
 <a name='L280'></a><a href='#L280'>280</a>
 <a name='L281'></a><a href='#L281'>281</a>
 <a name='L282'></a><a href='#L282'>282</a>
-<a name='L283'></a><a href='#L283'>283</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -394,6 +401,7 @@
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
+<span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">105x</span>
 <span class="cline-any cline-yes">105x</span>
 <span class="cline-any cline-yes">46x</span>
@@ -412,6 +420,7 @@
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
+<span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">105x</span>
 <span class="cline-any cline-yes">105x</span>
 <span class="cline-any cline-yes">105x</span>
@@ -511,6 +520,9 @@
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
+<span class="cline-any cline-yes">108x</span>
+<span class="cline-any cline-yes">108x</span>
+<span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -536,6 +548,8 @@
 <span class="cline-any cline-yes">106x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">108x</span>
+<span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
 <span class="cline-any cline-yes">108x</span>
@@ -673,6 +687,7 @@ export const template = (component: DatepickerRange) =&gt; {
 &nbsp;
 	const startInputGroupClass = {
 		'dss-input-group': true,
+		'dss-input-group-start': true,
 		[`dss-input-group--${component.size}`]: Boolean(component.size),
 		'dss-input-group--invalid':
 			component.invalid ||
@@ -691,6 +706,7 @@ export const template = (component: DatepickerRange) =&gt; {
 &nbsp;
 	const endInputGroupClass = {
 		'dss-input-group': true,
+		'dss-input-group-end': true,
 		[`dss-input-group--${component.size}`]: Boolean(component.size),
 		'dss-input-group--invalid':
 			component.invalid ||
@@ -764,6 +780,7 @@ export const template = (component: DatepickerRange) =&gt; {
                   @click=${component._handleRangeStartClick}
                   @input=${component._handleRangeStartInput}
                   @focusin=${component._handleRangeStartFocusIn}
+                  @focusout=${component._handleRangeStartFocusOut}
                   @keydown=${component._handleRangeKeydown}
                   role="combobox"
                   aria-haspopup="dialog"
@@ -775,7 +792,9 @@ export const template = (component: DatepickerRange) =&gt; {
                 hideTooltip
                 size="md"
                 icon="close"
-                label="Netejar"
+                label="Netejar data inicial"
+                @focusin=${component._handleClearStartFocusin}  
+                @focusout=${component._handleClearStartFocusout}  
                 @onClick=${() =&gt; component._clearDate('rangeStart')}
                 ?hidden=${!component._inputRangeStart?.value || component._inputRangeStart.readOnly || component._inputRangeStart.disabled}
               &gt;&lt;/${dssIconButton}&gt;
@@ -852,7 +871,9 @@ export const template = (component: DatepickerRange) =&gt; {
                 hideTooltip
                 size="md"
                 icon="close"
-                label="Netejar"
+                label="Netejar data fin"
+                @focusin=${component._handleClearEndFocusin}  
+                @focusout=${component._handleClearEndFocusout}  
                 @onClick=${() =&gt; component._clearDate('rangeEnd')}
                 ?hidden=${!component._inputRangeEnd?.value || component._inputRangeEnd.readOnly || component._inputRangeEnd.disabled}
               &gt;&lt;/${dssIconButton}&gt;
@@ -916,7 +937,7 @@ export const template = (component: DatepickerRange) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-11-17T12:18:58.376Z
+                at 2026-11-23T13:00:55.749Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

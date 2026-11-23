@@ -6,6 +6,7 @@ export declare class Input extends LitElement {
     constructor();
     disconnectedCallback(): void;
     _input: HTMLInputElement;
+    _inputGroup: HTMLInputElement;
     label: string;
     hideLabel: boolean;
     name: string;
@@ -56,6 +57,8 @@ export declare class Input extends LitElement {
     _labelClicked: boolean;
     _handleLabelClick(event: MouseEvent): void;
     _handleFocusout(): void;
+    _handleClearFocusin(): void;
+    _handleClearFocusout(): void;
     _onInput(e: Event): void;
     _handleValidity(): void;
     _roundFloat(value: number): number;

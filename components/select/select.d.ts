@@ -9,6 +9,7 @@ export declare class Select extends LitElement {
     _input: HTMLInputElement;
     _hiddenInput: HTMLInputElement;
     _combobox: HTMLInputElement;
+    _inputGroup: HTMLInputElement;
     label: string;
     hideLabel: boolean;
     name: string;

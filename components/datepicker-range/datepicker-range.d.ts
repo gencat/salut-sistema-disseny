@@ -20,6 +20,8 @@ export declare class DatepickerRange extends LitElement {
     _inputRangeStart: HTMLInputElement;
     _inputRangeEnd: HTMLInputElement;
     _hiddenInput: HTMLInputElement;
+    _inputGroupStart: HTMLInputElement;
+    _inputGroupEnd: HTMLInputElement;
     labelRangeStart: string;
     labelRangeEnd: string;
     hideLabel: boolean;
@@ -98,11 +100,16 @@ export declare class DatepickerRange extends LitElement {
     _handleRangeStartClick(): void;
     _handleRangeEndClick(): void;
     _handleRangeStartFocusIn(): void;
+    _handleRangeStartFocusOut(): void;
     _handleRangeEndFocusIn(): void;
     _handleRangeEndFocusOut(): void;
     _handleRangeKeydown(e: KeyboardEvent): void;
     _dispatchValueChange(rangeValues: any): void;
     _updateHiddenInput(): void;
+    _handleClearStartFocusin(): void;
+    _handleClearStartFocusout(): void;
+    _handleClearEndFocusin(): void;
+    _handleClearEndFocusout(): void;
     _emitChange(): void;
     _onCalendarChange(event: CustomEvent): void;
     _onCalendarCancel(): void;

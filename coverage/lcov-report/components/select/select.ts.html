@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.42% </span>
+                <span class="strong">95.44% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>793/831</span>
+                <span class='fraction'>797/835</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">79.82% </span>
+                <span class="strong">79.47% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>182/228</span>
+                <span class='fraction'>182/229</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.42% </span>
+                <span class="strong">95.44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>793/831</span>
+                <span class='fraction'>797/835</span>
             </div>
         
             
@@ -894,7 +894,11 @@
 <a name='L829'></a><a href='#L829'>829</a>
 <a name='L830'></a><a href='#L830'>830</a>
 <a name='L831'></a><a href='#L831'>831</a>
-<a name='L832'></a><a href='#L832'>832</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L832'></a><a href='#L832'>832</a>
+<a name='L833'></a><a href='#L833'>833</a>
+<a name='L834'></a><a href='#L834'>834</a>
+<a name='L835'></a><a href='#L835'>835</a>
+<a name='L836'></a><a href='#L836'>836</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -926,6 +930,7 @@
 <span class="cline-any cline-yes">74x</span>
 <span class="cline-any cline-yes">74x</span>
 <span class="cline-any cline-yes">74x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -1377,6 +1382,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">16x</span>
@@ -1466,21 +1472,23 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -1762,6 +1770,7 @@ export class Select extends LitElement {
 	@query('input.dss-input') _input!: HTMLInputElement;
 	@query('input.dss-hidden-value') _hiddenInput!: HTMLInputElement;
 	@query('.combobox') _combobox!: HTMLInputElement;
+	@query('.dss-input-group') _inputGroup!: HTMLInputElement;
 &nbsp;
 	// Native input properties
 	@property({ type: String }) label = '';
@@ -2207,6 +2216,7 @@ export class Select extends LitElement {
 	}
 &nbsp;
 	_showSelectedValues(values: string[]) {
+		if (this._isFiltering) <span class="branch-0 cbranch-no" title="branch not covered" >return;</span>
 		if (!this.multiple &amp;&amp; Array.isArray(values) &amp;&amp; values.length &gt; 1) {
 			values.splice(1);
 		}
@@ -2294,6 +2304,7 @@ export class Select extends LitElement {
 &nbsp;
 	_handleFocusIn() {
 		this._isFocused = true;
+		this._inputGroup.classList.add('dss-input-group--focusin');
 	}
 &nbsp;
 	_handleFocusOut(event: any) {
@@ -2318,6 +2329,7 @@ export class Select extends LitElement {
 			this._hidePlaceholder();
 			this._closeDropdown();
 		}
+		this._inputGroup.classList.remove('dss-input-group--focusin');
 	}
 &nbsp;
 	_handleBlurEsc() {
@@ -2563,7 +2575,7 @@ export class Select extends LitElement {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-11-17T12:18:58.376Z
+                at 2026-11-23T13:00:55.749Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

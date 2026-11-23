@@ -37,7 +37,6 @@ export declare class SearchBar extends LitElement {
     placeholder: string;
     _filter: string;
     _isFocused: boolean;
-    _showClearButton: boolean;
     _filteredCatalog: CatalogOption[];
     _filteredRecentSearches: CatalogOption[];
     _showAllChips: boolean;

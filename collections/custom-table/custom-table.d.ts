@@ -8,6 +8,7 @@ export interface IColumnHeader {
     label: string;
     style?: string;
     align?: string;
+    tooltip?: string;
     srOnly?: boolean;
     sortType?: 'number' | 'date' | 'string';
     sortOrder?: 'asc' | 'desc' | 'none';

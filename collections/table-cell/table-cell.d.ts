@@ -24,6 +24,7 @@ export declare class TableCell extends LitElement {
     icon: string | undefined;
     iconTooltip: string | undefined;
     value: string | undefined;
+    valueTooltip: string | undefined;
     divider: 'default' | 'group' | 'strong';
     hideDivider: boolean;
     nested: boolean;

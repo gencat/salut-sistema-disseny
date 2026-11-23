@@ -17,6 +17,7 @@ export declare class Timepicker extends LitElement {
     _checkFocusOut(event: FocusEvent): void;
     _input: HTMLInputElement;
     _label: HTMLLabelElement;
+    _inputGroup: HTMLInputElement;
     _combobox: HTMLInputElement;
     label: string;
     hideLabel: boolean;

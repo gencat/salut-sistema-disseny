@@ -20,6 +20,7 @@ export declare class Datepicker extends LitElement {
     _input: HTMLInputElement;
     _label: HTMLLabelElement;
     _calendar: any;
+    _inputGroup: HTMLInputElement;
     label: string;
     hideLabel: boolean;
     name: string;
@@ -90,6 +91,8 @@ export declare class Datepicker extends LitElement {
     _handleFocusout(): void;
     _handleFocusin(): void;
     _focusInput(): void;
+    _handleClearFocusin(): void;
+    _handleClearFocusout(): void;
     _handleKeydown(e: KeyboardEvent): void;
     _handleCalendarFocusOut(): void;
     _handleCalendarUpdated(event: CustomEvent<HTMLElement>): void;
